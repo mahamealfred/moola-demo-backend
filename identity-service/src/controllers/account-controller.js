@@ -24,7 +24,7 @@ export const getAccountBalance = async (req, res) => {
 
         });
         const userAuth = userTokenDeatails.userAuth
-        const response = await axios.get('https://test.ddin.rw/coretest/rest/accounts/default/status', {
+        const response = await axios.get(process.env.CYCLOS_URL+'/rest/accounts/default/status', {
             headers: {
                 'Authorization': `Basic ${userAuth}`,
                 'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export const getAccountsBalance = async (req, res) => {
         const userAuth = userTokenDetails.userAuth;
 
         const response = await axios.get(
-            'https://test.ddin.rw/coretest/rest/accounts/info',
+            process.env.CYCLOS_URL+'rest/accounts/info',
             {
                 headers: {
                     'Authorization': `Basic ${userAuth}`,
@@ -144,7 +144,7 @@ export const getAccountHistory = async (req, res) => {
         const userAuth = userTokenDetails.userAuth;
 
         const response = await axios.get(
-            "https://test.ddin.rw/coretest/rest/accounts/default/history",
+            process.env.CYCLOS_URL+"rest/accounts/default/history",
             {
                 headers: {
                     Authorization: `Basic ${userAuth}`,

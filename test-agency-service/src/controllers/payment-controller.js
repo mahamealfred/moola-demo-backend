@@ -3,10 +3,10 @@ import crypto from 'crypto';
 import logger from '../utils/logger.js';
 import dotenv from 'dotenv';
 import CryptoJS from 'crypto-js';
-import { billercategories, generate20DigitToken, generateFDIAccessToken, generateRequestId } from '../utils/helper.js';
+import { billercategories, generate20DigitToken, generateFDIAccessToken, generateRequestId, getBillerCharge } from '../utils/helper.js';
 import jwt from "jsonwebtoken";
 import { buildAirtimePayload, buildElecticityPayload, buildGenericBillerPayload, buildRRABillerPayload, buildStartimePayload } from '../utils/payloadBuilder.js';
-import { insertLogs } from '../utils/logsData.js';
+import { insertLogs, selectAllLogs, selectTransactionById } from '../utils/logsData.js';
 
 dotenv.config();
 
@@ -217,7 +217,6 @@ export const ValidateBillerFdi = async (req, res) => {
     });
   }
 
-
   let accessToken;
   try {
     accessToken = await generateFDIAccessToken();
@@ -308,6 +307,8 @@ export const ValidateBillerFdi = async (req, res) => {
     });
   }
 }
+
+//execute bill 
 export const executeBillerPayment = async (req, res) => {
   const {
     amount,
@@ -334,6 +335,11 @@ export const executeBillerPayment = async (req, res) => {
 
   let agent_name = "UnknownAgent";
   let userAuth = null;
+  let agent_id=0
+  let customer_charge = 0;
+if (billerCode.toLowerCase() === "tax") {
+  customer_charge = getBillerCharge(amount,billerCode);
+}
 
   try {
     const decodedToken = await new Promise((resolve, reject) =>
@@ -342,7 +348,8 @@ export const executeBillerPayment = async (req, res) => {
       )
     );
 
-    agent_name = decodedToken.id;
+    agent_name = decodedToken.name;
+    agent_id=decodedToken.id;
     userAuth = decodedToken.userAuth;
   } catch (err) {
     logger.warn("Invalid token", { error: err.message });
@@ -352,7 +359,7 @@ export const executeBillerPayment = async (req, res) => {
     });
   }
 
-  if (!process.env.CORE_URL) {
+  if (!process.env.CYCLOS_URL) {
     logger.error("CORE_URL is not defined in environment variables");
     return res.status(500).json({
       success: false,
@@ -382,7 +389,7 @@ export const executeBillerPayment = async (req, res) => {
   const config = {
     method: "post",
     maxBodyLength: Infinity,
-    url: `${process.env.CORE_URL}/rest/payments/confirmMemberPayment`,
+    url: `${process.env.CYCLOS_URL}/rest/payments/confirmMemberPayment`,
     headers: {
       "Content-Type": "application/json",
       Authorization: `Basic ${userAuth}`,
@@ -410,7 +417,9 @@ export const executeBillerPayment = async (req, res) => {
         response.data.id,            // transactionId
         "SUCCESS",                   // thirdpart_status
         "Payment processed",         // description
-        amount,                      // amount
+        amount,  
+        customer_charge,  
+        agent_id,                  // amount
         agent_name,                  // agent_name
         "Complete",                  // status
         billerCode,                   // service_name
@@ -925,3 +934,71 @@ export const bulkSmsPayment = async (req, res) => {
     });
   }
 };
+
+//transaction by Id
+ export const getTransactionsById = async (req, res) => {
+  const {id}=req.params
+  try {
+    const result=await selectTransactionById(id);
+    if(!result){
+      return res.status(404).json({
+        success: false,
+        message: 'Transaction not found. Please verify transaction ID details.',
+      });
+    }
+     return res.status(200).json({
+        success: true,
+        message: 'Transaction Details',
+        data: result
+      });
+    
+    
+  } catch (error) {
+     return res.status(500).json({
+      success: false,
+      message: "We're unable to complete the transaction right now. Please try again later.",
+      error: coreError || error.message,
+    });
+  }
+}
+//GET TRNASACTIONS
+//transaction by Id
+ export const getAllAgentTransactions = async (req, res) => {
+
+  try {
+     const authHeader = req.headers["authorization"];
+        const token = authHeader && authHeader.split(" ")[1];
+        const userTokenDetails = await new Promise((resolve, reject) => {
+            jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+                if (err) {
+                    logger.warn("Invalid token!");
+                    return reject("Invalid token");
+                }
+                resolve(user);
+            });
+        });
+
+        const id = userTokenDetails.id;
+       
+    const result=await selectAllLogs(id);
+    if(result.length<1){
+      return res.status(404).json({
+        success: false,
+        message: 'Transaction not found. Please verify transaction ID details.',
+      });
+    }
+     return res.status(200).json({
+        success: true,
+        message: 'Transaction Details',
+        data: result
+      });
+    
+    
+  } catch (error) {
+     return res.status(500).json({
+      success: false,
+      message: "We're unable to complete the transaction right now. Please try again later.",
+      error: coreError || error.message,
+    });
+  }
+}

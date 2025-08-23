@@ -1,19 +1,21 @@
 // services/logService.js
 import sequelize from "../db/config.js";
 import TransactionStatus from "../models/TransactionStatus.js";
-
+import { format } from "date-fns";
 // Insert log entry
 export const insertLogs = async (
   transactionId,
   thirdpart_status,
   description,
   amount,
+  customer_charge,
+  agent_id,
   agent_name,
   status,
   service_name,
   trxId,
-  customerId = null,
-  token = null
+  customerId ,
+  token 
 ) => {
   try {
     await TransactionStatus.create({
@@ -23,6 +25,8 @@ export const insertLogs = async (
       status,
       description,
       amount,
+      customer_charge,
+      agent_id,
       agent_name,
       transaction_reference: trxId,
       customerId,
@@ -52,18 +56,106 @@ export const updateLogs = async (transactionId, status, trxId) => {
 };
 
 // Select all completed logs
-export const selectAllLogs = async () => {
+export const selectAllLogs = async (id) => {
   try {
     const results = await TransactionStatus.findAll({
-      where: { status: "Complete" },
-      attributes: ["ID"],
+      where: { agent_id: id },
+      attributes: [
+        "transactionId",
+        "agent_name",
+        "agent_id",
+        "service_name",
+        "amount",
+        "customer_charge",
+        "status",
+        "description",
+        "token",
+        "date",
+      ],
+      raw: true,
     });
-    return results.map((row) => ({ ID: row.ID }));
+
+    if (!results || results.length === 0) return [];
+
+    // Map over each transaction
+    return results.map((row) => {
+      const formattedDate = row.date
+        ? format(new Date(row.date), "dd/MM/yyyy")
+        : null;
+
+      const formattedAmount = `${Number(row.amount).toFixed(2)} Rwf`;
+
+      return {
+        id: row.transactionId,
+        date: row.date,
+        formattedDate,
+        processDate: row.date,
+        formattedProcessDate: formattedDate,
+        amount: Number(row.amount),
+        formattedAmount,
+        customerCharge: Number(row.customer_charge),
+        status:  row.status,
+        description: row.description,
+        serviceName: row.service_name,
+      };
+    });
   } catch (error) {
     console.error("Error fetching logs:", error.message);
     return [];
   }
 };
+
+// Select all completed logs
+export const selectTransactionById = async (id) => {
+  try {
+    const result = await TransactionStatus.findOne({
+      where: { transactionId: id },
+      attributes: [
+        "transactionId",
+        "agent_name",
+        "agent_id",
+        "service_name",
+        "amount",
+        "customer_charge",
+        "status",
+        "description",
+        "token",
+        "date",
+      ],
+      raw: true,
+    });
+
+    if (!result) return null;
+
+    // Format date
+    const formattedDate = result.date
+      ? format(new Date(result.date), "dd/MM/yyyy")
+      : null;
+
+    // amount formatting (negative for charges, if needed)
+    const formattedAmount = `${Number(result.amount).toFixed(2)} Rwf`;
+
+    // build response
+    return {
+      id: result.transactionId,
+      date: result.date,
+      formattedDate,
+      processDate: result.date, // you can use another column if processDate differs
+      formattedProcessDate: formattedDate,
+      amount: Number(result.amount),
+      formattedAmount,
+      customerCharge:Number(result.customer_charge),
+      status:  result.status,
+      description: result.description,
+      serviceName:result.serviceName
+     
+    };
+  } catch (error) {
+    console.error("Error fetching logs:", error.message);
+    return null;
+  }
+};
+
 
 // Insert into bulk service payment results (still raw SQL for now)
 export const insertInBulkServicePayment = async (

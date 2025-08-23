@@ -30,3 +30,10 @@ CREATE TABLE transactions_status (
 ALTER TABLE transactions_status
 ADD COLUMN customerId VARCHAR(50) NULL AFTER transactionId,
 ADD COLUMN token VARCHAR(255) NULL AFTER customerId;
+
+ALTER TABLE transactions_status
+ADD COLUMN agent_id VARCHAR(50) NULL AFTER agent_name;
+
+ALTER TABLE transactions_status
+ADD COLUMN customer_charge DECIMAL(10,2) DEFAULT NULL AFTER amount;
+

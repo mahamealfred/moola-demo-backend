@@ -1548,3 +1548,379 @@
 {"level":"info","message":"Received POST request to /api/agencybanking/eco/services/execute-bill-payment","service":"agency-service","timestamp":"2025-08-03T10:08:08.178Z"}
 {"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-03T10:08:08.179Z"}
 {"amount":"200.00","billerCode":"RRA","ccy":"RWF","clientPhone":"+250789595309","customerId":"+250789595309","email":"mahamealfred@gmail.com","level":"warn","message":"Missing required fields for bill payment","productCode":"RRA","requestId":"a196d6c8-d25a-49d4-8cc0-5339a6724736","service":"agency-service","timestamp":"2025-08-03T10:08:08.186Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T15:38:17.824Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T15:40:31.492Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T15:41:12.804Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T15:41:31.925Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T15:43:11.831Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T15:43:15.099Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:08:17.238Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:12:57.205Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:13:07.403Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:13:12.149Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:13:16.730Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:13:30.759Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:13:33.479Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:13:51.564Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:14:32.839Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:20:13.485Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:20:38.997Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:20:50.520Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:20:59.134Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:09.291Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:12.341Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:28.510Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:31.877Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:33.140Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:36.961Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:46.879Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:21:53.515Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:10.798Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:12.096Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:14.503Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:17.691Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:20.682Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:22.283Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:27.423Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:39.531Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:22:46.477Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:29:49.161Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:30:54.265Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:37:12.844Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T17:40:16.259Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T17:40:16.262Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T17:40:28.065Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T17:40:28.066Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:42:05.429Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:42:27.011Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:42:36.186Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:42:44.477Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:42:54.318Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:42:56.921Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:03.255Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:07.073Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:10.877Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:13.381Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:15.688Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:17.383Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:21.362Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:26.099Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:31.754Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:34.384Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:36.286Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:38.281Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:40.621Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:44.201Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:47.067Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:48.704Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:53.117Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:43:55.389Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:44:00.970Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:44:03.314Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:44:59.240Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:45:09.572Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:45:14.363Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:45:20.689Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:45:33.503Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:45:37.357Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T17:45:44.407Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T17:45:44.408Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":278337.85999999987,"customerAccountName":"","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"}],"extraInfo":null,"localStockMgt":null,"pdtId":"airtime-mtn-rw","pdtName":"MTN Rwanda Airtime","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"MTN Rwanda","trxId":"1d1c1968-a5bc-4186-ae2f-a9e5b2799789","trxResult":"direct_topup","vendMax":250000,"vendMin":100,"vendUnitId":"flexible","verticalId":"airtime"}},"service":"agency-service","timestamp":"2025-08-23T17:45:45.033Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:52:31.731Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:53:04.839Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:53:07.253Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:53:11.679Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:53:32.015Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:53:35.367Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:53:37.363Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T17:54:05.254Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T17:54:05.256Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":278337.85999999987,"customerAccountName":"","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"}],"extraInfo":null,"localStockMgt":null,"pdtId":"airtime-mtn-rw","pdtName":"MTN Rwanda Airtime","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"MTN Rwanda","trxId":"5f0fda41-ef70-4e7a-be26-138fdbd5a9db","trxResult":"direct_topup","vendMax":250000,"vendMin":100,"vendUnitId":"flexible","verticalId":"airtime"}},"service":"agency-service","timestamp":"2025-08-23T17:54:07.237Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:20.370Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:27.067Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:29.968Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:32.909Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:34.621Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:35.872Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:38.728Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:41.621Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:45.028Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T17:57:52.111Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:14:02.341Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:14:22.090Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:14:23.426Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:14:26.802Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:15:00.863Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:16:49.865Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:16:52.907Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:17:19.915Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:17:29.805Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:18:21.546Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:18:28.648Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:18:35.831Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:18:40.383Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:23:07.520Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:23:07.521Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:24:05.966Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:24:10.069Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:24:10.070Z"}
+{"level":"error","message":"ReferenceError: getBillerCharge is not defined\n    at executeBillerPayment (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/agency-service/src/controllers/payment-controller.js:249:3)\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\index.js:295:15\n    at processParams (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\index.js:291:5)\n    at Function.handle (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\router\\index.js:186:3)","service":"agency-service","timestamp":"2025-08-23T18:24:10.077Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:29:09.642Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:29:11.163Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:29:50.738Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:29:50.739Z"}
+{"error":"jwt is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T18:29:50.745Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:30:27.541Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:30:27.543Z"}
+{"error":"jwt is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T18:30:27.548Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:30:59.560Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:31:11.074Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:31:11.076Z"}
+{"error":"jwt is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T18:31:11.086Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:31:29.361Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:31:32.490Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:31:32.491Z"}
+{"error":"jwt is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T18:31:32.495Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:35:39.968Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:35:41.619Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:36:20.032Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:36:24.462Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:03.032Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:06.484Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:37:12.853Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:37:12.854Z"}
+{"level":"error","message":"ReferenceError: buildRRABillerPayload is not defined\n    at executeBillerPayment (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/agency-service/src/controllers/payment-controller.js:287:34)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","service":"agency-service","timestamp":"2025-08-23T18:37:12.862Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:37.410Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:39.022Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:40.936Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:43.455Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:49.354Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:51.400Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:56.019Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:37:57.352Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:38:02.382Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:38:06.605Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:38:08.571Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:38:12.749Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:38:12.751Z"}
+{"data":{"id":2516,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T18:38:13.901Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:41:01.090Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T18:41:13.666Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T18:41:13.668Z"}
+{"data":{"id":2520,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T18:41:14.645Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:42:18.432Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:42:21.376Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:42:25.708Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:42:29.503Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:42:31.770Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:02.051Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:11.436Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:13.874Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:25.450Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:38.445Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:40.290Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:46.021Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:50.927Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:50:52.611Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:51:22.422Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:51:29.665Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:56:34.343Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:56:37.161Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:57:07.725Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:57:39.616Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:58:36.465Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:58:37.904Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:58:44.354Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:58:51.265Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:58:54.405Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T18:59:53.223Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T19:00:12.944Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T19:00:14.464Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T19:00:20.016Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T19:00:23.781Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T19:00:29.404Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T19:00:31.829Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T19:00:35.104Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:31:37.164Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:32:10.181Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:32:20.647Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:32:45.813Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:32:58.049Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:03.570Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:10.013Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:13.364Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:18.157Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:24.261Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:26.851Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:34.714Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:52.837Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:33:58.455Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:04.757Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:07.712Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:10.480Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:15.320Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:19.640Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:22.075Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:24.925Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:48.155Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:50.515Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:51.665Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:34:59.073Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:35:04.959Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:35:08.036Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:35:10.081Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:35:29.436Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:36:51.003Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:36:52.988Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:36:58.658Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:37:39.721Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:37:42.430Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:37:46.009Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:37:50.000Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:37:52.090Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:38:10.929Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:38:12.699Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:38:16.305Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:38:18.367Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:38:53.171Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:38:56.668Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:40:14.269Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:40:19.943Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:40:21.356Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:40:29.094Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:40:31.093Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:41:38.552Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:41:42.592Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:41:44.338Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:41:54.614Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:41:56.382Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:42:02.384Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:42:16.568Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:42:26.773Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:43:09.953Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:43:14.859Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:43:16.414Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:43:25.449Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:16.289Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:19.937Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:22.483Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:30.053Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:33.616Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:47.374Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:52.049Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:54.005Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:44:55.626Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:45:07.647Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:45:42.709Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:45:44.176Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:45:46.535Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:46:52.384Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:46:54.347Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:46:57.230Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:47:06.885Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:47:24.846Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:47:53.114Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:47:55.336Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:48:27.760Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:48:58.590Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:49:42.876Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:50:10.318Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:50:12.892Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:50:15.066Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:54:10.160Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:54:13.782Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:54:16.118Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:54:17.045Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:55:39.001Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:55:59.671Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:56:15.609Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:59:23.302Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:59:54.499Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T21:59:58.652Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:00:02.400Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:00:36.282Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:00:43.367Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:00:46.273Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:00:54.492Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:00:56.103Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:01:01.190Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:01:02.879Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:01:37.669Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:01:38.874Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:04:12.126Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:04:13.718Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:04:46.167Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:04:47.606Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:07:02.945Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:07:54.025Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:08:04.383Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:08:39.399Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:00.060Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:05.511Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:14.862Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:21.939Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:24.320Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:25.648Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:36.473Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:43.455Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:09:58.233Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:10:02.365Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:10:04.460Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:10:10.458Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:10:25.506Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:10:26.804Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:10:56.169Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:11:01.580Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:12:08.415Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:12:39.733Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:12:48.404Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:05.568Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:13.256Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:16.447Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:19.007Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:25.323Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:29.529Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:42.911Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:54.273Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:13:55.705Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:14:12.609Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:14:13.847Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:14:28.941Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:14:58.043Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:15:13.563Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:15:24.232Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:16:00.390Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:16:02.858Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:16:35.110Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T22:18:33.486Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T22:18:33.487Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":277537.85999999987,"customerAccountName":"","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"}],"extraInfo":null,"localStockMgt":null,"pdtId":"airtime-mtn-rw","pdtName":"MTN Rwanda Airtime","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"MTN Rwanda","trxId":"7d23ccb0-b497-41ca-8404-d81c9e41418e","trxResult":"direct_topup","vendMax":250000,"vendMin":100,"vendUnitId":"flexible","verticalId":"airtime"}},"service":"agency-service","timestamp":"2025-08-23T22:18:34.224Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T22:18:57.474Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T22:18:57.476Z"}
+{"data":{"id":2524,"pending":true},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T22:18:58.413Z"}
+{"level":"error","message":"Biller payment failed","service":"agency-service","timestamp":"2025-08-23T22:18:58.902Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:20:59.587Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:21:47.856Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:21:49.898Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-08-23T22:21:51.718Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T22:22:16.230Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T22:22:16.231Z"}
+{"data":{"id":2527,"pending":true},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T22:22:17.149Z"}
+{"level":"error","message":"Biller payment failed","service":"agency-service","timestamp":"2025-08-23T22:22:21.454Z"}
+{"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:684:10)\n    at ServerResponse.send (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:161:12)\n    at ServerResponse.json (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:250:15)\n    at executeBillerPayment (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/agency-service/src/controllers/payment-controller.js:400:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","service":"agency-service","timestamp":"2025-08-23T22:22:21.458Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T22:27:44.167Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T22:27:44.169Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":277437.85999999987,"customerAccountName":"UZAMUKUNDA PRINCESSE","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"},{"id":"sms","name":"SMS"}],"extraInfo":{"tin":""},"localStockMgt":null,"pdtId":"electricity-eucl-rw","pdtName":"EUCL Prepaid Electricity","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"EUCL","trxId":"c8eeade6-61ca-4770-83cd-62f631dcfcc5","trxResult":"voucher","vendMax":5000000,"vendMin":100,"vendUnitId":"flexible","verticalId":"electricity"}},"service":"agency-service","timestamp":"2025-08-23T22:27:46.477Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T22:29:57.878Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T22:29:57.879Z"}
+{"data":{"id":2530,"pending":true},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T22:29:58.776Z"}
+{"level":"error","message":"Biller payment failed","service":"agency-service","timestamp":"2025-08-23T22:30:03.280Z"}
+{"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:684:10)\n    at ServerResponse.send (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:161:12)\n    at ServerResponse.json (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:250:15)\n    at executeBillerPayment (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/agency-service/src/controllers/payment-controller.js:400:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","service":"agency-service","timestamp":"2025-08-23T22:30:03.283Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T22:35:22.122Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T22:35:22.123Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":277337.85999999987,"customerAccountName":"","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"}],"extraInfo":null,"localStockMgt":null,"pdtId":"airtime-mtn-rw","pdtName":"MTN Rwanda Airtime","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"MTN Rwanda","trxId":"630ff875-6ef0-4c04-b1e7-1c1208049046","trxResult":"direct_topup","vendMax":250000,"vendMin":100,"vendUnitId":"flexible","verticalId":"airtime"}},"service":"agency-service","timestamp":"2025-08-23T22:35:31.821Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T22:36:09.863Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T22:36:09.863Z"}
+{"data":{"id":2533,"pending":true},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T22:36:10.793Z"}
+{"level":"error","message":"Biller payment failed","service":"agency-service","timestamp":"2025-08-23T22:36:14.995Z"}
+{"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:652:11)\n    at ServerResponse.header (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:684:10)\n    at ServerResponse.send (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:161:12)\n    at ServerResponse.json (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\agency-service\\node_modules\\express\\lib\\response.js:250:15)\n    at executeBillerPayment (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/agency-service/src/controllers/payment-controller.js:400:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","service":"agency-service","timestamp":"2025-08-23T22:36:14.997Z"}

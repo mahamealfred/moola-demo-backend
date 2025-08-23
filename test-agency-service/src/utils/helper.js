@@ -2,6 +2,19 @@
 import CryptoJS from 'crypto-js';
 import axios from "axios";
 
+import tariffs from "./tariffs.json" assert { type: "json" }; 
+
+export const  getBillerCharge=(amount,billerCode)=> {
+  const taxTariffs = tariffs.billPayment.filter(
+    (t) => t.transaction_type.toLowerCase() === billerCode.toString()
+  );
+
+  const match = taxTariffs.find(
+    (t) => amount >= t.range_from && amount <= t.range_to
+  );
+
+  return match ? Number(match.customer_charges) : 0;
+}
 export const generateRequestId=() =>{
     let id = 'A';
     for (let i = 0; i < 15; i++) {
@@ -59,6 +72,8 @@ export const generateFDIAccessToken = async(req,res)=>{
       
       return  accesstoken
 };
+
+
 export const billercategories = {
     "Travel": [
         {

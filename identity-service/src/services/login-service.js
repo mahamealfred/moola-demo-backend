@@ -1,21 +1,23 @@
 import axios from "axios";
 import logger from "../utils/logger.js";
 import generateTokens from "../utils/generateToken.js";
-
+import dotenv from "dotenv";
+dotenv.config()
 
 const loginService = async (req, res, username, password) => {
     const token = Buffer.from(`${username}:${password}`).toString('base64');
 
 
     try {
-        const response = await axios.get('https://test.ddin.rw/coretest/rest/members/me', {
+        const response = await axios.get(process.env.CYCLOS_URL+'/rest/members/me', {
             headers: {
                 'Authorization': `Basic ${token}`,
                 'Content-Type': 'application/json',
             },
         });
         const id=response.data.id
-        const { accessToken, refreshToken } = await generateTokens(token,id);
+        const name=response.data.name
+        const { accessToken, refreshToken } = await generateTokens(token,id,name);
 
 
         logger.warn("Successfully logged");

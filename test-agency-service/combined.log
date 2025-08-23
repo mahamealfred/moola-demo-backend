@@ -2797,3 +2797,557 @@
 {"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-14T00:42:27.851Z"}
 {"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-17T08:01:43.398Z"}
 {"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-17T09:35:53.738Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-20T09:24:37.142Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-20T10:05:15.254Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-20T19:48:21.779Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T08:04:59.535Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T08:06:04.770Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T08:07:04.033Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T11:27:58.609Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T11:45:46.457Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T11:45:56.185Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T11:46:01.908Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T11:46:03.711Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T12:19:28.869Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T12:19:28.870Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-21T12:19:33.351Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-21T12:19:33.352Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-21T20:15:30.560Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T08:51:17.926Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-22T08:53:41.539Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T08:53:41.541Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-22T08:54:07.353Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T08:54:07.354Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":284087.85999999987,"customerAccountName":"","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"}],"extraInfo":null,"localStockMgt":null,"pdtId":"airtime-mtn-rw","pdtName":"MTN Rwanda Airtime","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"MTN Rwanda","trxId":"ca716def-5e0b-402e-a3c6-ec0127f6e694","trxResult":"direct_topup","vendMax":250000,"vendMin":100,"vendUnitId":"flexible","verticalId":"airtime"}},"service":"agency-service","timestamp":"2025-08-22T08:54:27.661Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":284087.85999999987,"customerAccountName":"","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"}],"extraInfo":null,"localStockMgt":null,"pdtId":"airtime-mtn-rw","pdtName":"MTN Rwanda Airtime","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"MTN Rwanda","trxId":"4ccaf950-6c32-43dd-a07c-c0bd53384c57","trxResult":"direct_topup","vendMax":250000,"vendMin":100,"vendUnitId":"flexible","verticalId":"airtime"}},"service":"agency-service","timestamp":"2025-08-22T08:54:27.670Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T08:55:34.318Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T08:55:34.319Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:08:50.234Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T09:09:20.964Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:09:20.965Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:10:36.174Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T09:11:16.968Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:11:16.969Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:12:35.729Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:12:45.669Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:12:48.761Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:13:34.002Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:13:39.706Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:13:45.126Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:14:25.971Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:14:28.303Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:14:30.668Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:14:39.317Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/WITHDRWAL","service":"agency-service","timestamp":"2025-08-22T09:15:37.431Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:15:37.432Z"}
+{"level":"error","message":"TypeError: tariffs.agencyBankingTariffsfilter is not a function\n    at file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/test-agency-service/src/routes/agency-service.js:50:18\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:295:15\n    at param (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:600:14)\n    at param (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:610:14)\n    at processParams (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:664:3)","service":"agency-service","timestamp":"2025-08-22T09:15:37.447Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:16:04.425Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:16:06.195Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:16:07.745Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:16:08.767Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/WITHDRWAL","service":"agency-service","timestamp":"2025-08-22T09:16:50.767Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:16:50.769Z"}
+{"level":"error","message":"TypeError: tariffs.agencyTariffs is not a function\n    at file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/test-agency-service/src/routes/agency-service.js:50:18\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:295:15\n    at param (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:600:14)\n    at param (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:610:14)\n    at processParams (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:664:3)","service":"agency-service","timestamp":"2025-08-22T09:16:50.777Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:17:18.403Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/WITHDRWAL","service":"agency-service","timestamp":"2025-08-22T09:17:29.720Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:17:29.721Z"}
+{"level":"error","message":"TypeError: tariffs is not a function\n    at file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/test-agency-service/src/routes/agency-service.js:50:10\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:295:15\n    at param (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:600:14)\n    at param (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:610:14)\n    at processParams (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\test-agency-service\\node_modules\\router\\index.js:664:3)","service":"agency-service","timestamp":"2025-08-22T09:17:29.726Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:19:03.753Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:19:19.962Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/WITHDRWAL","service":"agency-service","timestamp":"2025-08-22T09:19:29.103Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:19:29.105Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T09:19:36.030Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:19:36.032Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/WITHDRAWAL","service":"agency-service","timestamp":"2025-08-22T09:20:11.539Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:20:11.540Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/E_Tax","service":"agency-service","timestamp":"2025-08-22T09:20:31.063Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:20:31.064Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/Tax","service":"agency-service","timestamp":"2025-08-22T09:20:57.625Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:20:57.626Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/TAX","service":"agency-service","timestamp":"2025-08-22T09:21:04.359Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:21:04.360Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:03.838Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:07.991Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:09.829Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:13.607Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:22.867Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:26.488Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:30.568Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:37.232Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:40.577Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:43.075Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:48.848Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:23:51.502Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:26:16.171Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:26:20.508Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:27:41.181Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:28:03.089Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:28:43.554Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:29:01.349Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:29:04.774Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:29:13.345Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:29:16.488Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:29:26.546Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:29:30.678Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:35:37.028Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:35:41.861Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:35:51.804Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:35:55.371Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:36:04.834Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/TAX","service":"agency-service","timestamp":"2025-08-22T09:44:33.714Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:44:33.717Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T09:44:44.705Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:44:44.706Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:46:34.403Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:46:39.712Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:46:52.816Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:47:28.210Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:47:30.956Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:47:32.224Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/bill/Tax","service":"agency-service","timestamp":"2025-08-22T09:47:36.226Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:47:36.226Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/bill/e_tax","service":"agency-service","timestamp":"2025-08-22T09:47:57.468Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:47:57.469Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:49:07.521Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:49:12.330Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:49:14.018Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:52:13.983Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/bill?type=tax","service":"agency-service","timestamp":"2025-08-22T09:52:28.394Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:52:28.397Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/bill?type=tax","service":"agency-service","timestamp":"2025-08-22T09:53:08.303Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:53:08.305Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/bill?type=tax","service":"agency-service","timestamp":"2025-08-22T09:53:32.022Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T09:53:32.023Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T09:53:45.605Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T09:53:45.606Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:54:19.521Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:54:25.237Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:54:30.298Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:54:40.399Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:54:44.801Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:16.456Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:18.025Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:20.772Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:25.507Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:27.747Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:33.102Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:38.336Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:42.535Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:46.478Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:55:58.231Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:01.444Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:07.792Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:11.032Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:18.422Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:20.893Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:25.527Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:28.582Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:33.409Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:35.436Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:39.969Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:41.742Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:45.224Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:48.563Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:54.676Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:56.002Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:56:57.970Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:00.131Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:02.369Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:03.993Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:11.767Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:14.964Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:18.570Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:20.551Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:23.783Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:30.772Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:32.340Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:36.319Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:40.577Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:54.355Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:56.569Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:57:59.750Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:58:03.420Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:58:05.474Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:58:07.844Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:58:12.760Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:58:14.488Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T09:58:19.481Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:01:04.723Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/rapidtransfer?type=Rapid_Tansfer_Send","service":"agency-service","timestamp":"2025-08-22T10:03:29.532Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T10:03:29.535Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:05:17.495Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:05:29.736Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:11:30.426Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/rapidtransfer?type=Rapid_Tansfer_Send","service":"agency-service","timestamp":"2025-08-22T10:11:41.461Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T10:11:41.465Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/rapidtransfer?type=Rapid_Tansfer_Send","service":"agency-service","timestamp":"2025-08-22T10:12:57.505Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-22T10:12:57.506Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T10:13:13.962Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T10:13:13.963Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T10:15:48.434Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T10:15:48.435Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:10.086Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:19.712Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:21.787Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:23.446Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:25.327Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:30.346Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:32.940Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T10:26:34.771Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T15:08:36.613Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T15:08:36.614Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T15:18:41.689Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T15:18:41.691Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-22T15:18:44.673Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-22T15:18:44.675Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T15:58:34.343Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T15:58:38.512Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-22T15:58:40.674Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T07:43:25.162Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T10:19:07.497Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T10:29:43.413Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T10:29:43.414Z"}
+{"error":{"msg":"Failed to validate/invalid payment reference"},"level":"error","message":"Phone number validation failed","service":"agency-service","status":400,"timestamp":"2025-08-23T10:29:47.273Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/validate/biller","service":"agency-service","timestamp":"2025-08-23T10:30:19.196Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T10:30:19.197Z"}
+{"level":"info","message":" validation response","responseData":{"data":{"availTrxBalance":278337.85999999987,"customerAccountName":"","deliveryMethods":[{"id":"direct_topup","name":"Direct Topup"}],"extraInfo":null,"localStockMgt":null,"pdtId":"airtime-mtn-rw","pdtName":"MTN Rwanda Airtime","pdtStatusId":"active","selectAmount":null,"stock":null,"stockedPdts":null,"svcProviderName":"MTN Rwanda","trxId":"117593b5-59b2-4a2c-82d0-ed45d6d381b0","trxResult":"direct_topup","vendMax":250000,"vendMin":100,"vendUnitId":"flexible","verticalId":"airtime"}},"service":"agency-service","timestamp":"2025-08-23T10:30:19.793Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T10:31:12.536Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T10:31:12.537Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T10:31:12.544Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T10:31:37.771Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T10:31:37.772Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T10:31:37.776Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T10:32:07.285Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T10:32:07.286Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T10:32:07.292Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T10:33:01.799Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T10:33:06.363Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T10:33:06.364Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T10:33:06.370Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/billers/details","service":"agency-service","timestamp":"2025-08-23T10:33:36.357Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T10:33:36.358Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T10:34:09.759Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T10:34:09.760Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T10:34:09.763Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T10:36:00.611Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T10:36:03.372Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T10:36:10.937Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T10:37:51.804Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:12:38.354Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:12:39.965Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:12:41.220Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:12:44.091Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:12:52.507Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:12:52.507Z"}
+{"data":{"id":2469,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T11:12:53.590Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:16:35.790Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:17:02.211Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:17:06.316Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:17:09.862Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:17:21.247Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:17:26.548Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:17:34.714Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:17:48.008Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:17:48.009Z"}
+{"data":{"id":2473,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T11:17:49.023Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:25:48.328Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:25:57.366Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:26:28.916Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:26:40.899Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:26:40.901Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T11:26:40.912Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:27:11.195Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:27:11.197Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T11:27:11.205Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:27:31.462Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:27:33.024Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:27:35.911Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:27:35.912Z"}
+{"error":"agent_Id is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-08-23T11:27:35.917Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:28:02.252Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:28:11.478Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:28:11.479Z"}
+{"data":{"id":2477,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T11:28:12.546Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:30:00.246Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:30:00.247Z"}
+{"data":{"id":2481,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T11:30:01.189Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:30:58.493Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:31:00.612Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:31:17.409Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:31:17.410Z"}
+{"data":{"id":2485,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T11:31:18.312Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:33:10.094Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T11:33:14.848Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T11:33:47.748Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T11:33:47.749Z"}
+{"data":{"id":2489,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T11:33:48.742Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T12:39:15.451Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T12:39:15.452Z"}
+{"data":{"id":2493,"pending":true},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T12:39:16.525Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T12:55:09.008Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T12:55:12.706Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:11.426Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:16.915Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:18.634Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:22.924Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:25.270Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:26.974Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:30.301Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:01:32.897Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:02:06.572Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:02:40.754Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:03:02.411Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:03:24.500Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:03:33.162Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:03:38.495Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:03:39.809Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:03:55.267Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:04:01.694Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:04:03.175Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:04:08.134Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:04:12.220Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:13.146Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:29.875Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:31.415Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:33.240Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:34.839Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:42.345Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:46.126Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:49.511Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:55.558Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:06:56.889Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:07:08.370Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:07:10.606Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:07:15.309Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:07:42.167Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:08:12.734Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:08:21.912Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:08:25.249Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:08:29.080Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:08:37.597Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:08:42.215Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:08:45.884Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T13:11:09.897Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T13:11:09.898Z"}
+{"data":{"id":2496,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T13:11:11.064Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:12:00.563Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:12:07.095Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T13:12:09.595Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T13:12:09.596Z"}
+{"data":{"id":2500,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T13:12:10.669Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:16:07.594Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:16:09.841Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:16:11.792Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T13:16:16.354Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T13:16:16.354Z"}
+{"data":{"id":2504,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T13:16:17.322Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T13:16:40.693Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T13:16:40.694Z"}
+{"data":{"id":2508,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T13:16:41.572Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:18:06.186Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:18:08.292Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:18:21.169Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:18:23.338Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:18:27.299Z"}
+{"level":"info","message":"Received POST request to /api/agencytest/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-08-23T13:18:35.809Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T13:18:35.810Z"}
+{"data":{"id":2512,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-08-23T13:18:36.791Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:20:49.175Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:21:06.061Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:21:13.037Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:21:19.940Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:21:31.570Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:04.477Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:15.209Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:17.907Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:20.779Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:25.601Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:37.772Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:39.595Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:52.433Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:55.640Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:22:56.758Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:21.010Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:25.826Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:29.512Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:33.085Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:36.827Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:38.589Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:39.687Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:56.871Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:23:58.321Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:24:01.727Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:24:19.970Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:09.189Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:12.630Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:14.128Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:19.802Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:21.656Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:26.448Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:27.594Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:30.790Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:26:53.365Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:27:03.099Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:27:08.157Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:27:14.854Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:30:51.773Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/90","service":"agency-service","timestamp":"2025-08-23T13:32:16.971Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:32:16.973Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/1","service":"agency-service","timestamp":"2025-08-23T13:32:31.595Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:32:31.597Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2477","service":"agency-service","timestamp":"2025-08-23T13:32:52.455Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:32:52.456Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:33:31.316Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:33:32.674Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:33:37.849Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:33:39.653Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:33:47.549Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:33:49.249Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:33:51.804Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:00.593Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:02.789Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:04.971Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:07.061Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:11.544Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:14.276Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:17.413Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:20.662Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:21.500Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:41.143Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:45.473Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:47.580Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:49.770Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:52.183Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:55.338Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:34:58.869Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:35:00.771Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:35:03.604Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:35:09.989Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:35:34.206Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:35:43.153Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:35:55.519Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2477","service":"agency-service","timestamp":"2025-08-23T13:35:59.969Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:35:59.970Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2477","service":"agency-service","timestamp":"2025-08-23T13:36:10.452Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:36:10.453Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:36:29.749Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2477","service":"agency-service","timestamp":"2025-08-23T13:36:34.937Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:36:34.938Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T13:37:27.686Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2477","service":"agency-service","timestamp":"2025-08-23T13:37:33.221Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:37:33.222Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2512","service":"agency-service","timestamp":"2025-08-23T13:43:43.459Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T13:43:43.460Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2512","service":"agency-service","timestamp":"2025-08-23T14:05:02.849Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T14:05:02.850Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:08:16.032Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:08:17.192Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2512","service":"agency-service","timestamp":"2025-08-23T14:08:19.517Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T14:08:19.518Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:27:55.517Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:28:34.827Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:29:02.056Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2512","service":"agency-service","timestamp":"2025-08-23T14:29:11.720Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T14:29:11.722Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2512","service":"agency-service","timestamp":"2025-08-23T14:39:41.069Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T14:39:41.070Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:40:42.964Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:40:53.260Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:41:21.634Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:41:35.483Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:41:40.116Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:41:44.225Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:41:48.335Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:42:16.445Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:42:25.337Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:42:33.869Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:42:54.087Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:43:09.124Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:43:18.996Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:43:26.452Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:43:51.856Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:43:55.360Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:43:59.557Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:44:08.815Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:44:11.842Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/details/2512","service":"agency-service","timestamp":"2025-08-23T14:44:15.997Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T14:44:15.998Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:45:31.817Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:45:37.279Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:45:44.050Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:45:45.120Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:50:33.793Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:50:35.889Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:50:37.751Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:50:42.711Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:50:55.893Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:50:59.773Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:51:04.372Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:51:06.027Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:51:14.290Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:51:45.120Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:51:46.356Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:51:50.955Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:52:11.120Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:52:16.701Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:52:28.237Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:52:31.275Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:52:54.223Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:54:29.303Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:54:34.752Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:54:54.669Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:54:59.416Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:55:07.927Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:55:11.118Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T14:55:39.510Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transaction/s/history","service":"agency-service","timestamp":"2025-08-23T14:56:26.443Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T14:56:26.445Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T14:56:35.848Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T14:56:35.850Z"}
+{"level":"warn","message":"Invalid token!","service":"agency-service","timestamp":"2025-08-23T14:56:35.854Z"}
+{"level":"error","message":"ReferenceError: coreError is not defined\n    at getAllAgentTransactions (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/client-app-micro-service/test-agency-service/src/controllers/payment-controller.js:1002:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","service":"agency-service","timestamp":"2025-08-23T14:56:35.857Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:03:13.706Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:03:13.707Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:04:37.725Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:04:37.727Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:04:51.555Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:04:56.937Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:05:02.779Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:05:03.976Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:05:05.583Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:05:12.697Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:05:12.698Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:05:45.389Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:05:46.935Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:05:52.811Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:05:56.140Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:05:58.782Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:05:58.783Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:07:19.918Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:07:36.597Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:07:39.549Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:07:44.912Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:07:46.386Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:07:49.608Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:07:49.609Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:08:51.227Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:09:31.980Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:10:57.135Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:11:05.735Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:11:05.736Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:11:49.948Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:12:30.829Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:12:30.832Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:16:26.663Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T15:16:26.664Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:17:40.459Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T15:17:40.460Z"}
+{"level":"info","message":"Agency Test service running on port 4003","service":"agency-service","timestamp":"2025-08-23T15:18:25.518Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/rapidtransfer?type=Rapid_Tansfer_Send","service":"agency-service","timestamp":"2025-08-23T15:36:05.347Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:36:05.349Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs/bill?type=tax","service":"agency-service","timestamp":"2025-08-23T15:36:11.260Z"}
+{"level":"info","message":"Request body, undefined","service":"agency-service","timestamp":"2025-08-23T15:36:11.261Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/tariffs","service":"agency-service","timestamp":"2025-08-23T15:36:22.337Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T15:36:22.338Z"}
+{"level":"info","message":"Received GET request to /api/agencytest/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-08-23T15:37:11.247Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-08-23T15:37:11.248Z"}

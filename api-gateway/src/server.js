@@ -4,7 +4,6 @@ import cors from "cors";
 import Redis from "ioredis";
 import helmet from "helmet";
 import dotenv from "dotenv";
-
 import {rateLimit} from "express-rate-limit";
 import { RedisStore } from "rate-limit-redis";
 import logger from "./utils/logger.js";
@@ -134,9 +133,12 @@ app.use(
   "/v1/clients/validation",
   proxy(process.env.CLIENT_SERVICE_URL, proxyOptions)
 );
-//setting up proxy for our payment service
+
+
+
+//setting up proxy for our payment service agency prod
 app.use(
-  "/v1/agencybanking",
+  "/v1/agency",
   //validateToken,
   proxy(process.env.AGENCY_SERVICE_URL, {
     ...proxyOptions,
@@ -156,9 +158,80 @@ app.use(
   })
 );
 
-//Test validation
+app.use(
+  "/v1/agency/thirdpartyagency/services/execute",
+  validateToken,
+  proxy(process.env.AGENCY_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["Content-Type"] = "application/json";
+    //  proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from Test service: ${proxyRes.statusCode}`
+      );
+
+      return proxyResData;
+    },
+  })
+  
+);
+
+
+app.use(
+  "/v1/agency/thirdpartyagency/services/transactions/history",
+  validateToken,
+  proxy(process.env.AGENCY_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["Content-Type"] = "application/json";
+    //  proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from Test service: ${proxyRes.statusCode}`
+      );
+
+      return proxyResData;
+    },
+  })
+  
+);
+
+
+
+
+//Test validation env config
 app.use(
   "/v1/agencytest/thirdpartyagency/services/execute",
+  validateToken,
+  proxy(process.env.TEST_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["Content-Type"] = "application/json";
+    //  proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from Test service: ${proxyRes.statusCode}`
+      );
+
+      return proxyResData;
+    },
+  })
+  
+);
+
+
+app.use(
+  "/v1/agencytest/thirdpartyagency/services/transactions/history",
   validateToken,
   proxy(process.env.TEST_SERVICE_URL, {
     ...proxyOptions,
@@ -182,30 +255,7 @@ app.use(
   "/v1/agencytest",
   proxy(process.env.TEST_SERVICE_URL, proxyOptions)
 );
-//setting up proxy for our media service
-app.use(
-  "/v1/media",
-  validateToken,
-  proxy(process.env.LOGS_SERVICE_URL, {
-    ...proxyOptions,
-    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
-      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
-      if (!srcReq.headers["content-type"].startsWith("multipart/form-data")) {
-        proxyReqOpts.headers["Content-Type"] = "application/json";
-      }
 
-      return proxyReqOpts;
-    },
-    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
-      logger.info(
-        `Response received from media service: ${proxyRes.statusCode}`
-      );
-
-      return proxyResData;
-    },
-    parseReqBody: false,
-  })
-);
 
 
 

@@ -3,14 +3,15 @@ import crypto from "crypto";
 import RefreshToken from "../models/RefreshToken.js";
 //import RefreshToken from "../models/RefreshToken.js";
 
-const generateTokens = async (token,id) => {
+const generateTokens = async (token,id,name) => {
   const accessToken = jwt.sign(
     {
       userAuth:token,
-      id:id
+      id:id,
+      name:name
     },
     process.env.JWT_SECRET,
-    { expiresIn: "60m" }
+    { expiresIn: "120m" }
   );
 
   const refreshToken = crypto.randomBytes(40).toString("hex");

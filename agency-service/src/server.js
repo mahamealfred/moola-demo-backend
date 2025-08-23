@@ -9,7 +9,7 @@ import {RedisStore} from "rate-limit-redis";
 import {RateLimiterRedis} from "rate-limiter-flexible";
 import Redis from "ioredis";
 import errorHandler from "./middleware/errorHandler.js";
-import routes from "./routes/agency-service.js";
+import routes from "./routes/banking-routes.js";
 
 dotenv.config()
 
@@ -67,7 +67,7 @@ const rateLimiter = new RateLimiterRedis({
 //app.use("/api/account/", sensitiveEndpointsLimiter);
 
 //Routes
-app.use("/api/agencybanking", routes);
+app.use("/api/agency", routes);
 
   //error handler
 app.use(errorHandler);

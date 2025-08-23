@@ -1,7 +1,8 @@
 import axios from "axios";
 import xml2js from 'xml2js';
 import logger from "../utils/logger.js";
-
+import dotenv from "dotenv";
+dotenv.config();
 
 export const clientRegistrationService = async (req, res, email, password, username, firstName, lastName, identity, phoneNumber) => {
   let data = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mem="http://members.webservices.cyclos.strohalm.nl/">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <mem:registerMember>\r\n         <!--Optional:-->\r\n         <params>\r\n            <groupId>25</groupId>\r\n            <username>${username}</username>\r\n            <name>${firstName + " " + lastName}</name>\r\n            <email>${email}</email>\r\n            <loginPassword>${password}</loginPassword>\r\n            <fields>\r\n               <internalName>Phone_User_ID</internalName>\r\n               <fieldId>8</fieldId>\r\n               <displayName>Phone/User ID</displayName>\r\n               <value>${phoneNumber}</value>\r\n               <!--Optional:-->\r\n               <internalName>national_id</internalName>\r\n               <fieldId>3</fieldId>\r\n               <displayName>National_Id</displayName>\r\n               <value>${identity}</value>\r\n            </fields>\r\n         </params>\r\n      </mem:registerMember>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>`;
@@ -9,7 +10,7 @@ export const clientRegistrationService = async (req, res, email, password, usern
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'https://test.ddin.rw/coretest/services/members',
+    url: process.env.CYCLOS_URL+'/services/members',
     headers: {
       'Content-Type': 'application/xml'
     },
@@ -132,7 +133,7 @@ export const agentRegistrationService = async (
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'https://test.ddin.rw/coretest/services/members',
+    url: process.env.CYCLOS_URL+'/services/members',
     headers: {
       'Content-Type': 'application/xml'
     },

@@ -1,0 +1,217 @@
+{
+  "agencyTariffs": [
+    {
+      "transaction_type": "DEPOSIT to ACCOUNT & PREPAID CARD",
+      "range_from": 1,
+      "range_to": 2000000,
+      "customer_charges": "FREE"
+    },
+    {
+      "transaction_type": "TOKEN CASH OUT",
+      "range_from": 1,
+      "range_to": 200000,
+      "customer_charges": "1%"
+    },
+    {
+      "transaction_type": "RAPID TRANSFER RECEIVED",
+      "range_from": 1,
+      "range_to": 1500000,
+      "customer_charges": "Free"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 1,
+      "range_to": 5000,
+      "customer_charges": "200"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 5001,
+      "range_to": 10000,
+      "customer_charges": "250"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 10001,
+      "range_to": 20000,
+      "customer_charges": "300"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 20001,
+      "range_to": 40000,
+      "customer_charges": "400"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 40001,
+      "range_to": 75000,
+      "customer_charges": "550"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 75001,
+      "range_to": 150000,
+      "customer_charges": "950"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 150001,
+      "range_to": 300000,
+      "customer_charges": "1750"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 300001,
+      "range_to": 500000,
+      "customer_charges": "2750"
+    }
+  ],
+  "billPayment": [
+    {
+      "transaction_type": "Water",
+      "customer_charges": 500
+    },
+    
+    {
+      "transaction_type": "tax",
+      "range_from": 1,
+      "range_to": 1000,
+      "customer_charges": 160
+    },
+    {
+      "transaction_type": "tax",
+      "range_from": 1001,
+      "range_to": 10000,
+      "customer_charges": 300
+    },
+    {
+      "transaction_type": "tax",
+      "range_from": 10001,
+      "range_to": 40000,
+      "customer_charges": 500
+    },
+    {
+      "transaction_type": "tax",
+      "range_from": 40001,
+      "range_to": 75000,
+      "customer_charges": 1000
+    },
+    {
+      "transaction_type": "tax",
+      "range_from": 75001,
+      "range_to": 150000,
+      "customer_charges": 1500
+    },
+    {
+      "transaction_type": "tax",
+      "range_from": 150001,
+      "range_to": 500000,
+      "customer_charges": 2000
+    },
+    {
+      "transaction_type": "tax",
+      "range_from": 500001,
+      "range_to": 1000000000,
+      "customer_charges": 3000
+    }
+  ],
+  "rapidTransferSendTariffs": [
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1,
+      "range_to": 57000,
+      "customer_charges": 4948.94
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 57001,
+      "range_to": 114000,
+      "customer_charges": 7178.62
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 114001,
+      "range_to": 171000,
+      "customer_charges": 8646.23
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 171001,
+      "range_to": 228000,
+      "customer_charges": 1293.67
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 228001,
+      "range_to": 285000,
+      "customer_charges": 13829.03
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 285001,
+      "range_to": 427500,
+      "customer_charges": 19154.21
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 427501,
+      "range_to": 570000,
+      "customer_charges": 25136.84
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 570001,
+      "range_to": 855000,
+      "customer_charges": 32879.33
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 855001,
+      "range_to": 997500,
+      "customer_charges": 33905.33
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 997501,
+      "range_to": 1140000,
+      "customer_charges": 42176.88
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1140001,
+      "range_to": 1425000,
+      "customer_charges": 53869.83
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1425001,
+      "range_to": 1995000,
+      "customer_charges": 65483.71
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1995001,
+      "range_to": 2280000,
+      "customer_charges": 72542.68
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 2280001,
+      "range_to": 2565000,
+      "customer_charges": 76876.68
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 2565001,
+      "range_to": 2850000,
+      "customer_charges": 84361.73
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 2850001,
+      "range_to": 3135000,
+      "customer_charges": 104248.93
+    }
+  ]
+}

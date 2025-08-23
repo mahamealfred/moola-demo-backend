@@ -1,0 +1,429 @@
+{
+  "agencyTariffs": [
+    {
+      "transaction_type": "DEPOSIT to ACCOUNT & PREPAID CARD",
+      "range_from": 1,
+      "range_to": 2000000,
+      "customer_charges": "FREE",
+      "ddin_commission": "0.25%"
+    },
+    {
+      "transaction_type": "TOKEN CASH OUT",
+      "range_from": 1,
+      "range_to": 200000,
+      "customer_charges": "1%",
+      "ddin_commission": "0.60%"
+    },
+    {
+      "transaction_type": "RAPID TRANSFER RECEIVED",
+      "range_from": 1,
+      "range_to": 1500000,
+      "customer_charges": "Free",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 1,
+      "range_to": 5000,
+      "customer_charges": "200",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 5001,
+      "range_to": 10000,
+      "customer_charges": "250",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 10001,
+      "range_to": 20000,
+      "customer_charges": "300",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 20001,
+      "range_to": 40000,
+      "customer_charges": "400",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 40001,
+      "range_to": 75000,
+      "customer_charges": "550",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 75001,
+      "range_to": 150000,
+      "customer_charges": "950",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 150001,
+      "range_to": 300000,
+      "customer_charges": "1750",
+      "ddin_commission": "60% of the Fee"
+    },
+    {
+      "transaction_type": "WITHDRAWAL",
+      "range_from": 300001,
+      "range_to": 500000,
+      "customer_charges": "2750",
+      "ddin_commission": "60% of the Fee"
+    }
+  ],
+  "billPayment": [
+    {
+      "transaction_type": "Water",
+      "fee_paid_by_customer": 500,
+      "ddin_commission": 300,
+      "bank_commission": 200
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 1,
+      "range_to": 1000,
+      "fee": 200,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 1001,
+      "range_to": 3000,
+      "fee": 300,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 3001,
+      "range_to": 5000,
+      "fee": 400,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 5001,
+      "range_to": 10000,
+      "fee": 500,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 10001,
+      "range_to": 20000,
+      "fee": 600,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 20001,
+      "range_to": 40000,
+      "fee": 700,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 40001,
+      "range_to": 75000,
+      "fee": 1000,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 75001,
+      "range_to": 150000,
+      "fee": 1600,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 150001,
+      "range_to": 300000,
+      "fee": 2000,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 300001,
+      "range_to": 500000,
+      "fee": 3000,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 500001,
+      "range_to": 1000000,
+      "fee": 4000,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 1000001,
+      "range_to": 3000000,
+      "fee": 5000,
+      "ddin_share": "70%",
+      "bank_share": "30%"
+    },
+    {
+      "transaction_type": "E_Tax",
+      "range_from": 1,
+      "range_to": 1000,
+      "customer_charges": 160
+    },
+    {
+      "transaction_type": "E_Tax",
+      "range_from": 1001,
+      "range_to": 10000,
+      "customer_charges": 300
+    },
+    {
+      "transaction_type": "E_Tax",
+      "range_from": 10001,
+      "range_to": 40000,
+      "customer_charges": 500
+    },
+    {
+      "transaction_type": "E_Tax",
+      "range_from": 40001,
+      "range_to": 75000,
+      "customer_charges": 1000
+    },
+    {
+      "transaction_type": "E_Tax",
+      "range_from": 75001,
+      "range_to": 150000,
+      "customer_charges": 1500
+    },
+    {
+      "transaction_type": "E_Tax",
+      "range_from": 150001,
+      "range_to": 500000,
+      "customer_charges": 2000
+    },
+    {
+      "transaction_type": "E_Tax",
+      "range_from": 500001,
+      "range_to": 1000000000,
+      "customer_charges": 3000
+    }
+  ],
+  "rapidTransferSendTariffs": [
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1,
+      "range_to": 57000,
+      "customer_fee": 4948.94,
+      "tva": 890.81,
+      "ddin_commission": 1544.07
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 57001,
+      "range_to": 114000,
+      "customer_fee": 7178.62,
+      "tva": 1292.15,
+      "ddin_commission": 2239.73
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 114001,
+      "range_to": 171000,
+      "customer_fee": 8646.23,
+      "tva": 1556.32,
+      "ddin_commission": 2697.62
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 171001,
+      "range_to": 228000,
+      "customer_fee": 1293.67,
+      "tva": 2194.86,
+      "ddin_commission": 3804.43
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 228001,
+      "range_to": 285000,
+      "customer_fee": 13829.03,
+      "tva": 2489.23,
+      "ddin_commission": 4314.66
+    },
+    {
+     "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 285001,
+      "range_to": 427500,
+      "customer_fee": 19154.21,
+      "tva": 3447.76,
+      "ddin_commission": 5976.11
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 427501,
+      "range_to": 570000,
+      "customer_fee": 25136.84,
+      "tva": 4524.63,
+      "ddin_commission": 7842.69
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 570001,
+      "range_to": 855000,
+      "customer_fee": 32879.33,
+      "tva": 5918.28,
+      "ddin_commission": 10258.35
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 855001,
+      "range_to": 997500,
+      "customer_fee": 33905.33,
+      "tva": 6102.96,
+      "ddin_commission": 10578.46
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 997501,
+      "range_to": 1140000,
+      "customer_fee": 42176.88,
+      "tva": 7591.84,
+      "ddin_commission": 13159.19
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1140001,
+      "range_to": 1425000,
+      "customer_fee": 53869.83,
+      "tva": 9696.57,
+      "ddin_commission": 16807.39
+    },
+    {
+       "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1425001,
+      "range_to": 1995000,
+      "customer_fee": 65483.71,
+      "tva": 11787.07,
+      "ddin_commission": 20430.92
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 1995001,
+      "range_to": 2280000,
+      "customer_fee": 72542.68,
+      "tva": 13057.68,
+      "ddin_commission": 22633.32
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 2280001,
+      "range_to": 2565000,
+      "customer_fee": 76876.68,
+      "tva": 13837.80,
+      "ddin_commission": 23985.52
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 2565001,
+      "range_to": 2850000,
+      "customer_fee": 84361.73,
+      "tva": 15185.11,
+      "ddin_commission": 26320.86
+    },
+    {
+      "transaction_type": "Rapid_Tansfer_Send",
+      "range_from": 2850001,
+      "range_to": 3135000,
+      "customer_fee": 104248.93,
+      "tva": 18764.81,
+      "ddin_commission": 32525.67
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 1,
+      "range_to": 1000,
+      "customer_charges": 200
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 1001,
+      "range_to": 3000,
+      "customer_charges": 300
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 3001,
+      "range_to": 5000,
+      "customer_charges": 400
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 5001,
+      "range_to": 10000,
+      "customer_charges": 500
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 10001,
+      "range_to": 20000,
+      "customer_charges": 600
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 20001,
+      "range_to": 40000,
+      "customer_charges": 700
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 40001,
+      "range_to": 75000,
+      "customer_charges": 1000
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 75001,
+      "range_to": 150000,
+      "customer_charges": 1600
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 150001,
+      "range_to": 300000,
+      "customer_charges": 2000
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 300001,
+      "range_to": 500000,
+      "customer_charges": 3000
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 500001,
+      "range_to": 1000000,
+      "customer_charges": 4000
+    },
+    {
+      "transaction_type": "Tax",
+      "range_from": 1000001,
+      "range_to": 3000000,
+      "customer_charges": 5000
+    }
+  ]
+}

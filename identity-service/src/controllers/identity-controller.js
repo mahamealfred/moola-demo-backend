@@ -122,7 +122,7 @@ const findUser = async (req, res) => {
     try {
         const userName = req.params.user
 
-        const response = await axios.get(`https://test.ddin.rw/coretest/rest/members/principal/${userName}`, {
+        const response = await axios.get(process.env.CYCLOS_URL+`rest/members/principal/${userName}`, {
             headers: {
                 Authorization: `Basic ${topupUserAuth}`,
                 'Content-Type': 'application/json',
