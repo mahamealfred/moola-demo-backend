@@ -7841,3 +7841,27 @@
 {"level":"info","message":"Received POST request to /v1/agency/thirdpartyagency/services/execute/bill-payment","service":"api-gateway","timestamp":"2025-08-24T08:11:20.474Z"}
 {"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-08-24T08:11:20.474Z"}
 {"level":"info","message":"Response received from Agency service: 200","service":"api-gateway","timestamp":"2025-08-24T08:11:25.588Z"}
+{"level":"info","message":"API Gateway is running on port 4000","service":"api-gateway","timestamp":"2025-08-24T11:31:14.562Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:4004","service":"api-gateway","timestamp":"2025-08-24T11:31:14.565Z"}
+{"level":"info","message":"Account service is running on port http://localhost:4010","service":"api-gateway","timestamp":"2025-08-24T11:31:14.566Z"}
+{"level":"info","message":"Agency service is running on port http://localhost:4001","service":"api-gateway","timestamp":"2025-08-24T11:31:14.566Z"}
+{"level":"info","message":"Client service is running on port http://localhost:4002","service":"api-gateway","timestamp":"2025-08-24T11:31:14.566Z"}
+{"level":"info","message":"Client service is running on port http://localhost:4003","service":"api-gateway","timestamp":"2025-08-24T11:31:14.567Z"}
+{"level":"info","message":"Redis Url redis://localhost:6379","service":"api-gateway","timestamp":"2025-08-24T11:31:14.567Z"}
+{"level":"info","message":"API Gateway is running on port 4000","service":"api-gateway","timestamp":"2025-08-24T11:31:23.350Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:4004","service":"api-gateway","timestamp":"2025-08-24T11:31:23.353Z"}
+{"level":"info","message":"Account service is running on port http://localhost:4010","service":"api-gateway","timestamp":"2025-08-24T11:31:23.354Z"}
+{"level":"info","message":"Agency service is running on port http://localhost:4001","service":"api-gateway","timestamp":"2025-08-24T11:31:23.354Z"}
+{"level":"info","message":"Client service is running on port http://localhost:4002","service":"api-gateway","timestamp":"2025-08-24T11:31:23.355Z"}
+{"level":"info","message":"Client service is running on port http://localhost:4003","service":"api-gateway","timestamp":"2025-08-24T11:31:23.355Z"}
+{"level":"info","message":"Redis Url redis://localhost:6379","service":"api-gateway","timestamp":"2025-08-24T11:31:23.356Z"}
+{"level":"info","message":"API Gateway is running on port 4000","service":"api-gateway","timestamp":"2025-08-24T11:46:02.371Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:4004","service":"api-gateway","timestamp":"2025-08-24T11:46:02.375Z"}
+{"level":"info","message":"Account service is running on port http://localhost:4010","service":"api-gateway","timestamp":"2025-08-24T11:46:02.376Z"}
+{"level":"info","message":"Agency service is running on port http://localhost:4001","service":"api-gateway","timestamp":"2025-08-24T11:46:02.376Z"}
+{"level":"info","message":"Client service is running on port http://localhost:4002","service":"api-gateway","timestamp":"2025-08-24T11:46:02.376Z"}
+{"level":"info","message":"Client service is running on port http://localhost:4003","service":"api-gateway","timestamp":"2025-08-24T11:46:02.377Z"}
+{"level":"info","message":"Redis Url redis://localhost:6379","service":"api-gateway","timestamp":"2025-08-24T11:46:02.377Z"}
+{"level":"info","message":"Received GET request to /v1/agency/accounts/all/accounts/info/balance","service":"api-gateway","timestamp":"2025-08-24T11:47:04.717Z"}
+{"level":"info","message":"Request body, undefined","service":"api-gateway","timestamp":"2025-08-24T11:47:04.718Z"}
+{"level":"info","message":"Response received from Identity service: 500","service":"api-gateway","timestamp":"2025-08-24T11:47:06.006Z"}

@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import CryptoJS from 'crypto-js';
 import { generateRequestId } from '../utils/helper.js';
 import { generateFDIAccessToken } from '../utils/helper.js';
-import { insertLogs } from '../utils/logsData.js';
+import { insertLogs, selectAllLogs, selectTransactionById } from '../utils/logsData.js';
 import { getBillerCharge } from '../utils/helper.js';
 import jwt from "jsonwebtoken";
 import { buildAirtimePayload, buildElecticityPayload, buildGenericBillerPayload, buildRRABillerPayload, buildStartimePayload } from '../utils/payloadBuilder.js';
@@ -497,12 +497,12 @@ export const getBillerList = async (req, res) => {
     if(result.length<1){
       return res.status(404).json({
         success: false,
-        message: 'Transaction not found. Please verify transaction ID details.',
+        message: 'Transactions not found',
       });
     }
      return res.status(200).json({
         success: true,
-        message: 'Transaction Details',
+        message: 'Transactions Details',
         data: result
       });
     

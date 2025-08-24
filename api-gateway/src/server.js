@@ -14,7 +14,7 @@ import  { validateToken } from "./middleware/authMiddleware.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 const redisClient = new Redis(process.env.REDIS_URL);
 
@@ -60,7 +60,7 @@ const proxyOptions = {
 
 //setting up proxy for our identity service
 app.use(
-  "/v1/auth",
+  "/v1/agency/auth",
   proxy(process.env.IDENTITY_SERVICE_URL, {
     ...proxyOptions,
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
@@ -78,7 +78,7 @@ app.use(
 );
 //setting up proxy for our account service
 app.use(
-  "/v1/accounts",
+  "/v1/agency/accounts",
   validateToken,
   proxy(process.env.IDENTITY_SERVICE_URL, {
     ...proxyOptions,

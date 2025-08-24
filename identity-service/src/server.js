@@ -68,11 +68,11 @@ const rateLimiter = new RateLimiterRedis({
   
 
   //apply this sensitiveEndpointsLimiter to our routes
-app.use("/api/auth/register", sensitiveEndpointsLimiter);
+app.use("/api/agency/auth/register", sensitiveEndpointsLimiter);
 
 //Routes
-app.use("/api/auth", routes);
-app.use("/api/accounts", accountRoutes);
+app.use("/api/agency/auth", routes);
+app.use("/api/agency/accounts", accountRoutes);
   //error handler
 app.use(errorHandler);
 

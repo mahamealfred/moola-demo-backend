@@ -70,7 +70,7 @@ export const getAccountsBalance = async (req, res) => {
         const userAuth = userTokenDetails.userAuth;
 
         const response = await axios.get(
-            process.env.CYCLOS_URL+'rest/accounts/info',
+            process.env.CYCLOS_URL+'/rest/accounts/info',
             {
                 headers: {
                     'Authorization': `Basic ${userAuth}`,
