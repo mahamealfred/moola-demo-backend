@@ -30,3 +30,16 @@
 {"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-08-23T17:30:05.559Z"}
 {"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-08-23T17:31:03.088Z"}
 {"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-08-23T17:37:18.757Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-08-27T13:39:32.951Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-08-27T13:40:23.738Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-08-27T13:41:27.886Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-08-27T14:25:19.463Z"}
+{"level":"error","message":"SyntaxError: Expected ',' or '}' after property value in JSON at position 103\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\api-gateway\\node_modules\\body-parser\\lib\\types\\json.js:77:19)\n    at C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\api-gateway\\node_modules\\body-parser\\lib\\read.js:123:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\api-gateway\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\api-gateway\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\client-app-micro-service\\api-gateway\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:514:28)\n    at endReadableNT (node:internal/streams/readable:1589:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","service":"api-gateway","timestamp":"2025-08-27T14:48:26.311Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:31:05.721Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:32:15.561Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:32:41.044Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:34:44.192Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:35:49.602Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:36:33.815Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:36:53.231Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-09-16T08:37:00.799Z"}

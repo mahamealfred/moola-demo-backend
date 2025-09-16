@@ -155,19 +155,22 @@ export const getCustomerDetails = async (req, res) => {
 
   logger.info("Initiating customer detail validation", { accountno });
 
-  const header = {
-    affcode: "ERW",
-    requestId: "A" + Date.now(),
-    sourceCode: "DDIN",
-    sourceIp: "10.8.245.9",
-    channel: "API",
-    requesttype: "VALIDATE",
-    agentcode: "20209387"
-  };
+  // Generate these variables first
+  const requestId = generateRequestId();
+  const sourceIp = req.ip || req.connection.remoteAddress; // Make sure to get sourceIp
+  const requestToken = generateRequestToken(AFFCODE, requestId, AGENT_CODE, SOURCE_CODE, sourceIp);
 
-  const tokenString = header.affcode + header.requestId + header.agentcode + header.sourceCode + header.sourceIp;
-  const requestToken = crypto.createHash('sha512').update(tokenString).digest('hex');
-  header.requestToken = requestToken;
+  // Then create the header object
+  const header = {
+    sourceCode: SOURCE_CODE,
+    affcode: AFFCODE,
+    requestId: requestId, // Use the already declared variable
+    agentcode: AGENT_CODE,
+    requestToken: requestToken, // Use the already declared variable
+    requesttype: 'VALIDATE',
+    sourceIp: sourceIp, // Make sure sourceIp is defined
+    channel: CHANNEL,
+  };
 
   const payload = {
     accountno,
@@ -212,116 +215,6 @@ export const getCustomerDetails = async (req, res) => {
       success: false,
       message: "Internal server error",
       error: error?.response?.data || error.message
-    });
-  }
-};
-
-//Openning Ecobank Account 
-export const openEcoBankAccount = async (req, res) => {
-  logger.info(`EcoBank Account Opening endpoint called.`);
-
-  const {
-    firstname,
-    lastname,
-    middlename,
-    dateOfBirth,
-    identityType,
-    identityNo,
-    idIssueDate,
-    idExpiryDate,
-    mobileNo,
-    email,
-    gender,
-    address,
-    countryCode
-  } = req.body;
-
-  const affcode = "EGH";
-  const agentcode = "32650551883";
-  const sourceCode = "DDIN";
-  const requestId = "A" + Date.now();
-  const sourceIp = "10.8.245.9";
-  const pin = "123456"; // should be stored securely
-  const ccy = "RWF";
-  const destinationAccount = "000000000000";
-  const amount = "0";
-
-  // Generate tokens
-  const requestToken = crypto
-    .createHash('sha512')
-    .update(affcode + requestId + agentcode + sourceCode + sourceIp)
-    .digest('hex');
-
-  const transactionToken = crypto
-    .createHash('sha512')
-    .update(sourceIp + requestId + agentcode + ccy + destinationAccount + amount + pin)
-    .digest('hex');
-
-  const transactionGuid = crypto.randomUUID();
-
-  const data = {
-    header: {
-      sourceCode,
-      affcode,
-      requestId,
-      agentcode,
-      requestToken,
-      requesttype: "ACCOUNT_OPENING",
-      sourceIp,
-      channel: "API"
-    },
-    firstname,
-    lastname,
-    middlename,
-    dateOfBirth,
-    identityType,
-    identityNo,
-    idIssueDate,
-    idExpiryDate,
-    mobileNo,
-    email,
-    gender,
-    address,
-    countryCode,
-    transactionGuid,
-    transactiontoken: transactionToken
-  };
-
-  const config = {
-    method: 'post',
-    maxBodyLength: Infinity,
-    url: 'https://mule.ecobank.com/agencybanking/services/thirdpartyagencybanking/createaccount',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    data
-  };
-
-  try {
-    const response = await axios.request(config);
-    logger.info("Account opening response received", response.data);
-
-    if (response.data?.header?.responsecode === "000") {
-      return res.status(200).json({
-        success: true,
-        message: "Account opened successfully",
-        data: response.data
-      });
-    }
-
-    logger.warn("Account opening failed", response.data?.header?.responsemessage);
-    return res.status(400).json({
-      success: false,
-      message: response.data?.header?.responsemessage,
-      data: response.data
-    });
-
-  } catch (e) {
-    logger.error("Account opening error", e?.response?.data || e.message);
-    return res.status(500).json({
-      success: false,
-      message: "Internal server error",
-      error: e?.response?.data || e.message
     });
   }
 };

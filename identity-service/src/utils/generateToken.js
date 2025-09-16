@@ -11,7 +11,7 @@ const generateTokens = async (token,id,name) => {
       name:name
     },
     process.env.JWT_SECRET,
-    { expiresIn: "120m" }
+    { expiresIn: "24h" }
   );
 
   const refreshToken = crypto.randomBytes(40).toString("hex");

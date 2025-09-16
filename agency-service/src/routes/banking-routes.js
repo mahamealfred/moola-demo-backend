@@ -1,7 +1,7 @@
 import express from "express";
 import { getCustomerDetails, getEcoBankAccountBalance, validateIdentity } from "../controllers/account-controller.js";
-import { executeBillerPayment, getAllAgentTransactions, getBillerDetails, getBillerList, getBillers, getBillPaymentFee, getTransactionsById, postBillPayment, ValidateBillerFdi, validateBillPayment } from "../controllers/payment-controller.js";
-import { openAccount } from "../controllers/banking-controller.js";
+import { executeBillerPayment, executeBillPaymentEcoBank, getAllAgentTransactions, getBillerDetails, getBillerList, getBillers, getBillPaymentFee, getTransactionsById,  validateBillEcobank, validateBiller } from "../controllers/payment-controller.js";
+import { executeEcoCashIn, executeEcoCashOut, openAccount } from "../controllers/banking-controller.js";
 import tariffs from "../utils/tariffs.json" assert { type: "json" };
 
 
@@ -9,21 +9,23 @@ import tariffs from "../utils/tariffs.json" assert { type: "json" };
 const router = express.Router();
 
 //Account Routes
-router.get("/eco/services/getbalance",getEcoBankAccountBalance);
-router.post("/eco/services/validateidentity",validateIdentity);
-router.post("/eco/services/getcustomerdetails",getCustomerDetails);
-router.post("/eco/services/account-openning",openAccount);
-
+router.get("/thirdpartyagency/services/getbalance",getEcoBankAccountBalance);
+router.post("/thirdpartyagency/services/validateidentity",validateIdentity);
+router.post("/thirdpartyagency/services/getcustomerdetails",getCustomerDetails);
+//banking
+router.post("/thirdpartyagency/services/account-openning",openAccount);
+router.post("/thirdpartyagency/services/execute/cash-in",executeEcoCashIn);
+router.post("/thirdpartyagency/services/execute/withdraw",executeEcoCashOut);
 
 //Bill validation and pyment routes
-router.post("/thirdpartyagency/services/validate/biller",ValidateBillerFdi);
+router.post("/thirdpartyagency/services/validate/biller",validateBiller);
 router.post("/thirdpartyagency/services/execute/bill-payment",executeBillerPayment);
 
-router.post("/eco/services/validate/biller",validateBillPayment);
+router.post("/eco/services/validate/biller",validateBillEcobank);
 router.post("/eco/services/biller-details",getBillerDetails);
 router.get("/eco/services/agent-billers",getBillers);
 router.post("/eco/services/bill-payment-fee",getBillPaymentFee);
-router.post("/eco/services/execute-bill-payment",postBillPayment);
+router.post("/eco/services/execute-bill-payment",executeBillPaymentEcoBank);
 
 
 //Get billers 
