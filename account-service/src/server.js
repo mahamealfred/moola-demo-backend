@@ -14,7 +14,7 @@ import routes from "./routes/account-service.js";
 dotenv.config()
 
 const app = express();
-const PORT = process.env.PORT || 3004
+const PORT = process.env.PORT || 4002
 
 
 

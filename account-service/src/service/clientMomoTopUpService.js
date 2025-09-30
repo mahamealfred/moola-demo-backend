@@ -1,10 +1,12 @@
 import axios from "axios";
 import logger from "../utils/logger.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const clientMomoTopUpService = async (req, res, amount, currencySymbol, tokenId) => {
   try {
     const response = await axios.post(
-      "https://test.ddin.rw/coretest/rest/payments/confirmMemberPayment",
+     process.env.CYCLOS_URL+"/rest/payments/confirmMemberPayment",
       {
         toMemberId: "136",
         amount: amount,

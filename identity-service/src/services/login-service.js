@@ -7,7 +7,6 @@ dotenv.config()
 const loginService = async (req, res, username, password) => {
     const token = Buffer.from(`${username}:${password}`).toString('base64');
 
-
     try {
         const response = await axios.get(process.env.CYCLOS_URL+'/rest/members/me', {
             headers: {
@@ -15,40 +14,70 @@ const loginService = async (req, res, username, password) => {
                 'Content-Type': 'application/json',
             },
         });
-        const id=response.data.id
-        const name=response.data.name
-        const { accessToken, refreshToken } = await generateTokens(token,id,name);
+        
+        const id = response.data.id;
+        const name = response.data.name;
+        
+        // Extract agent category and phone number from customValues
+        const customValues = response.data.customValues || [];
+        let agentCategory = null;
+        let phoneNumber = null;
 
+        customValues.forEach(field => {
+            if (field.internalName === 'agent_category') {
+                agentCategory = field.value;
+            }
+            if (field.internalName === 'Phone_User_ID') {
+                phoneNumber = field.value;
+            }
+        });
 
-        logger.warn("Successfully logged");
+        const { accessToken, refreshToken } = await generateTokens(token, id, name);
+
+        logger.warn("Successfully logged in", { 
+            userId: id, 
+            username: name, 
+            agentCategory, 
+            phoneNumber 
+        });
+
         return res.status(200).json({
             success: true,
-            data:{
-            id,
-            name:response.data.name,
-            email:response.data.email,
-            accessToken,
-            refreshToken
+            data: {
+                id,
+                name: response.data.name,
+                email: response.data.email,
+                category: agentCategory,
+                phoneNumber,
+                accessToken,
+                refreshToken
             }
-          
-
         });
     } catch (error) {
-        console.log("eeoeo:",error)
-        logger.error("Error while saving in Cyclos:");
-        if (error.response.status === 400) {
+        logger.error("Error during login:", {
+            error: error.response?.data || error.message,
+            username: username
+        });
+        
+        if (error.response?.status === 400) {
             return res.status(400).json({
                 success: false,
-                message: error.response?.data.errorDetails || "Invalid Credentials",
+                message: error.response?.data?.errorDetails || "Invalid Credentials",
+            });
+        }
+
+        if (error.response?.status === 401) {
+            return res.status(401).json({
+                success: false,
+                message: "Invalid username or password",
             });
         }
 
         return res.status(500).json({
             success: false,
-            message: "An unexpected error occurred while processing",
+            message: "An unexpected error occurred while processing login",
         });
     }
-
 };
 
 export { loginService };

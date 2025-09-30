@@ -636,7 +636,7 @@ export const executeBillerPaymentFDI = async (req, res) => {
                 electricityToken             // token
             );
             //call third-party endpoint
-            await fdiBillPayamentService(req,
+            return await  fdiBillPayamentService(req,
                 res,
                 response,
                 amount,

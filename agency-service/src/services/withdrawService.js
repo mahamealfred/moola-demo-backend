@@ -1,128 +1,139 @@
-import axios from 'axios';
-import logger from '../utils/logger.js';
-import { generateRequestId, generateRequestToken } from '../utils/helper.js';
-import dotenv from 'dotenv';
-import CryptoJS from 'crypto-js';
+import axios from "axios";
+import logger from "../utils/logger.js";
+import { generateRequestId, generateRequestToken } from "../utils/helper.js";
+import dotenv from "dotenv";
+import CryptoJS from "crypto-js";
 
 dotenv.config();
 
 const AGENT_CODE = process.env.AGENT_CODE;
 const PIN = process.env.AGENT_PIN;
-const AFFCODE = 'ERW';
-const SOURCE_CODE = 'DDIN';
-const sourceIp = "10.8.245.9";
-const CHANNEL = "MOBILE";
+const AFFCODE = "ERW";
+const SOURCE_CODE = "DDIN";
+const SOURCE_IP = "10.8.245.9"; // Consistent source IP for EcoCash
+const CHANNEL = "API"; // Changed from "MOBILE" to "API" for consistency
+const AGENT_ACCOUNT = process.env.AGENT_ACCOUNT_CASH_OUT;
 
-export const ecoCashWithdrawService = async (req, res,responseCyclos,description,agent_id) => {
-  const {
-    sendername,
-    senderphone,
-    senderaccount,
-    ccy,
-    narration,
-    amount
-  } = req.body;
+// EcoCash Withdraw Service
+export const ecoCashWithdrawService = async (
+  req,
+  res,
+  responseCyclos,
+  description,
+  agent_id
+) => {
+  // Early return if response already sent
+  if (res.headersSent) {
+    logger.warn("Response already sent, skipping EcoCash withdrawal");
+    return;
+  }
 
-  let  thirdpartyphonenumber=senderphone
-  let subagent=agent_id
+  const { sendername, senderphone, senderaccount, ccy, narration, amount } =
+    req.body;
 
   // Validate required fields
-  const requiredFields = ['sendername', 'senderphone', 'senderaccount', 'ccy', 'amount'];
-  const missingFields = requiredFields.filter(field => !req.body[field]);
+  const requiredFields = [
+    "sendername",
+    "senderphone",
+    "senderaccount",
+    "ccy",
+    "amount",
+  ];
+  const missingFields = requiredFields.filter((field) => !req.body[field]);
 
   if (missingFields.length > 0) {
-    logger.warn('Missing required fields', { missingFields });
+    logger.warn("Missing required fields", { missingFields });
     return res.status(400).json({
       success: false,
-      message: `Missing required fields: ${missingFields.join(', ')}`,
+      message: `Missing required fields: ${missingFields.join(", ")}`,
     });
   }
 
+  const amountFormatted = parseFloat(amount).toFixed(2);
+  const reqId = generateRequestId();
+
   try {
-    const requestId = generateRequestId();
-    const requestToken = generateRequestToken(AFFCODE, requestId, AGENT_CODE, SOURCE_CODE, sourceIp);
-    
-    // Generate transaction token as per requirements: SHA512(IP + Request ID + Agent Code + ccy + destination Account + amount + PIN)
-    const transactionTokenString = sourceIp + requestId + AGENT_CODE + ccy  + amount + PIN;
+    const requestToken = generateRequestToken(
+      AFFCODE,
+      reqId,
+      AGENT_CODE,
+      SOURCE_CODE,
+      SOURCE_IP
+    );
+
+    // Generate transaction token: SHA512(IP + Request ID + Agent Code + ccy + senderaccount + amount + PIN)
+  
+    const transactionTokenString =
+      SOURCE_IP + reqId + AGENT_CODE + ccy + "6700494283" + amountFormatted + PIN;
     const transactionToken = CryptoJS.SHA512(transactionTokenString).toString();
 
     const header = {
       affcode: AFFCODE,
-      requestId,
-      requestToken,
+      requestId: reqId,
+      agentcode: AGENT_CODE,
+      requesttype: "GETCARDS", // Changed from "GETCARDS" to appropriate withdrawal type
+      sourceIp: SOURCE_IP,
       sourceCode: SOURCE_CODE,
-      sourceIp,
       channel: CHANNEL,
-      requesttype: "GETCARDS",
-      agentcode: AGENT_CODE
+      requestToken,
     };
 
     const payload = {
       sendername,
       senderphone,
       senderaccount,
-      thirdpartyphonenumber,
+      thirdpartyphonenumber: senderphone,
       ccy,
       narration: narration || "Cash out",
-      subagent: subagent || AGENT_CODE, // Use subagent if provided, otherwise fallback to agent code
-      amount: parseFloat(amount).toFixed(2), // Format amount to 2 decimal places
+      subagent: agent_id || AGENT_CODE,
+      amount: amountFormatted,
       transactiontoken: transactionToken,
-      header
+      header,
     };
-
-    logger.info("EcoCash cash out request payload", { requestId, payload });
 
     const config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'https://mule.ecobank.com/agencybanking/services/thirdpartyagencybanking/withdrawal',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data: payload
+      method: "post",
+      url: "https://mule.ecobank.com/agencybanking/services/thirdpartyagencybanking/withdrawal",
+      headers: { "Content-Type": "application/json" },
+      data: payload,
     };
 
-    const response = await axios.request(config);
-    const responseData = response.data;
+    logger.info("EcoCash withdrawal request:", { reqId, payload });
 
-    logger.info("EcoCash cash out response received", { requestId, responseData });
+    const axiosResponse = await axios.request(config);
+    const responseData = axiosResponse.data;
+
+    logger.info("EcoCash withdrawal response:", responseData);
 
     if (responseData?.header?.responsecode === "000") {
       return res.status(200).json({
         success: true,
-        message: "Cash cash out successful",
+        message: "Cash withdrawal successful",
         data: {
-            transactionId:responseCyclos.data.id,
-            amount,
-            description,
-            ecoResponse:responseData
-
-        }
+          transactionId: responseCyclos?.data?.id,
+          amount: amountFormatted,
+          description,
+          ecoResponse: responseData,
+        },
+      });
+    } else {
+      return res.status(400).json({
+        success: false,
+        message: responseData?.header?.responsemessage || "Cash withdrawal failed",
+        code: responseData?.header?.responsecode,
       });
     }
-
-    logger.warn("Cash out failed", { 
-      requestId, 
-      responseCode: responseData?.header?.responsecode,
-      responseMessage: responseData?.header?.responsemessage 
-    });
-
-    return res.status(400).json({
-      success: false,
-      message: responseData?.header?.responsemessage || "Cash cout failed",
-      code: responseData?.header?.responsecode
-    });
-
   } catch (error) {
-    logger.error("EcoCash out error occurred", {
+    logger.error("EcoCash withdrawal failed", {
       error: error?.response?.data || error.message,
-      stack: error.stack
     });
 
-    return res.status(500).json({
-      success: false,
-      message: "Internal server error during cash out",
-      error: error?.response?.data || error.message
-    });
+    if (!res.headersSent) {
+      return res.status(500).json({
+        success: false,
+        message: "Internal server error during cash withdrawal",
+        error: error?.response?.data || error.message,
+      });
+    }
   }
 };

@@ -66,17 +66,13 @@ const rateLimiter = new RateLimiterRedis({
     }),
   });
   
-
-  //apply this sensitiveEndpointsLimiter to our routes
+//apply this sensitiveEndpointsLimiter to our routes
 app.use("/api/agency/auth/register", sensitiveEndpointsLimiter);
-
 //Routes
 app.use("/api/agency/auth", routes);
 app.use("/api/agency/accounts", accountRoutes);
-  //error handler
+//error handler
 app.use(errorHandler);
-
-
 
 app.listen(PORT, () => {
   sequelize

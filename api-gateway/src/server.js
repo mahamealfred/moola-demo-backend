@@ -80,7 +80,7 @@ app.use(
 app.use(
   "/v1/agency/accounts",
   validateToken,
-  proxy(process.env.IDENTITY_SERVICE_URL, {
+  proxy(process.env.ACCOUNT_SERVICE_URL, {
     ...proxyOptions,
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
       proxyReqOpts.headers["Content-Type"] = "application/json";
@@ -276,7 +276,7 @@ app.listen(PORT, () => {
     `Client service is running on port ${process.env.CLIENT_SERVICE_URL}`
   );
     logger.info(
-    `Client service is running on port ${process.env.TEST_SERVICE_URL}`
+    `Test service is running on port ${process.env.TEST_SERVICE_URL}`
   );
    logger.info(`Redis Url ${process.env.REDIS_URL}`);
 });
