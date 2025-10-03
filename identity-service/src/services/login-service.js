@@ -32,11 +32,11 @@ const loginService = async (req, res, username, password) => {
             }
         });
 
-        const { accessToken, refreshToken } = await generateTokens(token, id, name);
+        const { accessToken, refreshToken } = await generateTokens(token, id, name,username);
 
         logger.warn("Successfully logged in", { 
             userId: id, 
-            username: name, 
+            name: name, 
             agentCategory, 
             phoneNumber 
         });

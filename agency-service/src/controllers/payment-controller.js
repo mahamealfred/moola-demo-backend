@@ -778,17 +778,28 @@ export const getAllAgentTransactions = async (req, res) => {
     try {
         const authHeader = req.headers["authorization"];
         const token = authHeader && authHeader.split(" ")[1];
-        const userTokenDetails = await new Promise((resolve, reject) => {
-            jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-                if (err) {
-                    logger.warn("Invalid token!");
-                    return reject("Invalid token");
-                }
-                resolve(user);
-            });
-        });
+        let id=0
 
-        const id = userTokenDetails.id;
+try {
+        const userTokenDetails = await new Promise((resolve, reject) =>
+            jwt.verify(token, process.env.JWT_SECRET, (err, user) =>
+                err ? reject(err) : resolve(user)
+            )
+        );
+id = userTokenDetails.id;
+      
+    } catch (err) {
+        logger.warn("Invalid token", { error: err.message });
+        return res.status(401).json({
+            success: false,
+            message: "Invalid or expired token. Please log in again.",
+        });
+    }
+
+
+       
+
+       
 
         const result = await selectAllLogs(id);
         if (result.length < 1) {
@@ -808,7 +819,7 @@ export const getAllAgentTransactions = async (req, res) => {
         return res.status(500).json({
             success: false,
             message: "We're unable to complete the transaction right now. Please try again later.",
-            error: coreError || error.message,
+            error:  error.message,
         });
     }
 }

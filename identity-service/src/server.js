@@ -10,7 +10,6 @@ import {RateLimiterRedis} from "rate-limiter-flexible";
 import Redis from "ioredis";
 import errorHandler from "./middleware/errorHandler.js";
 import routes from "./routes/identity-service.js";
-import accountRoutes from "./routes/account-service.js";
 import sequelize from "./db/config.js";
 
 dotenv.config()
@@ -70,7 +69,7 @@ const rateLimiter = new RateLimiterRedis({
 app.use("/api/agency/auth/register", sensitiveEndpointsLimiter);
 //Routes
 app.use("/api/agency/auth", routes);
-app.use("/api/agency/accounts", accountRoutes);
+
 //error handler
 app.use(errorHandler);
 

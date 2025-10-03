@@ -94,6 +94,7 @@ export const selectAllLogs = async (id) => {
         amount: Number(row.amount),
         formattedAmount,
         customerCharge: Number(row.customer_charge),
+        token: row.token,
         status:  row.status,
         description: row.description,
         serviceName: row.service_name,

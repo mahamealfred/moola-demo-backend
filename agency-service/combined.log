@@ -4268,3 +4268,184 @@
 {"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-09-30T17:57:53.627Z"}
 {"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-09-30T17:57:53.628Z"}
 {"data":{"id":179927,"pending":false},"level":"info","message":"Biller payment response from core system","service":"agency-service","status":200,"timestamp":"2025-09-30T17:57:54.652Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-09-30T19:54:27.895Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T08:52:28.659Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transaction/details/2512","service":"agency-service","timestamp":"2025-10-03T09:13:46.600Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:13:46.602Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:14:11.525Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:14:11.527Z"}
+{"level":"warn","message":"Invalid token!","service":"agency-service","timestamp":"2025-10-03T09:14:11.541Z"}
+{"level":"error","message":"ReferenceError: coreError is not defined\n    at getAllAgentTransactions (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/xpay-core-api/agency-service/src/controllers/payment-controller.js:811:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","service":"agency-service","timestamp":"2025-10-03T09:14:11.545Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:14:28.963Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:14:28.964Z"}
+{"level":"warn","message":"Invalid token!","service":"agency-service","timestamp":"2025-10-03T09:14:28.972Z"}
+{"level":"error","message":"ReferenceError: coreError is not defined\n    at getAllAgentTransactions (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/xpay-core-api/agency-service/src/controllers/payment-controller.js:811:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","service":"agency-service","timestamp":"2025-10-03T09:14:28.974Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:17:48.098Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:17:55.205Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:17:55.207Z"}
+{"level":"warn","message":"Invalid token!","service":"agency-service","timestamp":"2025-10-03T09:17:55.223Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:19:54.912Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:19:57.911Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:20:09.766Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:20:19.429Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:20:24.931Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:20:32.500Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:20:40.287Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:20:42.648Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:21:08.562Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:21:13.479Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:21:14.764Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:21:29.014Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:21:29.015Z"}
+{"error":"jwt expired","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-03T09:21:29.032Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:21:47.425Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:21:47.427Z"}
+{"error":"jwt malformed","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-03T09:21:47.431Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:21:49.497Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:21:49.498Z"}
+{"error":"jwt malformed","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-03T09:21:49.501Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:22:11.587Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:22:11.588Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-03T09:23:30.623Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T09:23:34.110Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T09:23:34.111Z"}
+{"level":"info","message":"Received POST request to /api/agency/self-serve/withdrawals/commissions","service":"agency-service","timestamp":"2025-10-03T10:38:55.026Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T10:38:55.036Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T11:12:21.793Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T11:12:21.803Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T11:33:45.558Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T11:33:45.561Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T11:34:33.053Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T11:34:33.058Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T11:55:42.691Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T11:55:42.693Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T11:59:38.301Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T11:59:38.305Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T11:59:38.738Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T11:59:38.739Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:00:08.247Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:00:08.249Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:00:10.803Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:00:10.804Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:00:35.058Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:00:35.059Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:00:35.086Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:00:35.087Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:00:37.040Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:00:37.042Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:00:54.613Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:00:54.614Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:01:17.676Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:01:17.677Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:01:54.653Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:01:54.710Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:02:29.953Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:02:29.954Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:26.138Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:26.139Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:26.171Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:26.172Z"}
+{"level":"info","message":"Received GET request to /api/agency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:26.202Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:26.204Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:36.543Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:36.544Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:36.565Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:36.566Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:36.584Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:36.585Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:36.599Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:36.599Z"}
+{"level":"info","message":"Received GET request to /api/agency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:36.613Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:36.614Z"}
+{"level":"info","message":"Received GET request to /api/agency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:06:36.626Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:06:36.627Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:07:13.115Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:07:13.116Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:07:13.155Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:07:13.157Z"}
+{"level":"info","message":"Received GET request to /api/agency/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:07:13.182Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:07:13.182Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:08:53.400Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:08:53.401Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:08:53.431Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:08:53.431Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:09:45.455Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:09:45.455Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:09:45.488Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:09:45.490Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:09:57.308Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:09:57.309Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:09:57.336Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:09:57.337Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:15:23.151Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:15:23.152Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:15:52.262Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:15:52.262Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:15:52.278Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:15:52.279Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:39:56.351Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:39:56.354Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:39:56.381Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:39:56.382Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:42:47.938Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:42:47.939Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:42:47.979Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:42:47.979Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:44:00.828Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:44:00.830Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:44:00.855Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:44:00.855Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:45:14.313Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:45:14.314Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:45:14.343Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:45:14.343Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:50:15.826Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:50:15.827Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:50:15.862Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:50:15.863Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:51:08.567Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:51:08.572Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:51:08.598Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:51:08.598Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:53:17.081Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:53:17.083Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T12:53:17.110Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T12:53:17.115Z"}
+{"level":"info","message":"Received PUT request to /api/agency/profile/update","service":"agency-service","timestamp":"2025-10-03T13:23:06.318Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T13:23:06.322Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T13:27:04.296Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T13:27:04.296Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T13:27:04.338Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T13:27:04.339Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T14:40:19.705Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T14:40:19.707Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T14:40:19.730Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T14:40:19.730Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T15:36:48.166Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T15:36:48.168Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T15:36:48.187Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T15:36:48.187Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:06.103Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:06.106Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:06.148Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:06.149Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:28.417Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:28.417Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:28.432Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:28.433Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:37.817Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:37.817Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:37.831Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:37.832Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:52.700Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:52.700Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:09:52.712Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:09:52.712Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:11:32.610Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:11:32.613Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:11:32.639Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:11:32.643Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:13:32.551Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:13:32.552Z"}
+{"level":"info","message":"Received GET request to /api/agency/thirdpartyagency/services/transactions/history","service":"agency-service","timestamp":"2025-10-03T19:13:32.569Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-03T19:13:32.569Z"}

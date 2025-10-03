@@ -4892,3 +4892,98 @@
 {"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-09-30T19:51:06.757Z"}
 {"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-09-30T19:51:10.059Z"}
 {"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-09-30T19:51:13.004Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-09-30T19:51:20.711Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-09-30T19:54:27.480Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T08:51:13.025Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T08:56:35.458Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T08:56:35.459Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T08:56:35.464Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T08:56:36.313Z","userId":4,"username":"Live Agent UAT"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:03:38.745Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:32:54.743Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:33:12.208Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:33:14.293Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:33:33.494Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:33:36.186Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:33:44.273Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:33:46.447Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T09:34:07.322Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T09:34:07.324Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T09:34:07.332Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T09:34:08.278Z","userId":4}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-03T09:38:03.961Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T09:38:57.061Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T09:38:57.062Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T09:38:57.072Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T09:38:57.781Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/refresh-token","service":"identity-service","timestamp":"2025-10-03T09:39:53.177Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T09:39:53.178Z"}
+{"level":"info","message":"Refresh token endpoint hit...","service":"identity-service","timestamp":"2025-10-03T09:39:53.182Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/refresh-token","service":"identity-service","timestamp":"2025-10-03T09:47:10.411Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T09:47:10.413Z"}
+{"level":"info","message":"Refresh token endpoint hit...","service":"identity-service","timestamp":"2025-10-03T09:47:10.416Z"}
+{"level":"warn","message":"Invalid refresh token provided","service":"identity-service","timestamp":"2025-10-03T09:47:10.430Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T09:47:25.567Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T09:47:25.568Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T09:47:25.572Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T09:47:26.267Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T10:39:53.792Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T10:39:53.798Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T10:39:53.812Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T10:39:54.480Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T11:05:35.740Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T11:05:35.741Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T11:05:35.746Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-10-03T11:05:36.359Z","username":"liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T11:05:55.296Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T11:05:55.297Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T11:05:55.299Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T11:05:55.936Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T11:37:12.297Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T11:37:12.302Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T11:37:12.316Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T11:37:12.984Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T11:41:28.924Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T11:41:28.925Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T11:41:28.931Z"}
+{"agentCategory":"Corporate","level":"warn","message":"Successfully logged in","name":"DDIN CORPORATE USER","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T11:41:29.687Z","userId":277}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T12:08:36.599Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T12:08:36.612Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T12:08:36.625Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-10-03T12:08:37.536Z","username":"liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T12:08:46.762Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T12:08:46.763Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T12:08:46.765Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T12:08:47.477Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T12:42:33.322Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T12:42:33.329Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T12:42:33.348Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-10-03T12:42:34.156Z","username":"liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T12:42:43.207Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T12:42:43.208Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T12:42:43.210Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T12:42:43.942Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T13:10:20.113Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T13:10:20.119Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T13:10:20.127Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-10-03T13:10:20.808Z","username":"liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T13:10:59.011Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T13:10:59.012Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T13:10:59.014Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T13:10:59.944Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T14:39:15.604Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T14:39:15.613Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T14:39:15.801Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-10-03T14:39:16.627Z","username":"liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T14:39:27.015Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T14:39:27.015Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T14:39:27.016Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T14:39:27.705Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T19:08:38.499Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T19:08:38.501Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T19:08:38.504Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T19:08:41.305Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-10-03T20:13:16.876Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-03T20:13:16.880Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-03T20:13:16.885Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-03T20:13:17.584Z","userId":4}
