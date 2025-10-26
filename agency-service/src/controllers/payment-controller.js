@@ -36,7 +36,7 @@ export const validateBiller = async (req, res) => {
     // Billers that go through FDI
     const fdiBillers = ['tax', 'airtime', 'paytv', 'electricity'];
     // Billers that go through FDI
-    const ecoBillers = ['RRA', 'RWANDA_WASAC', 'IREMBOPAY', 'EUCL_ERW','ELEC', 'STTV', 'RNIT', 'GTP-LOAD'];
+    const ecoBillers = ['RRA', 'RWANDA_WASAC', 'IREMBOPAY', 'EUCL_ERW', 'ELEC', 'STTV', 'RNIT', 'GTP-LOAD'];
     try {
         if (fdiBillers.includes(billerCode)) {
 
@@ -297,7 +297,7 @@ export const executeBillerPayment = async (req, res) => {
     // Billers that go through FDI
     const fdiBillers = ['tax', 'airtime', 'paytv', 'electricity'];
     // Billers that go through FDI
-    const ecoBillers = ['RRA', 'RWANDA_WASAC','EUCL_ERW', 'IREMBOPAY', 'ELEC', 'STTV', 'RNIT', 'GTP-LOAD'];
+    const ecoBillers = ['RRA', 'RWANDA_WASAC', 'EUCL_ERW', 'IREMBOPAY', 'ELEC', 'STTV', 'RNIT', 'GTP-LOAD'];
     try {
         if (fdiBillers.includes(billerCode)) {
 
@@ -392,27 +392,27 @@ export const executeBillPaymentEcoBank = async (req, res) => {
     }
 
     const payload = billerCode === "ELEC"
-                ? buildEcobankElecticityPayload({ amount, requestId, ccy, customerId, clientPhone })
-                :billerCode === "EUCL_ERW"
-                ? buildEcobankElecticityPayload({ amount, requestId, ccy, customerId, clientPhone })
-                : billerCode === "STTV"
-                    ? buildEcobankStartimePayload({ amount, requestId, ccy, customerId, clientPhone })
-                                : billerCode === "RWANDA_WASAC"
+        ? buildEcobankElecticityPayload({ amount, requestId, ccy, customerId, clientPhone })
+        : billerCode === "EUCL_ERW"
+            ? buildEcobankElecticityPayload({ amount, requestId, ccy, customerId, clientPhone })
+            : billerCode === "STTV"
+                ? buildEcobankStartimePayload({ amount, requestId, ccy, customerId, clientPhone })
+                : billerCode === "RWANDA_WASAC"
                     ? buildEcobankWasacPayload({ amount, requestId, ccy, customerId, clientPhone })
                     : billerCode === "IREMBOPAY"
-                    ? buildEcobankIremboPayPayload({ amount, requestId, ccy, customerId, clientPhone })
-                     : billerCode === "RNIT"
-                    ? buildEcobankRNITPayPayload({ amount, requestId, ccy, customerId, clientPhone })
-                    : billerCode === "RRA"
-                        ? buildRRAEcobankBillerPayload({ amount, requestId, ccy, customerId, clientPhone, netAmount })
-                        : buildGenericBillerPayload({
-                            amount,
-                            requestId,
-                            ccy,
-                            customerId,
-                            clientPhone,
-                            billerCode,
-                        });
+                        ? buildEcobankIremboPayPayload({ amount, requestId, ccy, customerId, clientPhone })
+                        : billerCode === "RNIT"
+                            ? buildEcobankRNITPayPayload({ amount, requestId, ccy, customerId, clientPhone })
+                            : billerCode === "RRA"
+                                ? buildRRAEcobankBillerPayload({ amount, requestId, ccy, customerId, clientPhone, netAmount })
+                                : buildGenericBillerPayload({
+                                    amount,
+                                    requestId,
+                                    ccy,
+                                    customerId,
+                                    clientPhone,
+                                    billerCode,
+                                });
 
     const config = {
         method: "post",
@@ -424,7 +424,7 @@ export const executeBillPaymentEcoBank = async (req, res) => {
         },
         data: JSON.stringify(payload),
     };
-   
+
 
     try {
         const cyclosResp = await axios.request(config);
@@ -436,7 +436,7 @@ export const executeBillPaymentEcoBank = async (req, res) => {
 
         if (cyclosResp.status === 200) {
             let electricityToken = null
-            
+
             await insertLogs(
                 cyclosResp.data.id,            // transactionId
                 null,                   // thirdpart_status
@@ -451,7 +451,7 @@ export const executeBillPaymentEcoBank = async (req, res) => {
                 customerId,                  // customerId
                 electricityToken             // token
             );
-      
+
             // Call ecobank service and return its result
             return await ecobankBillPayamentService(
                 req,
@@ -563,7 +563,7 @@ export const executeBillerPaymentFDI = async (req, res) => {
         logger.warn("Invalid token", { error: err.message });
         return res.status(401).json({
             success: false,
-            message: "Invalid or expired token. Please log in again.",
+            message: "Invalid or expired token. Please log in again. h",
         });
     }
 
@@ -636,7 +636,7 @@ export const executeBillerPaymentFDI = async (req, res) => {
                 electricityToken             // token
             );
             //call third-party endpoint
-            return await  fdiBillPayamentService(req,
+            return await fdiBillPayamentService(req,
                 res,
                 response,
                 amount,
@@ -778,28 +778,28 @@ export const getAllAgentTransactions = async (req, res) => {
     try {
         const authHeader = req.headers["authorization"];
         const token = authHeader && authHeader.split(" ")[1];
-        let id=0
+        let id = 0
 
-try {
-        const userTokenDetails = await new Promise((resolve, reject) =>
-            jwt.verify(token, process.env.JWT_SECRET, (err, user) =>
-                err ? reject(err) : resolve(user)
-            )
-        );
-id = userTokenDetails.id;
-      
-    } catch (err) {
-        logger.warn("Invalid token", { error: err.message });
-        return res.status(401).json({
-            success: false,
-            message: "Invalid or expired token. Please log in again.",
-        });
-    }
+        try {
+            const userTokenDetails = await new Promise((resolve, reject) =>
+                jwt.verify(token, process.env.JWT_SECRET, (err, user) =>
+                    err ? reject(err) : resolve(user)
+                )
+            );
+            id = userTokenDetails.id;
+
+        } catch (err) {
+            logger.warn("Invalid token", { error: err.message });
+            return res.status(401).json({
+                success: false,
+                message: "Invalid or expired token. Please log in again.",
+            });
+        }
 
 
-       
 
-       
+
+
 
         const result = await selectAllLogs(id);
         if (result.length < 1) {
@@ -819,20 +819,10 @@ id = userTokenDetails.id;
         return res.status(500).json({
             success: false,
             message: "We're unable to complete the transaction right now. Please try again later.",
-            error:  error.message,
+            error: error.message,
         });
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

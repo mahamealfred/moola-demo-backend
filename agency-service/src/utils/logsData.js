@@ -14,8 +14,8 @@ export const insertLogs = async (
   status,
   service_name,
   trxId,
-  customerId ,
-  token 
+  customerId,
+  token
 ) => {
   try {
     await TransactionStatus.create({
@@ -39,10 +39,10 @@ export const insertLogs = async (
 };
 
 // Update log entry
-export const updateLogs = async (transactionId, status, thirdpart_status,token) => {
+export const updateLogs = async (transactionId, status, thirdpart_status, token) => {
   try {
     const [updated] = await TransactionStatus.update(
-      { transactionId, thirdpart_status,status,token },
+      { transactionId, thirdpart_status, status, token },
       { where: { transactionId: transactionId } }
     );
     if (updated > 0) {
@@ -95,7 +95,7 @@ export const selectAllLogs = async (id) => {
         formattedAmount,
         customerCharge: Number(row.customer_charge),
         token: row.token,
-        status:  row.status,
+        status: row.status,
         description: row.description,
         serviceName: row.service_name,
       };
@@ -145,11 +145,11 @@ export const selectTransactionById = async (id) => {
       formattedProcessDate: formattedDate,
       amount: Number(result.amount),
       formattedAmount,
-      customerCharge:Number(result.customer_charge),
-      status:  result.status,
+      customerCharge: Number(result.customer_charge),
+      status: result.status,
       description: result.description,
-      serviceName:result.serviceName
-     
+      serviceName: result.serviceName
+
     };
   } catch (error) {
     console.error("Error fetching logs:", error.message);

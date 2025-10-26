@@ -3,6 +3,7 @@ import { getCustomerDetails, getEcoBankAccountBalance, validateExpressCashToken,
 import { executeBillerPayment, executeBillPaymentEcoBank, getAllAgentTransactions, getBillerDetails, getBillerList, getBillers, getBillPaymentFee, getTransactionsById,  validateBillEcobank, validateBiller } from "../controllers/payment-controller.js";
 import { executeEcoCashIn, executeEcoCashOut, executeEcoCashOutExpressCashToken, openAccount } from "../controllers/banking-controller.js";
 import { loadTariffs } from "../utils/loadTariffs.js";
+import {  ddinPindoBulkSmsPaymentForCorporate, ddinPindoSingleSmsPaymentForCorporate } from "../controllers/smsController.js";
 
 
 
@@ -23,6 +24,9 @@ router.post("/thirdpartyagency/services/execute/redeemtoken",executeEcoCashOutEx
 //Bill validation and pyment routes
 router.post("/thirdpartyagency/services/validate/biller",validateBiller);
 router.post("/thirdpartyagency/services/execute/bill-payment",executeBillerPayment);
+//Bulk -sms
+router.post("/thirdpartyagency/services/execute/bulk-sms",ddinPindoBulkSmsPaymentForCorporate);
+router.post("/thirdpartyagency/services/execute/single-sms",ddinPindoSingleSmsPaymentForCorporate);
 
 router.post("/eco/services/validate/biller",validateBillEcobank);
 router.post("/eco/services/biller-details",getBillerDetails);
@@ -33,8 +37,7 @@ router.post("/eco/services/execute-bill-payment",executeBillPaymentEcoBank);
 
 //Get billers 
 router.get("/thirdpartyagency/services/billers/details",getBillerList);
-//Bulk -sms
-//router.post("/thirdpartyagency/services/execute/bulk-sms",bulkSmsPayment);
+
 
 //get transactions details
 router.get("/thirdpartyagency/services/transaction/details/:id",getTransactionsById);

@@ -171,7 +171,7 @@ app.use(
     },
     userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
       logger.info(
-        `Response received from Test service: ${proxyRes.statusCode}`
+        `Response received from Agency service: ${proxyRes.statusCode}`
       );
 
       return proxyResData;
@@ -194,7 +194,7 @@ app.use(
     },
     userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
       logger.info(
-        `Response received from Test service: ${proxyRes.statusCode}`
+        `Response received from Agency service: ${proxyRes.statusCode}`
       );
 
       return proxyResData;

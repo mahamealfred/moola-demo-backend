@@ -5125,3 +5125,392 @@
 {"header":{"requestId":"A336211879522023","responsecode":"400","responsemessage":"AUTHENTICATION_FAILED"},"level":"info","message":"EcoCash withdrawal response:","service":"agency-service","timestamp":"2025-10-16T12:45:26.287Z"}
 {"level":"error","message":"EcoCashOut failed","service":"agency-service","timestamp":"2025-10-16T12:45:26.290Z"}
 {"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:700:11)\n    at ServerResponse.header (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:684:10)\n    at ServerResponse.send (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:161:12)\n    at ServerResponse.json (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:250:15)\n    at executeEcoCashOutExpressCashToken (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/xpay-core-api/agency-service/src/controllers/banking-controller.js:530:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","service":"agency-service","timestamp":"2025-10-16T12:45:26.291Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-16T13:01:21.168Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/redeemtoken","service":"agency-service","timestamp":"2025-10-16T13:01:22.265Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-16T13:01:22.266Z"}
+{"data":{"id":2726,"pending":false},"level":"info","message":"EcoCashOut response from core system","service":"agency-service","status":200,"timestamp":"2025-10-16T13:01:23.019Z"}
+{"level":"info","message":"EcoCash withdrawal request:","payload":{"amount":"10000.00","currency":"RWF","header":{"affcode":"ERW","agentcode":"32650551883","channel":"API","requestId":"A563965516650499","requestToken":"fbceb2beaf33ac3b6f53511a9993aabc65aefe56de2686c88722511da591558a2e962512c9c218dc789fe70c80db740ce71cc40226eaaa507cd3fdbcd784a869","requesttype":"TOKEN_CASH_OUT","sourceCode":"DDIN","sourceIp":"10.8.245.9"},"receivername":"Patrick","subagent":58,"thirdpartyphonenumber":"+250246108878","token":"64426577","transactiontoken":"c0a461c0a5e0d555358c24ffab68edc24bae181e8185250781d324692dbbc9e8378451d0b212ca51b2e0f45f45afbf623ebc255710f7855d14dc51eb804a3c1e"},"reqId":"A563965516650499","service":"agency-service","timestamp":"2025-10-16T13:01:23.025Z"}
+{"cbareferenceno":"A563965516650499","externalrefno":"A563965516650499","header":{"requestId":"A563965516650499","responsecode":"000","responsemessage":"Success"},"level":"info","message":"EcoCash withdrawal response:","service":"agency-service","timestamp":"2025-10-16T13:02:00.211Z"}
+{"level":"error","message":"EcoCashOut failed","service":"agency-service","timestamp":"2025-10-16T13:02:00.217Z"}
+{"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:700:11)\n    at ServerResponse.header (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:684:10)\n    at ServerResponse.send (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:161:12)\n    at ServerResponse.json (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:250:15)\n    at executeEcoCashOutExpressCashToken (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/xpay-core-api/agency-service/src/controllers/banking-controller.js:530:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","service":"agency-service","timestamp":"2025-10-16T13:02:00.222Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/redeemtoken","service":"agency-service","timestamp":"2025-10-16T13:02:03.857Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-16T13:02:03.858Z"}
+{"data":{"id":2727,"pending":false},"level":"info","message":"EcoCashOut response from core system","service":"agency-service","status":200,"timestamp":"2025-10-16T13:02:04.515Z"}
+{"level":"info","message":"EcoCash withdrawal request:","payload":{"amount":"10000.00","currency":"RWF","header":{"affcode":"ERW","agentcode":"32650551883","channel":"API","requestId":"A294902094442102","requestToken":"ee95187dd55a98912f5c69b497802d0bcfc3191a8fa6fb34a2a33732a8678954fb9ecbb2e6f1585fe50ebcf95b37ca3179b651585c113ec67dda871cf59e2ceb","requesttype":"TOKEN_CASH_OUT","sourceCode":"DDIN","sourceIp":"10.8.245.9"},"receivername":"Patrick","subagent":58,"thirdpartyphonenumber":"+250246108878","token":"64426577","transactiontoken":"17316b8e44ae742cb9c5b76708591db5a0964185ec9759fc81cbdd0fdbc73cfba9d0dfce203d3b5d94c0baa680bd99af681b10a53af08818b5d603d2aad623d8"},"reqId":"A294902094442102","service":"agency-service","timestamp":"2025-10-16T13:02:04.517Z"}
+{"header":{"requestId":"A294902094442102","responsecode":"418","responsemessage":"INVALID_CUSTOMER_TOKEN"},"level":"info","message":"EcoCash withdrawal response:","service":"agency-service","timestamp":"2025-10-16T13:02:07.245Z"}
+{"level":"error","message":"EcoCashOut failed","service":"agency-service","timestamp":"2025-10-16T13:02:07.247Z"}
+{"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:700:11)\n    at ServerResponse.header (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:684:10)\n    at ServerResponse.send (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:161:12)\n    at ServerResponse.json (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:250:15)\n    at executeEcoCashOutExpressCashToken (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/xpay-core-api/agency-service/src/controllers/banking-controller.js:530:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","service":"agency-service","timestamp":"2025-10-16T13:02:07.250Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/validate/cash-token","service":"agency-service","timestamp":"2025-10-16T13:04:30.879Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-16T13:04:30.880Z"}
+{"amount":10000,"cashToken":"66308681","level":"info","message":"Initiating customer detail validation","service":"agency-service","timestamp":"2025-10-16T13:04:30.884Z"}
+{"level":"info","message":"Sending request to Ecobank API","requestId":"A718588290027243","service":"agency-service","timestamp":"2025-10-16T13:04:30.885Z"}
+{"ccy":"RWF","charge":0,"header":{"requestId":"A718588290027243","responsecode":"000","responsemessage":"SUCCESS"},"level":"info","message":"Received response from Ecobank API","sendername":"ECOBANK","service":"agency-service","timestamp":"2025-10-16T13:04:41.812Z","tokenstatus":"PENDING"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/redeemtoken","service":"agency-service","timestamp":"2025-10-16T13:05:10.826Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-16T13:05:10.827Z"}
+{"data":{"id":2728,"pending":false},"level":"info","message":"EcoCashOut response from core system","service":"agency-service","status":200,"timestamp":"2025-10-16T13:05:11.504Z"}
+{"level":"info","message":"EcoCash withdrawal request:","payload":{"amount":"10000.00","currency":"RWF","header":{"affcode":"ERW","agentcode":"32650551883","channel":"API","requestId":"A159968714598390","requestToken":"6717e6e5e2fa96a93c75a9519789629d23e8fc8cf88d926898b8d1b626ebf9aac97c36706fd8666017e7de7b9bf07ec4f30d5d9adff740af83c1a8d4b00c14dd","requesttype":"TOKEN_CASH_OUT","sourceCode":"DDIN","sourceIp":"10.8.245.9"},"receivername":"Algfred Mahame","subagent":58,"thirdpartyphonenumber":"+250246108878","token":"66308681","transactiontoken":"bca2f4909794df8515df4e2e0bef8d5f0ba38f4bdce8a657e4eaedd08c00780a749acf24bdd3d429a287a5044cc0180a5bc7a61db35ad04e6d22b4dc22f0b457"},"reqId":"A159968714598390","service":"agency-service","timestamp":"2025-10-16T13:05:11.506Z"}
+{"cbareferenceno":"A159968714598390","externalrefno":"A159968714598390","header":{"requestId":"A159968714598390","responsecode":"000","responsemessage":"Success"},"level":"info","message":"EcoCash withdrawal response:","service":"agency-service","timestamp":"2025-10-16T13:05:17.800Z"}
+{"level":"error","message":"EcoCashOut failed","service":"agency-service","timestamp":"2025-10-16T13:05:17.802Z"}
+{"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:700:11)\n    at ServerResponse.header (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:684:10)\n    at ServerResponse.send (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:161:12)\n    at ServerResponse.json (C:\\Users\\Bwiza Leathitia\\OneDrive\\Documents\\ddin-projects\\2025-projects\\xpay-core-api\\agency-service\\node_modules\\express\\lib\\response.js:250:15)\n    at executeEcoCashOutExpressCashToken (file:///C:/Users/Bwiza%20Leathitia/OneDrive/Documents/ddin-projects/2025-projects/xpay-core-api/agency-service/src/controllers/banking-controller.js:530:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","service":"agency-service","timestamp":"2025-10-16T13:05:17.807Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-23T17:32:50.549Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-23T19:22:32.006Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-24T08:27:56.387Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T13:27:32.146Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:14:58.177Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:23:51.007Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:23:51.010Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:24:03.524Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:24:03.525Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:24:06.163Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:24:06.164Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:26:17.573Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:26:17.574Z"}
+{"error":"jwt must be provided","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-26T14:26:17.584Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:30:01.392Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:30:01.393Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:31:30.523Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:32:04.395Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:32:04.398Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:34:31.829Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:34:44.861Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:35:08.583Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:35:08.585Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:38:06.207Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:38:11.699Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:38:11.700Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:38:26.926Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:38:34.936Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:38:42.128Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:39:02.707Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:39:08.582Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T14:39:09.051Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:39:09.053Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:39:22.718Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:39:22.719Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:39:34.880Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:39:34.881Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:39:58.564Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:40:17.238Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:42:00.837Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:42:29.948Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:42:29.950Z"}
+{"amount":15,"ccy":"RWF","level":"warn","message":"Missing required fields for bill payment","recipients":[{"name":"Alfred","number":"250789595309"},{"name":"David","number":"250784236367"}],"senderId":"DDIN","service":"agency-service","smsMessage":"Hello from DDIN Test 1","timestamp":"2025-10-26T14:42:29.960Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:43:46.053Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:43:46.055Z"}
+{"amount":15,"ccy":"RWF","level":"warn","message":"Missing required fields for bill payment","recipients":[{"name":"Alfred","number":"250789595309"},{"name":"David","number":"250784236367"}],"senderId":"DDIN","service":"agency-service","smsMessage":"Hello from DDIN Test 1","timestamp":"2025-10-26T14:43:46.061Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:45:10.124Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:45:10.125Z"}
+{"amount":15,"ccy":"RWF","level":"warn","message":"Missing required fields for bill payment","recipients":[{"name":"Alfred","number":"250789595309"},{"name":"David","number":"250784236367"}],"senderId":"DDIN","service":"agency-service","smsMessage":"Hello from DDIN Test 1","timestamp":"2025-10-26T14:45:10.129Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:45:15.206Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:45:15.207Z"}
+{"amount":15,"ccy":"RWF","level":"warn","message":"Missing required fields for bill payment","recipients":[{"name":"Alfred","number":"250789595309"},{"name":"David","number":"250784236367"}],"senderId":"DDIN","service":"agency-service","smsMessage":"Hello from DDIN Test 1","timestamp":"2025-10-26T14:45:15.210Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:46:14.280Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:46:14.281Z"}
+{"error":"jwt must be provided","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-26T14:46:14.286Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bill-payment","service":"agency-service","timestamp":"2025-10-26T14:46:48.631Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T14:46:48.632Z"}
+{"error":"jwt must be provided","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-26T14:46:48.633Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:53:25.551Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:53:35.141Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:54:17.645Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:54:28.558Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:54:39.035Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:54:41.676Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:54:45.538Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:55:22.463Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:55:32.615Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:55:51.803Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T14:56:14.709Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:02:29.235Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:26:19.520Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:27:30.913Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:27:40.930Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:29:23.393Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:29:33.477Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:31:39.771Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:31:43.062Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:31:45.040Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:34:08.734Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:34:11.163Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:34:15.262Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:34:17.439Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:34:50.129Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:35:14.299Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:35:18.878Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:39:22.131Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:39:31.864Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:39:40.085Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:40:02.644Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:40:08.500Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:40:34.089Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:40:43.278Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:40:48.745Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:40:59.416Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:41:57.045Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:02.603Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:08.236Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:11.654Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:23.170Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:30.759Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:38.567Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:52.713Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:42:56.713Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:43:38.355Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:43:50.051Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T18:43:57.407Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:00:35.638Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:00:46.955Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:00:53.662Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:10:07.799Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:11:36.892Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:11:38.671Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:11:40.771Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:12:28.562Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:12:56.828Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:14:29.776Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:14:39.096Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:14:43.330Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:03.640Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:08.745Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:14.593Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:25.299Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:31.900Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:38.861Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:43.049Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:45.919Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:49.027Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:15:57.244Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:16:49.967Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:17:02.687Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:17:07.178Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:17:31.893Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:17:34.076Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:17:44.599Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:17:52.676Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:18:01.807Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:18:03.801Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:18:13.296Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:18:18.498Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:18:29.468Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:19:00.979Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:19:03.082Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:19:06.196Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:19:22.166Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:19:24.120Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:19:26.282Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:50:58.003Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T19:51:01.956Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:26:17.149Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:26:21.237Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:26:52.377Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:26:56.961Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:41:00.915Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T20:41:45.944Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T20:41:45.945Z"}
+{"coreError":"<!doctype html><html lang=\"en\"><head><title>HTTP Status 401 – Unauthorized</title><style type=\"text/css\">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 401 – Unauthorized</h1><hr class=\"line\" /><p><b>Type</b> Status Report</p><p><b>Message</b> Unauthorized</p><p><b>Description</b> The request has not been applied because it lacks valid authentication credentials for the target resource.</p><hr class=\"line\" /><h3>Apache Tomcat/9.0.73</h3></body></html>","level":"error","message":"Bulk SMS payment failed","service":"agency-service","status":401,"timestamp":"2025-10-26T20:41:46.849Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T20:49:48.001Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T20:49:48.002Z"}
+{"coreError":"<!doctype html><html lang=\"en\"><head><title>HTTP Status 401 – Unauthorized</title><style type=\"text/css\">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 401 – Unauthorized</h1><hr class=\"line\" /><p><b>Type</b> Status Report</p><p><b>Message</b> Unauthorized</p><p><b>Description</b> The request has not been applied because it lacks valid authentication credentials for the target resource.</p><hr class=\"line\" /><h3>Apache Tomcat/9.0.73</h3></body></html>","level":"error","message":"Bulk SMS payment failed","service":"agency-service","status":401,"timestamp":"2025-10-26T20:49:48.646Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:51:33.928Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:51:44.281Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:51:52.224Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:52:04.444Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T20:52:06.778Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T20:52:13.420Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T20:52:13.422Z"}
+{"coreError":"<!doctype html><html lang=\"en\"><head><title>HTTP Status 401 – Unauthorized</title><style type=\"text/css\">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 401 – Unauthorized</h1><hr class=\"line\" /><p><b>Type</b> Status Report</p><p><b>Message</b> Unauthorized</p><p><b>Description</b> The request has not been applied because it lacks valid authentication credentials for the target resource.</p><hr class=\"line\" /><h3>Apache Tomcat/9.0.73</h3></body></html>","level":"error","message":"Bulk SMS payment failed","service":"agency-service","status":401,"timestamp":"2025-10-26T20:52:14.117Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:06:30.639Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:07:15.696Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:07:21.438Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:07:26.467Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:07:55.818Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:08:00.642Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:08:08.094Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:08:38.346Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:08:41.876Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:08:44.430Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:09:51.698Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T21:10:12.357Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T21:10:12.359Z"}
+{"error":"jwt is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-26T21:10:12.367Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:11:31.908Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:11:41.253Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T21:11:44.982Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T21:11:44.984Z"}
+{"error":"jwt is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-26T21:11:44.993Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:12:10.692Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:12:13.083Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:12:16.198Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T21:12:19.549Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T21:12:19.551Z"}
+{"error":"jwt is not defined","level":"warn","message":"Invalid token","service":"agency-service","timestamp":"2025-10-26T21:12:19.558Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:12:44.004Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T21:12:47.847Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T21:12:47.848Z"}
+{"data":{"id":206083,"pending":false},"level":"info","message":"Corporate bulk SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T21:12:48.647Z"}
+{"data":{"count":1,"item_price":0.006,"network":null,"remaining_balance":383.2000000228868,"status":"sent","total":2,"total_cost":0.012},"level":"info","message":"Pindo Corporate SMS API response","service":"agency-service","status":201,"timestamp":"2025-10-26T21:12:49.320Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:14:50.531Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:15:08.703Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:15:12.557Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:15:14.411Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:21:40.549Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:21:46.072Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:21:51.240Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:22:45.193Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:22:47.349Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:24:26.884Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:24:31.745Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:24:36.436Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:24:39.242Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:24:48.591Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:24:50.639Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:25:01.348Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:25:03.459Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:25:40.737Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:25:43.564Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:25:56.063Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:26:01.158Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:26:32.293Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:26:34.772Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T21:33:37.342Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T21:33:37.344Z"}
+{"data":{"id":206095,"pending":false},"level":"info","message":"Corporate bulk SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T21:33:38.209Z"}
+{"data":{"count":1,"item_price":0.006,"network":null,"remaining_balance":383.16400002288697,"status":"sent","total":1,"total_cost":0.006},"level":"info","message":"Pindo Corporate SMS API response","service":"agency-service","status":201,"timestamp":"2025-10-26T21:33:38.884Z"}
+{"error":"customer_charge is not defined","level":"error","message":"Pindo Corporate SMS API failed","service":"agency-service","status":404,"timestamp":"2025-10-26T21:33:38.885Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:37:22.341Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:37:53.129Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:37:55.850Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:38:12.134Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:38:13.925Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:38:29.315Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T21:38:42.403Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T21:38:42.404Z"}
+{"data":{"id":206097,"pending":false},"level":"info","message":"Corporate bulk SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T21:38:43.361Z"}
+{"data":{"count":1,"item_price":0.006,"network":null,"remaining_balance":383.158000022887,"status":"sent","total":1,"total_cost":0.006},"level":"info","message":"Pindo Corporate SMS API response","service":"agency-service","status":201,"timestamp":"2025-10-26T21:38:44.130Z"}
+{"error":"agent_id is not defined","level":"error","message":"Pindo Corporate SMS API failed","service":"agency-service","status":404,"timestamp":"2025-10-26T21:38:44.131Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:39:28.410Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:39:41.568Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T21:39:44.492Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T21:39:44.493Z"}
+{"data":{"id":206099,"pending":false},"level":"info","message":"Corporate bulk SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T21:39:45.366Z"}
+{"data":{"count":1,"item_price":0.006,"network":null,"remaining_balance":383.152000022887,"status":"sent","total":1,"total_cost":0.006},"level":"info","message":"Pindo Corporate SMS API response","service":"agency-service","status":201,"timestamp":"2025-10-26T21:39:46.077Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:45:37.200Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:45:39.531Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:45:49.781Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:48:48.477Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:48:53.821Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:48:57.673Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:53:12.310Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T21:53:32.614Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:10:06.933Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:11:00.808Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:11:11.269Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:11:25.329Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:12:44.674Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:12:50.543Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:13:07.350Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:13:10.188Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:13:39.993Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:13:42.274Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:14:00.866Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:14:03.893Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:14:27.510Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:14:42.395Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:15:15.273Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:15:18.137Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:15:20.344Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:15:25.826Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:15:57.949Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:16:38.048Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:16:41.878Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:17:10.319Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:17:18.798Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T22:18:06.773Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T22:18:06.775Z"}
+{"data":{"id":206101,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T22:18:07.637Z"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":401,"timestamp":"2025-10-26T22:18:08.730Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:21:50.604Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:21:58.197Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:22:00.589Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T22:23:26.457Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T22:23:26.460Z"}
+{"data":{"id":206103,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T22:23:27.299Z"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":401,"timestamp":"2025-10-26T22:23:28.317Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T22:26:16.506Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T22:26:16.507Z"}
+{"data":{"id":206105,"pending":false},"level":"info","message":"Corporate bulk SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T22:26:17.263Z"}
+{"data":{"count":1,"item_price":0.006,"network":null,"remaining_balance":383.14600002288705,"status":"sent","total":1,"total_cost":0.006},"level":"info","message":"Pindo Corporate SMS API response","service":"agency-service","status":201,"timestamp":"2025-10-26T22:26:18.024Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:31:57.229Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T22:32:13.660Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T22:32:13.662Z"}
+{"data":{"id":206107,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T22:32:14.657Z"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":401,"timestamp":"2025-10-26T22:32:15.695Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:33:03.375Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T22:33:29.171Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T22:33:32.272Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T22:33:32.274Z"}
+{"data":{"id":206109,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T22:33:33.238Z"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":401,"timestamp":"2025-10-26T22:33:34.358Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:09:15.854Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:09:51.975Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:11:20.022Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:11:24.126Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T23:11:38.316Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:11:38.318Z"}
+{"data":{"id":206115,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:11:39.404Z"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":401,"timestamp":"2025-10-26T23:11:40.544Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:15:34.113Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:18:07.749Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:20:14.369Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T23:20:23.104Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:20:23.108Z"}
+{"data":{"id":206117,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:20:24.133Z"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API request failed","service":"agency-service","status":401,"timestamp":"2025-10-26T23:20:25.347Z","url":"https://api.pindo.io/v1/sms"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":401,"timestamp":"2025-10-26T23:20:25.349Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:20:45.965Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T23:20:51.923Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:20:51.924Z"}
+{"data":{"id":206119,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:20:52.909Z"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API request failed","service":"agency-service","status":401,"timestamp":"2025-10-26T23:20:54.007Z","url":"https://api.pindo.io/v1/sms"}
+{"error":{"code":401,"data":null,"error":{"details":"Bearer token required","message":"Bearer token required"},"object":"","status":"fail"},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":401,"timestamp":"2025-10-26T23:20:54.009Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T23:21:10.002Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:21:10.004Z"}
+{"data":{"id":206121,"pending":false},"level":"info","message":"Corporate bulk SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:21:10.869Z"}
+{"level":"info","message":"Pindo Corporate Bulk SMS API request successful","method":"post","service":"agency-service","status":201,"timestamp":"2025-10-26T23:21:11.614Z","url":"https://api.pindo.io/v1/sms/bulk"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:23:44.014Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:24:28.835Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:24:39.547Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T23:24:47.444Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:24:47.446Z"}
+{"data":{"id":206125,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:24:48.414Z"}
+{"error":{"error":"to Wrong phone number format","message":"to Wrong phone number format","status":409},"level":"error","message":"Pindo Corporate Single SMS API request failed","service":"agency-service","status":409,"timestamp":"2025-10-26T23:24:49.130Z","url":"https://api.pindo.io/v1/sms/"}
+{"error":{"error":"to Wrong phone number format","message":"to Wrong phone number format","status":409},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":409,"timestamp":"2025-10-26T23:24:49.132Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:26:02.125Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T23:26:06.877Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:26:06.879Z"}
+{"data":{"id":206127,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:26:07.877Z"}
+{"error":{"error":"to expected str","message":"to expected str","status":409},"level":"error","message":"Pindo Corporate Single SMS API request failed","service":"agency-service","status":409,"timestamp":"2025-10-26T23:26:08.794Z","url":"https://api.pindo.io/v1/sms/"}
+{"error":{"error":"to expected str","message":"to expected str","status":409},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":409,"timestamp":"2025-10-26T23:26:08.796Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:26:42.723Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:26:48.423Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:26:54.138Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:26:57.574Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T23:26:59.588Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:26:59.590Z"}
+{"data":{"id":206129,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:27:00.720Z"}
+{"error":{"error":"to Wrong phone number format","message":"to Wrong phone number format","status":409},"level":"error","message":"Pindo Corporate Single SMS API request failed","service":"agency-service","status":409,"timestamp":"2025-10-26T23:27:01.507Z","url":"https://api.pindo.io/v1/sms/"}
+{"error":{"error":"to Wrong phone number format","message":"to Wrong phone number format","status":409},"level":"error","message":"Pindo Corporate Single SMS API failed","recipient":"250789595309","service":"agency-service","status":409,"timestamp":"2025-10-26T23:27:01.508Z"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/single-sms","service":"agency-service","timestamp":"2025-10-26T23:28:16.364Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:28:16.365Z"}
+{"data":{"id":206131,"pending":false},"level":"info","message":"Corporate single SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:28:17.177Z"}
+{"level":"info","message":"Pindo Corporate Single SMS API request successful","method":"post","service":"agency-service","status":201,"timestamp":"2025-10-26T23:28:17.909Z","url":"https://api.pindo.io/v1/sms/"}
+{"level":"info","message":"Received POST request to /api/agency/thirdpartyagency/services/execute/bulk-sms","service":"agency-service","timestamp":"2025-10-26T23:28:36.073Z"}
+{"level":"info","message":"Request body, [object Object]","service":"agency-service","timestamp":"2025-10-26T23:28:36.074Z"}
+{"data":{"id":206133,"pending":false},"level":"info","message":"Corporate bulk SMS payment response from core system","service":"agency-service","status":200,"timestamp":"2025-10-26T23:28:36.899Z"}
+{"level":"info","message":"Pindo Corporate Bulk SMS API request successful","method":"post","service":"agency-service","status":201,"timestamp":"2025-10-26T23:28:37.644Z","url":"https://api.pindo.io/v1/sms/bulk"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:30:32.399Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:30:53.658Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:33:21.867Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:41:29.309Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:41:34.655Z"}
+{"level":"info","message":"Agency service running on port 4001","service":"agency-service","timestamp":"2025-10-26T23:41:54.846Z"}
