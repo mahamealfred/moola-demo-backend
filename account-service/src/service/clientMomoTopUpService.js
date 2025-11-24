@@ -1,6 +1,7 @@
 import axios from "axios";
 import logger from "../utils/logger.js";
 import dotenv from "dotenv";
+import { createResponse, createErrorResponse } from "@moola/shared";
 dotenv.config();
 
 const clientMomoTopUpService = async (req, res, amount, currencySymbol, tokenId) => {
@@ -23,25 +24,18 @@ const clientMomoTopUpService = async (req, res, amount, currencySymbol, tokenId)
     );
 
     logger.warn("Successfully TopUp Client Account");
-    return res.status(200).json({
-      success: true,
-      data: response.data
-    });
+    return res.status(200).json(createResponse(true, 'banking.topup_successful', response.data, req.language));
   } catch (error) {
     console.log("error:", error);
     logger.error("Error while saving in Cyclos:");
 
     if (error.response?.status === 400) {
-      return res.status(400).json({
-        success: false,
-        message: error.response?.data?.errorDetails || "Invalid Credentials"
-      });
+      return res.status(400).json(createErrorResponse('authentication.invalid_credentials', req.language, 400, {
+        apiMessage: error.response?.data?.errorDetails
+      }));
     }
 
-    return res.status(500).json({
-      success: false,
-      message: "An unexpected error occurred while processing"
-    });
+    return res.status(500).json(createErrorResponse('common.processing_error', req.language, 500));
   }
 };
 

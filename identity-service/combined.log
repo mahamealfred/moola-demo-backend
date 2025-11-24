@@ -5180,3 +5180,349 @@
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-26T20:27:28.878Z"}
 {"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-10-26T20:27:28.883Z"}
 {"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-10-26T20:27:29.625Z","userId":4}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-27T12:30:28.334Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-27T20:42:18.882Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-28T17:21:17.251Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-10-28T19:45:35.721Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-02T16:45:07.016Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-02T16:51:22.225Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-02T16:51:22.227Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-02T16:51:22.231Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-02T16:51:23.095Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-02T17:50:43.486Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-02T17:50:43.490Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-02T17:50:43.493Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-02T17:50:44.190Z","userId":4}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-02T17:54:31.778Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-02T17:54:31.779Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-02T17:54:31.781Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-02T17:54:32.426Z","userId":4}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-02T19:26:50.138Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-09T17:38:08.436Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-09T17:40:42.183Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-09T17:40:42.185Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-09T17:40:42.190Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-09T17:40:43.073Z","userId":4}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-09T18:52:35.009Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-12T18:54:30.905Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-12T19:00:20.325Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:00:20.326Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:00:20.329Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:00:21.769Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=rw","service":"identity-service","timestamp":"2025-11-12T19:00:39.572Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:00:39.573Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:00:39.574Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:00:40.184Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-12T19:02:53.379Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:02:53.381Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:02:53.383Z"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:02:54.024Z","username":"Liveagent"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-12T19:04:13.841Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-12T19:06:32.202Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-12T19:14:55.916Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-12T19:20:23.558Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-12T19:37:36.841Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:37:36.844Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:37:36.858Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:37:37.629Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-12T19:38:04.361Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:38:04.362Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:38:04.366Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:38:04.962Z","username":"Liveagenty"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-12T19:38:37.196Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:38:37.197Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:38:37.200Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:38:37.835Z","username":"Liveagenty"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-12T19:39:35.403Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:39:35.404Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:39:35.407Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:39:36.099Z","username":"Liveagenty"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-12T19:39:39.851Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:39:39.852Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:39:39.855Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:39:40.504Z","username":"Liveagenty"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-12T19:39:58.727Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:39:58.728Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:39:58.730Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:39:59.344Z","username":"Liveagenty"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-12T19:40:15.859Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:40:15.860Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:40:15.863Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:40:16.445Z","username":"Liveagenty"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-12T19:40:26.922Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-12T19:40:26.922Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-12T19:40:26.925Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-12T19:40:27.541Z","username":"Liveagenty"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T10:31:43.154Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T10:50:22.347Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T10:51:23.733Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T10:51:23.735Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T10:51:23.984Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T10:51:24.874Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-13T10:51:37.860Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T10:51:37.861Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T10:51:37.865Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T10:51:38.555Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=fr","service":"identity-service","timestamp":"2025-11-13T10:52:27.531Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T10:52:27.533Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T10:52:27.554Z"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T10:52:28.260Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T10:53:56.593Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T10:53:56.594Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T10:53:56.597Z"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T10:53:57.229Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-13T10:55:36.425Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T10:55:36.426Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T10:55:36.429Z"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T10:55:37.071Z","username":"Liveagent"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T10:57:48.579Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T10:58:31.309Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T11:02:51.995Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:02:51.996Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:02:52.000Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T11:02:52.006Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T11:04:57.534Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:04:57.535Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:04:57.536Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:04:58.240Z","username":"invalid_user"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-13T11:04:58.258Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:04:58.260Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:04:58.262Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:04:58.849Z","username":"invalid_user"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T11:04:58.856Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:04:58.857Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:04:58.858Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:04:59.402Z","username":"invalid_user"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-13T11:05:49.879Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:05:49.880Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:05:49.881Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:05:50.459Z","username":"invalid_user"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-13T11:05:56.816Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:05:56.816Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:05:56.817Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:05:57.385Z","username":"invalid_user"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T11:06:55.997Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T11:07:40.580Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T11:09:37.409Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=en","service":"identity-service","timestamp":"2025-11-13T11:09:42.571Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:09:42.573Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:09:42.588Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:09:43.333Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T11:09:59.610Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:09:59.611Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:09:59.615Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:10:00.321Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T11:10:17.749Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:10:17.751Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:10:17.754Z"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:10:18.446Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=rw","service":"identity-service","timestamp":"2025-11-13T11:16:04.050Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:16:04.051Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:16:04.055Z"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:16:04.736Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=rw","service":"identity-service","timestamp":"2025-11-13T11:17:20.586Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:17:20.587Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:17:20.589Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:17:21.163Z","username":"Liveagen"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=rw","service":"identity-service","timestamp":"2025-11-13T11:17:30.476Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:17:30.477Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:17:30.479Z"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:17:31.050Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=rw","service":"identity-service","timestamp":"2025-11-13T11:18:02.531Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T11:18:02.532Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T11:18:02.555Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T11:18:03.306Z","username":"Epiphanie3"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T12:08:45.719Z"}
+{"level":"info","message":"Identity service running on port 4004","service":"identity-service","timestamp":"2025-11-13T12:13:10.728Z"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=rw","service":"identity-service","timestamp":"2025-11-13T12:14:28.737Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T12:14:28.738Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:14:28.750Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:14:29.557Z","username":"Liveagent"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login?lang=rw","service":"identity-service","timestamp":"2025-11-13T12:14:39.596Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T12:14:39.597Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:14:39.601Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:14:40.201Z","username":"LiveagentR"}
+{"level":"info","message":"Received POST request to /api/agency/auth/login","service":"identity-service","timestamp":"2025-11-13T12:14:49.352Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-11-13T12:14:49.354Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:14:49.356Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:14:50.071Z","username":"LiveagentR"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:53:32.378Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:53:33.172Z","username":"LiveagentR"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:54:08.044Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:54:08.697Z","username":"LiveagentR"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:54:19.804Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:54:20.523Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:56:02.807Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:56:03.504Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T12:56:26.559Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T12:56:27.255Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T20:15:35.572Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T20:15:36.417Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T20:15:58.436Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T20:15:59.102Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T20:52:00.010Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T20:52:00.025Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T20:52:10.339Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T20:52:10.344Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:04:13.081Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:04:13.902Z","username":"liveagentr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:04:29.103Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:04:29.761Z","username":"liveagentr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:04:40.150Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:04:40.821Z","username":"liveagentr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:10:02.395Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:10:03.195Z","username":"liveagentr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:14:58.901Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:14:59.538Z","username":"liveagentr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:16:29.095Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:16:29.883Z","username":"liveagentr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:16:46.107Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:16:46.750Z","username":"liveagenty"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:23:13.525Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:23:14.397Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:23:25.640Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:23:26.337Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:23:44.694Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:23:45.381Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:24:46.645Z"}
+{"error":"Got error 194 \"Tablespace is missing for a table\" from storage engine InnoDB","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:24:47.335Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:26:24.366Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:26:25.017Z","username":"liveagenth"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:29:23.855Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:29:24.530Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:29:43.930Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:29:44.703Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:30:12.170Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:30:12.757Z","username":"liveagenty"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:38:37.926Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:38:38.623Z","username":"liveagenty"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:38:48.616Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:38:49.274Z","username":"liveagenty"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:42:38.200Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:42:38.858Z","username":"liveagenth"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:45:34.377Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T21:45:34.395Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:45:42.267Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T21:45:42.268Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:47:05.442Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T21:47:05.449Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:50:16.926Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T21:50:16.927Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:50:18.613Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T21:50:18.614Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:50:20.084Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T21:50:20.085Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:50:55.184Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:50:55.822Z","username":"liveagenth"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:51:13.352Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:51:13.941Z","username":"liveagenth"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:52:12.409Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:52:13.034Z","username":"liveagenth"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:54:58.588Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:54:59.330Z","username":"liveagenth"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T21:55:04.564Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-13T21:55:05.169Z","username":"liveagenth"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:01:53.550Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:01:53.560Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:02:53.525Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:02:53.526Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:03:17.731Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:03:17.741Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:03:18.957Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:03:18.958Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:03:20.019Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:03:20.021Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:03:21.182Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:03:21.183Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:04:05.028Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:04:05.030Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:04:23.404Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:04:23.406Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:06:28.963Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:06:28.969Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:06:30.142Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:06:30.143Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:06:31.788Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:06:31.789Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:07:12.373Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:07:12.374Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:07:13.990Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:07:13.991Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-13T22:07:15.318Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-13T22:07:15.319Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T10:50:06.992Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T10:50:07.764Z","username":"liveagentyyyy"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T10:51:09.466Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T10:51:10.119Z","username":"liveagentyyyy"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T11:34:44.614Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T11:34:45.430Z","username":"jjjjjgrr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T11:35:01.504Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T11:35:02.118Z","username":"jjjjjgrr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T11:37:02.418Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T11:37:03.051Z","username":"liveagenthh"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T12:00:45.322Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T12:00:46.009Z","username":"liveagentg"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T12:16:48.851Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T12:16:49.496Z","username":"liveagentgg"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T13:15:11.309Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-14T13:15:11.348Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T13:15:16.147Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T13:15:16.920Z","username":"mahamealfred11@gmail.comrrrr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T13:20:23.061Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-14T13:20:23.866Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T13:37:55.517Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-14T13:37:56.212Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T13:52:22.555Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-14T13:52:23.226Z","username":"liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-14T13:52:32.886Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-14T13:52:33.577Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-19T13:59:06.980Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-19T13:59:08.127Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-19T18:03:53.065Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-19T18:03:53.897Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T14:32:01.519Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T14:32:02.405Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T16:12:37.914Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T16:12:38.809Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T16:55:29.171Z"}
+{"0":"\"","1":"u","10":" ","11":"i","12":"s","13":" ","14":"n","15":"o","16":"t","17":" ","18":"a","19":"l","2":"s","20":"l","21":"o","22":"w","23":"e","24":"d","25":" ","26":"t","27":"o","28":" ","29":"b","3":"e","30":"e","31":" ","32":"e","33":"m","34":"p","35":"t","36":"y","4":"r","5":"n","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-11-21T16:55:29.184Z"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T16:56:14.314Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T16:56:15.115Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T17:04:38.740Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T17:04:39.447Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T17:05:12.941Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T17:05:13.542Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T18:07:13.881Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T18:07:14.585Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T19:40:52.224Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T19:40:52.908Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T19:52:18.423Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-21T19:52:19.058Z","username":"User1"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T19:52:34.105Z"}
+{"agentCategory":"Corporate","level":"warn","message":"Successfully logged in","name":"DDIN CORPORATE USER","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T19:52:34.728Z","userId":277}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T19:56:04.080Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T19:56:04.745Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T20:05:11.500Z"}
+{"agentCategory":"Corporate","level":"warn","message":"Successfully logged in","name":"DDIN CORPORATE USER","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T20:05:12.193Z","userId":277}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T20:17:13.286Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-21T20:17:13.986Z","username":"Liveagent"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T20:17:22.527Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T20:17:23.225Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T20:19:49.159Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T20:19:49.914Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T20:24:26.682Z"}
+{"agentCategory":"Corporate","level":"warn","message":"Successfully logged in","name":"DDIN CORPORATE USER","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T20:24:27.360Z","userId":277}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T20:39:13.482Z"}
+{"agentCategory":"Corporate","level":"warn","message":"Successfully logged in","name":"DDIN CORPORATE USER","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T20:39:14.159Z","userId":277}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-21T21:48:50.256Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-21T21:48:51.135Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-22T09:56:26.489Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-22T09:56:27.437Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-22T12:42:31.893Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-22T12:42:32.738Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-22T12:56:10.933Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-22T12:56:11.586Z","userId":4}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-24T21:02:50.364Z"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-24T21:02:51.250Z","username":"Liveagentr"}
+{"level":"info","message":"Login endpoint hit...","service":"identity-service","timestamp":"2025-11-24T21:04:31.279Z"}
+{"agentCategory":"Agent","level":"warn","message":"Successfully logged in","name":"Live Agent UAT","phoneNumber":null,"service":"identity-service","timestamp":"2025-11-24T21:04:32.145Z","userId":4}

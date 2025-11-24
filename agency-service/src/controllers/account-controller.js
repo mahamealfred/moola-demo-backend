@@ -3,6 +3,7 @@ import logger from '../utils/logger.js';
 import { generateRequestId, generateRequestToken } from "../utils/helper.js";
 import dotenv from "dotenv";
 import CryptoJS from "crypto-js";
+import { createResponse, createErrorResponse } from '@moola/shared';
 
 dotenv.config();
 
@@ -63,26 +64,19 @@ export const getEcoBankAccountBalance = async (req, res) => {
     logger.info("Account balance response received", response.data);
 
     if (response.data?.header?.responsecode === "000") {
-      return res.status(200).json({
-        success: true,
-        message: "Account balance retrieved successfully",
-        data: response.data
-      });
+      return res.status(200).json(createResponse(true, 'banking.balance_retrieved_successfully', response.data, req.language));
     }
 
     logger.warn("Failed to retrieve balance", response.data?.header?.responsemessage);
-    return res.status(400).json({
-      success: false,
-      message: response.data?.header?.responsemessage
-    });
+    return res.status(400).json(createErrorResponse('banking.balance_retrieval_failed', req.language, 400, {
+      apiMessage: response.data?.header?.responsemessage
+    }));
 
   } catch (e) {
     logger.error("Get Account Balance error occurred", e?.response?.data || e.message);
-    res.status(500).json({
-      success: false,
-      message: "Internal server error",
+    res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
       error: e?.response?.data || e.message
-    });
+    }));
   }
 };
 
@@ -92,10 +86,7 @@ export const validateIdentity = async (req, res) => {
 
   if (!idNumber) {
     logger.warn('Missing required field: idNumber', req.body);
-    return res.status(400).json({
-      success: false,
-      message: 'Missing required field: idNumber',
-    });
+    return res.status(400).json(createErrorResponse('validation.missing_id_number', req.language, 400));
   }
   const requestId = generateRequestId();
   const requestToken = generateRequestToken(AFFCODE,requestId,AGENT_CODE,SOURCE_CODE,sourceIp);
@@ -131,17 +122,12 @@ export const validateIdentity = async (req, res) => {
     logger.info('Identity validation response', { requestId, responseData });
 
     if (responseData?.header?.responsecode === '000') {
-      return res.status(200).json({
-        success: true,
-        message: 'Identity validation successful',
-        data: responseData,
-      });
+      return res.status(200).json(createResponse(true, 'banking.identity_validation_successful', responseData, req.language));
     } else {
-      return res.status(400).json({
-        success: false,
-        message: responseData?.header?.responsemessage || 'Validation failed',
+      return res.status(400).json(createErrorResponse('validation.failed', req.language, 400, {
         code: responseData?.header?.responsecode,
-      });
+        apiMessage: responseData?.header?.responsemessage
+      }));
     }
   } catch (error) {
     logger.error(' Identity validation failed', {
@@ -149,11 +135,9 @@ export const validateIdentity = async (req, res) => {
       error: error?.response?.data || error.message,
     });
 
-    return res.status(500).json({
-      success: false,
-      message: 'Internal server error during identity validation',
+    return res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
       error: error?.response?.data || error.message,
-    });
+    }));
   }
 };
 
@@ -203,26 +187,19 @@ export const getCustomerDetails = async (req, res) => {
     logger.info("Received response", responseData);
 
     if (responseData?.header?.responsecode === "000") {
-      return res.status(200).json({
-        success: true,
-        message: "Customer details retrieved successfully",
-        data: responseData
-      });
+      return res.status(200).json(createResponse(true, 'banking.customer_details_retrieved', responseData, req.language));
     } else {
       logger.error("Validation failed", responseData?.header);
-      return res.status(400).json({
-        success: false,
-        message: responseData?.header?.responsemessage || "Validation failed",
-        code: responseData?.header?.responsecode
-      });
+      return res.status(400).json(createErrorResponse('validation.failed', req.language, 400, {
+        code: responseData?.header?.responsecode,
+        apiMessage: responseData?.header?.responsemessage
+      }));
     }
   } catch (error) {
     logger.error("Request failed", error?.response?.data || error.message);
-    return res.status(500).json({
-      success: false,
-      message: "Internal server error",
+    return res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
       error: error?.response?.data || error.message
-    });
+    }));
   }
 };
 export const validateExpressCashToken = async (req, res) => {
@@ -230,10 +207,7 @@ export const validateExpressCashToken = async (req, res) => {
 
   // Input validation
   if (!cashToken || !amount) {
-    return res.status(400).json({
-      success: false,
-      message: "Missing required fields: cashToken and amount are required",
-    });
+    return res.status(400).json(createErrorResponse('validation.missing_cash_token_amount', req.language, 400));
   }
 
   logger.info("Initiating customer detail validation", { cashToken, amount });
@@ -289,25 +263,18 @@ export const validateExpressCashToken = async (req, res) => {
     logger.info("Received response from Ecobank API", responseData);
 
     if (responseData?.header?.responsecode === "000") {
-      return res.status(200).json({
-        success: true,
-        message: "Customer details retrieved successfully",
-        data: responseData,
-      });
+      return res.status(200).json(createResponse(true, 'banking.customer_details_retrieved', responseData, req.language));
     } else {
       logger.error("Validation failed", responseData?.header);
-      return res.status(400).json({
-        success: false,
-        message: responseData?.header?.responsemessage || "Validation failed",
+      return res.status(400).json(createErrorResponse('validation.failed', req.language, 400, {
         code: responseData?.header?.responsecode,
-      });
+        apiMessage: responseData?.header?.responsemessage
+      }));
     }
   } catch (error) {
     logger.error("Request failed", error?.response?.data || error.message);
-    return res.status(500).json({
-      success: false,
-      message: "Internal server error",
+    return res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
       error: error?.response?.data || error.message,
-    });
+    }));
   }
 };

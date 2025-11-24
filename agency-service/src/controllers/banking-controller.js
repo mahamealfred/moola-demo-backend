@@ -8,7 +8,7 @@ import { buildEcoCashInPayload, buildEcoCashOutPayload } from '../utils/payloadB
 import { ecoCashDepositService } from '../services/depositService.js';
 import { ecoCashWithdrawService } from '../services/withdrawService.js';
 import { expressCashTokenService } from '../services/expressCashTokenService.js';
-
+import { createResponse, createErrorResponse } from '@moola/shared';
 
 dotenv.config();
 
@@ -20,6 +20,7 @@ const SOURCE_CODE = 'DDIN';
 const sourceIp = "10.8.245.9"
 const ccy = "RWF";
 const CHANNEL="API"
+const REQUEST_TYPE = "ACCOUNT_OPENING"; // Added missing REQUEST_TYPE constant
   const requestId = generateRequestId();
 
 
@@ -50,7 +51,7 @@ export const openAccount = async (req, res) => {
     !countryCode || !transactionGuid
   ) {
     logger.warn('Missing required fields in account opening payload', req.body);
-    return res.status(400).json({ success: false, message: 'Missing required fields' });
+    return res.status(400).json(createErrorResponse('validation.missing_required_fields', req.language, 400));
   }
    const amountFormatted = parseFloat(amount).toFixed(2);
   const destinationAccount = identityNo;
@@ -106,17 +107,12 @@ export const openAccount = async (req, res) => {
     logger.info('Account opening response', { requestId, responseData });
 
     if (responseData?.header?.responsecode === '000') {
-      return res.status(200).json({
-        success: true,
-        message: 'Account opened successfully',
-        data: responseData,
-      });
+      return res.status(200).json(createResponse(true, 'banking.account_opened_successfully', responseData, req.language));
     } else {
-      return res.status(400).json({
-        success: false,
-        message: responseData?.header?.responsemessage || 'Account opening failed',
+      return res.status(400).json(createErrorResponse('banking.account_opening_failed', req.language, 400, {
         code: responseData?.header?.responsecode,
-      });
+        apiMessage: responseData?.header?.responsemessage
+      }));
     }
   } catch (error) {
     logger.error(' Account opening error', {
@@ -124,11 +120,9 @@ export const openAccount = async (req, res) => {
       error: error?.response?.data || error.message,
     });
 
-    return res.status(500).json({
-      success: false,
-      message: 'Internal server error during account opening',
+    return res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
       error: error?.response?.data || error.message,
-    });
+    }));
   }
 };
 
@@ -145,11 +139,7 @@ export const executeEcoCashIn = async (req, res) => {
 
   if (!amount || !sendername || !senderphone || !senderaccount || !ccy ) {
     logger.warn('Missing required fields in EcoCashIn request', req.body);
-    return res.status(400).json({
-      success: false,
-      message:
-        'Missing required fields: amount, sendername, senderphone, senderaccount, and ccy are all required.',
-    });
+    return res.status(400).json(createErrorResponse('validation.missing_deposit_fields', req.language, 400));
   }
 
    const authHeader = req.headers['authorization'];
@@ -171,10 +161,7 @@ export const executeEcoCashIn = async (req, res) => {
     agent_id=decodedToken.id
   } catch (err) {
     logger.warn('Invalid token', { error: err.message });
-    return res.status(401).json({
-      success: false,
-      message: 'Invalid or expired token. Please log in again.',
-    });
+    return res.status(401).json(createErrorResponse('authentication.invalid_token', req.language, 401));
   }
 let description= `EcoCash Deposit - Amount: ${amount}, Sender: ${sendername}, Phone: ${senderphone}, Account: ${senderaccount}, Narration: ${narration}, Currency: ${ccy}`
   const payload = buildEcoCashInPayload({
@@ -211,11 +198,7 @@ let description= `EcoCash Deposit - Amount: ${amount}, Sender: ${sendername}, Ph
       
     }
 
-    return res.status(502).json({
-      success: false,
-      message:
-        'Unexpected response from the deposit. Please try again later.',
-    });
+    return res.status(502).json(createErrorResponse('banking.unexpected_response', req.language, 502));
   } catch (error) {
     const status = error?.response?.status;
     const errorDetails = error?.response?.data?.errorDetails;
@@ -228,41 +211,28 @@ let description= `EcoCash Deposit - Amount: ${amount}, Sender: ${sendername}, Ph
     });
 
     if (status === 400) {
-      let message = 'Unable to process payment due to invalid request.';
+      let messageKey = 'banking.invalid_payment_request';
 
       if (errorDetails === 'INVALID_TRANSACTION_PASSWORD') {
-        message = 'Your transaction password is incorrect. Please try again.';
+        messageKey = 'banking.invalid_transaction_password';
       } else if (errorDetails === 'BLOCKED_TRANSACTION_PASSWORD') {
-        message =
-          'Your transaction password has been blocked. Please contact support.';
+        messageKey = 'banking.blocked_transaction_password';
       }
 
-      return res.status(400).json({
-        success: false,
-        message,
-      });
+      return res.status(400).json(createErrorResponse(messageKey, req.language, 400));
     }
 
     if (status === 401) {
-      return res.status(401).json({
-        success: false,
-        message: 'Authentication failed. Please check your credentials.',
-      });
+      return res.status(401).json(createErrorResponse('authentication.failed', req.language, 401));
     }
 
     if (status === 404) {
-      return res.status(404).json({
-        success: false,
-        message: 'Account not found. Please verify the sender account.',
-      });
+      return res.status(404).json(createErrorResponse('banking.account_not_found', req.language, 404));
     }
 
-    return res.status(500).json({
-      success: false,
-      message:
-        "We're unable to process your EcoCash-In transaction right now. Please try again later.",
+    return res.status(500).json(createErrorResponse('banking.ecocash_in_error', req.language, 500, {
       error: coreError || error.message,
-    });
+    }));
   }
 };
 
@@ -279,12 +249,8 @@ export const executeEcoCashOut = async (req, res) => {
   } = req.body;
 
   if (!amount || !sendername || !senderphone || !senderaccount || !ccy ) {
-    logger.warn('Missing required fields in EcoCashIn request', req.body);
-    return res.status(400).json({
-      success: false,
-      message:
-        'Missing required fields: amount, sendername, senderphone, senderaccount, and ccy are all required.',
-    });
+    logger.warn('Missing required fields in EcoCashOut request', req.body);
+    return res.status(400).json(createErrorResponse('validation.missing_withdraw_fields', req.language, 400));
   }
 
    const authHeader = req.headers['authorization'];
@@ -307,10 +273,7 @@ export const executeEcoCashOut = async (req, res) => {
     userAuth = decodedToken.userAuth;
   } catch (err) {
     logger.warn('Invalid token', { error: err.message });
-    return res.status(401).json({
-      success: false,
-      message: 'Invalid or expired token. Please log in again.',
-    });
+    return res.status(401).json(createErrorResponse('authentication.invalid_token', req.language, 401));
   }
   let description= `EcoCash withdraw - Amount: ${amount}, Sender: ${sendername}, Phone: ${senderphone}, Account: ${senderaccount}, Narration: ${narration}, Currency: ${ccy}`
   const payload = buildEcoCashOutPayload({
@@ -343,15 +306,11 @@ export const executeEcoCashOut = async (req, res) => {
     });
 
     if (response.status === 200) {
-       await ecoCashWithdrawService(req,res,response,description,userId)
+      await ecoCashDepositService(req,res,response,description,agent_id)
       
     }
 
-    return res.status(502).json({
-      success: false,
-      message:
-        'Unexpected response from the withdraw server. Please try again later.',
-    });
+    return res.status(502).json(createErrorResponse('banking.unexpected_response', req.language, 502));
   } catch (error) {
     
     const status = error?.response?.status;
@@ -365,41 +324,28 @@ export const executeEcoCashOut = async (req, res) => {
     });
 
     if (status === 400) {
-      let message = 'Unable to process payment due to invalid request.';
+      let messageKey = 'banking.invalid_payment_request';
 
       if (errorDetails === 'INVALID_TRANSACTION_PASSWORD') {
-        message = 'Your transaction password is incorrect. Please try again.';
+        messageKey = 'banking.invalid_transaction_password';
       } else if (errorDetails === 'BLOCKED_TRANSACTION_PASSWORD') {
-        message =
-          'Your transaction password has been blocked. Please contact support.';
+        messageKey = 'banking.blocked_transaction_password';
       }
 
-      return res.status(400).json({
-        success: false,
-        message,
-      });
+      return res.status(400).json(createErrorResponse(messageKey, req.language, 400));
     }
 
     if (status === 401) {
-      return res.status(401).json({
-        success: false,
-        message: 'Authentication failed. Please check your credentials.',
-      });
+      return res.status(401).json(createErrorResponse('authentication.failed', req.language, 401));
     }
 
     if (status === 404) {
-      return res.status(404).json({
-        success: false,
-        message: 'Account not found. Please verify the sender account.',
-      });
+      return res.status(404).json(createErrorResponse('banking.account_not_found', req.language, 404));
     }
 
-    return res.status(500).json({
-      success: false,
-      message:
-        "We're unable to process your EcoCash-Out transaction right now. Please try again later.",
+    return res.status(500).json(createErrorResponse('banking.ecocash_out_error', req.language, 500, {
       error: coreError || error.message,
-    });
+    }));
   }
 };
 //Cash Out Using express cash token 
@@ -413,12 +359,8 @@ export const executeEcoCashOutExpressCashToken = async (req, res) => {
   } = req.body;
 
   if (!amount || !receivername|| !thirdpartyphonenumber || !cashToken || !ccy ) {
-    logger.warn('Missing required fields in EcoCashIn request', req.body);
-    return res.status(400).json({
-      success: false,
-      message:
-        'Missing required fields: amount, sendername, senderphone, senderaccount, and ccy are all required.',
-    });
+    logger.warn('Missing required fields in EcoCashOutExpressCashToken request', req.body);
+    return res.status(400).json(createErrorResponse('validation.missing_withdraw_fields', req.language, 400));
   }
 
    const authHeader = req.headers['authorization'];
@@ -441,10 +383,7 @@ export const executeEcoCashOutExpressCashToken = async (req, res) => {
     userAuth = decodedToken.userAuth;
   } catch (err) {
     logger.warn('Invalid token', { error: err.message });
-    return res.status(401).json({
-      success: false,
-      message: 'Invalid or expired token. Please log in again.',
-    });
+    return res.status(401).json(createErrorResponse('authentication.invalid_token', req.language, 401));
   }
   let description= `EcoCash withdraw - Amount: ${amount}, Sender: ${receivername}, Phone: ${thirdpartyphonenumber}, Token: ${cashToken}, Currency: ${ccy}`
   const payload = buildEcoCashOutPayload({
@@ -480,11 +419,7 @@ export const executeEcoCashOutExpressCashToken = async (req, res) => {
       
     }
 
-    return res.status(502).json({
-      success: false,
-      message:
-        'Unexpected response from the withdraw server. Please try again later.',
-    });
+    return res.status(502).json(createErrorResponse('banking.unexpected_response', req.language, 502));
   } catch (error) {
     
     const status = error?.response?.status;
@@ -498,40 +433,27 @@ export const executeEcoCashOutExpressCashToken = async (req, res) => {
     });
 
     if (status === 400) {
-      let message = 'Unable to process payment due to invalid request.';
+      let messageKey = 'banking.invalid_payment_request';
 
       if (errorDetails === 'INVALID_TRANSACTION_PASSWORD') {
-        message = 'Your transaction password is incorrect. Please try again.';
+        messageKey = 'banking.invalid_transaction_password';
       } else if (errorDetails === 'BLOCKED_TRANSACTION_PASSWORD') {
-        message =
-          'Your transaction password has been blocked. Please contact support.';
+        messageKey = 'banking.blocked_transaction_password';
       }
 
-      return res.status(400).json({
-        success: false,
-        message,
-      });
+      return res.status(400).json(createErrorResponse(messageKey, req.language, 400));
     }
 
     if (status === 401) {
-      return res.status(401).json({
-        success: false,
-        message: 'Authentication failed. Please check your credentials.',
-      });
+      return res.status(401).json(createErrorResponse('authentication.failed', req.language, 401));
     }
 
     if (status === 404) {
-      return res.status(404).json({
-        success: false,
-        message: 'Account not found. Please verify the sender account.',
-      });
+      return res.status(404).json(createErrorResponse('banking.account_not_found', req.language, 404));
     }
 
-    return res.status(500).json({
-      success: false,
-      message:
-        "We're unable to process your EcoCash-Out transaction right now. Please try again later.",
+    return res.status(500).json(createErrorResponse('banking.ecocash_out_error', req.language, 500, {
       error: coreError || error.message,
-    });
+    }));
   }
 };

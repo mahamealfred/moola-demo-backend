@@ -39,10 +39,10 @@ export const insertLogs = async (
 };
 
 // Update log entry
-export const updateLogs = async (transactionId, status, thirdpart_status, token) => {
+export const updateLogs = async (transactionId, status, thirdpart_status, token, description) => {
   try {
     const [updated] = await TransactionStatus.update(
-      { transactionId, thirdpart_status, status, token },
+      { transactionId, thirdpart_status, status, token, description },
       { where: { transactionId: transactionId } }
     );
     if (updated > 0) {
@@ -158,6 +158,58 @@ export const selectTransactionById = async (id) => {
 };
 
 
+// Select all TRANSACTION logs
+export const selectTransactions = async () => {
+  try {
+    const result = await TransactionStatus.findAll({
+      attributes: [
+        "transactionId",
+        "agent_name",
+        "agent_id",
+        "service_name",
+        "amount",
+        "customer_charge",
+        "status",
+        "description",
+        "token",
+        "date",
+      ],
+      raw: true,
+    });
+
+    if (!result) return null;
+
+    // Format date
+    const formattedDate = result.date
+      ? format(new Date(result.date), "dd/MM/yyyy")
+      : null;
+
+    // amount formatting (negative for charges, if needed)
+    const formattedAmount = `${Number(result.amount).toFixed(2)} Rwf`;
+
+    // build response
+    return {
+      id: result.transactionId,
+      date: result.date,
+      formattedDate,
+      processDate: result.date, // you can use another column if processDate differs
+      formattedProcessDate: formattedDate,
+      amount: Number(result.amount),
+      formattedAmount,
+      customerCharge: Number(result.customer_charge),
+      status: result.status,
+      description: result.description,
+      serviceName: result.serviceName
+
+    };
+  } catch (error) {
+    console.error("Error fetching logs:", error.message);
+    return null;
+  }
+};
+
+
+
 // Insert into bulk service payment results (still raw SQL for now)
 export const insertInBulkServicePayment = async (
   service_name,
@@ -186,5 +238,24 @@ export const insertInBulkServicePayment = async (
     console.log("Bulk service payment result inserted");
   } catch (error) {
     console.error("Error inserting bulk service payment:", error.message);
+  }
+};
+
+// Helper function to update the transfers table
+export const updateTransfersTable = async (description, id) => {
+  try {
+    const [results] = await sequelize.query(
+      "UPDATE transfers SET description = ? WHERE id = ?",
+      {
+        replacements: [description, id]
+      }
+    );
+    
+    const affectedRows = results.affectedRows;
+    console.log(`Transfers table updated successfully. Affected rows: ${affectedRows}`);
+    return affectedRows > 0; // Return true if the update was successful
+  } catch (error) {
+    console.error("Failed to update transfers table:", error.message);
+    return false; // Return false if the update failed
   }
 };

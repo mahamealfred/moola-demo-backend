@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import axios from "axios";
 import { callPollEndpoint, Chargeback, generateFDIAccessToken, generateRequestId, generateRequestToken } from "../utils/helper.js";
-import { updateLogs } from "../utils/logsData.js";
+import { updateLogs, updateTransfersTable } from "../utils/logsData.js";
 import CryptoJS from 'crypto-js';
 import logger from "../utils/logger.js";
 
@@ -10,8 +10,7 @@ const AGENT_CODE = process.env.AGENT_CODE;
 const PIN = process.env.AGENT_PIN;
 const AFFCODE = 'ERW';
 const SOURCE_CODE = 'DDIN';
-const ccy = 'RWF'
-
+const ccy = 'RWF';
 // Helper function: choose delivery method based on biller code
 const getDeliveryMethod = (billerCode) => {
   switch (billerCode.toLowerCase()) {
@@ -77,18 +76,21 @@ export const fdiBillPayamentService = async (
   try {
     const resp = await axios.request(config);
     let transactionId = response.data.id;
+    let id = response.data.id;
+    let description = null;
 
     if (resp.status === 202) {
       // Start continuous polling with timeout protection
       let status = "failed";
       let token = null;
       let units = null;
+
       let pollingAttempts = 0;
       const maxPollingAttempts = 10; // ~30 seconds total
 
       while (pollingAttempts < maxPollingAttempts) {
         pollingAttempts++;
-        
+
         // Check if response already sent before polling
         if (isResponseSent(res)) {
           logger.warn("Response already sent, stopping polling");
@@ -102,8 +104,9 @@ export const fdiBillPayamentService = async (
           status = "successful";
           token = billerCode.toLowerCase() === "electricity" ? responseData.data.data.spVendInfo.voucher : null;
           units = billerCode.toLowerCase() === "electricity" ? responseData.data.data.spVendInfo.units : null;
-          await updateLogs(transactionId, status, thirdpart_status, token);
-          
+          description = `${billerCode} payment - Customer ID: ${customerId} - Amount: ${amount}${units ? ` - Units: ${units}` : ''}${token ? ` - Token: ${token}` : ''}`.trim();
+          await updateLogs(transactionId, status, thirdpart_status, token, description);
+          await updateTransfersTable(description, id);
           // Final check before sending response
           if (!isResponseSent(res)) {
             return res.status(200).json({
@@ -126,7 +129,7 @@ export const fdiBillPayamentService = async (
         } else if (thirdpart_status !== "pending") {
           // Handle other non-pending statuses
           status = "failed";
-          await updateLogs(transactionId, status, thirdpart_status, token);
+          await updateLogs(transactionId, status, thirdpart_status, token, null);
           await Chargeback(transactionId);
 
           // Final check before sending response
@@ -145,7 +148,7 @@ export const fdiBillPayamentService = async (
 
       // Handle polling timeout
       if (!isResponseSent(res)) {
-        await updateLogs(transactionId, "failed", "timeout", null);
+        await updateLogs(transactionId, "failed", "timeout", null, null);
         await Chargeback(transactionId);
         return res.status(408).json({
           success: false,
@@ -159,8 +162,7 @@ export const fdiBillPayamentService = async (
     let status = "failed";
     let token = null;
 
-    await updateLogs(transactionId, status, thirdpart_status, token);
-
+    await updateLogs(transactionId, status, thirdpart_status, token, null);
     // Check if response already sent before error handling
     if (isResponseSent(res)) {
       logger.warn("Response already sent, skipping error response");
@@ -174,14 +176,13 @@ export const fdiBillPayamentService = async (
         message: error.response.data.msg,
       });
     }
-    
     if (!error.response) {
       return res.status(404).json({
         success: false,
         message: "Dear client, Your transaction has been processed; please get in touch with DDIN Support for follow-up.",
       });
     }
-    
+
     return res.status(500).json({
       success: false,
       message: "Dear client, we're unable to complete your transaction right now. Please try again later.",

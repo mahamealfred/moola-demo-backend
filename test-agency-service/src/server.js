@@ -10,8 +10,12 @@ import {RateLimiterRedis} from "rate-limiter-flexible";
 import Redis from "ioredis";
 import errorHandler from "./middleware/errorHandler.js";
 import routes from "./routes/agency-service.js";
+import { i18nManager } from "@moola/shared";
 
 dotenv.config()
+
+// Initialize i18n
+await i18nManager.init();
 
 const app = express();
 const PORT = process.env.PORT || 4003
@@ -22,6 +26,9 @@ const redisClient = new Redis(process.env.REDIS_URL);
 app.use(helmet())
 app.use(cors())
 app.use(express.json())
+
+// Add i18n middleware
+app.use(i18nManager.middleware());
 
 app.use((req, res, next) => {
     logger.info(`Received ${req.method} request to ${req.url}`);

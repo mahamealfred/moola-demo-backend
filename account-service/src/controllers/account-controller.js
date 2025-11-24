@@ -2,6 +2,7 @@ import axios from "axios";
 import logger from "../utils/logger.js";
 import jwt from "jsonwebtoken"
 import { clientMomoTopUpService } from "../service/clientMomoTopUpService.js";
+import { createResponse, createErrorResponse } from "@moola/shared";
 
 
 //user topup
@@ -13,10 +14,7 @@ export const clientMomoTopUp = async (req, res) => {
         const userTokenDeatails = await jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
             if (err) {
                 logger.warn("Invalid token!");
-                return res.status(429).json({
-                    message: "Invalid token!",
-                    success: false,
-                });
+                return res.status(401).json(createErrorResponse('authentication.invalid_credentials', req.language, 401));
             }
 
             return user;
@@ -29,10 +27,7 @@ export const clientMomoTopUp = async (req, res) => {
 
     } catch (e) {
         logger.error("Client Momo TopUp error occured", e);
-        res.status(500).json({
-            success: false,
-            message: "Internal server error",
-        });
+        res.status(500).json(createErrorResponse('common.server_error', req.language, 500));
     }
 };
 
@@ -66,30 +61,19 @@ export const getAccountBalance = async (req, res) => {
 
         if (response.status === 200) {
             logger.warn("Successfully get Account Balance");
-            return res.status(200).json({
-                success: true,
-                data: {
-                    mainBalance: response.data,
-                    creditBalance: 0
-                }
-
-
-            });
+            return res.status(200).json(createResponse(true, 'common.success', {
+                mainBalance: response.data,
+                creditBalance: 0
+            }, req.language));
         }
 
     } catch (error) {
         logger.error("get Account Balnce Error error occured", error);
 
         if (error.response.status === 400) {
-            return res.status(400).json({
-                success: false,
-                message: error.response?.data.errorDetails || "Invalid Credentials",
-            });
+            return res.status(400).json(createErrorResponse('authentication.invalid_credentials', req.language, 400));
         }
-        res.status(500).json({
-            success: false,
-            message: "Internal server error",
-        });
+        res.status(500).json(createErrorResponse('common.server_error', req.language, 500));
     }
 };
 
@@ -131,26 +115,19 @@ export const getAccountsBalance = async (req, res) => {
                 };
             });
 
-            return res.status(200).json({
-                success: true,
+            return res.status(200).json(createResponse(true, 'common.success', {
                 accounts: formattedAccounts,
                 creditBalance: 0
-            });
+            }, req.language));
         }
 
     } catch (error) {
         logger.error("get Account Balance Error occurred", error);
 
         if (error.response?.status === 400) {
-            return res.status(400).json({
-                success: false,
-                message: error.response?.data.errorDetails || "Invalid Credentials",
-            });
+            return res.status(400).json(createErrorResponse('authentication.invalid_credentials', req.language, 400));
         }
-        res.status(500).json({
-            success: false,
-            message: "Internal server error",
-        });
+        res.status(500).json(createErrorResponse('common.server_error', req.language, 500));
     }
 };
 
@@ -217,27 +194,15 @@ export const getAccountHistory = async (req, res) => {
                 };
             });
 
-            return res.status(200).json({
-                success: true,
-                message: "Account History",
-                data: filteredData,
-            });
+            return res.status(200).json(createResponse(true, 'common.success', filteredData, req.language));
         }
     } catch (error) {
         logger.error("Get Account History error occurred", error);
 
         if (error?.response?.status === 400) {
-            return res.status(400).json({
-                success: false,
-                message:
-                    error.response?.data?.errorDetails ||
-                    "Invalid credentials",
-            });
+            return res.status(400).json(createErrorResponse('authentication.invalid_credentials', req.language, 400));
         }
 
-        return res.status(500).json({
-            success: false,
-            message: "Internal server error",
-        });
+        return res.status(500).json(createErrorResponse('common.server_error', req.language, 500));
     }
 };

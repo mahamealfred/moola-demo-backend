@@ -4,6 +4,8 @@ import { executeBillerPayment, executeBillPaymentEcoBank, getAllAgentTransaction
 import { executeEcoCashIn, executeEcoCashOut, executeEcoCashOutExpressCashToken, openAccount } from "../controllers/banking-controller.js";
 import { loadTariffs } from "../utils/loadTariffs.js";
 import {  ddinPindoBulkSmsPaymentForCorporate, ddinPindoSingleSmsPaymentForCorporate } from "../controllers/smsController.js";
+import {  selectBrokerTransactions } from "../controllers/logsController.js";
+import { advancedTransactionLimiter } from "../middleware/advancedTransactionLimiter.js";
 
 
 
@@ -23,7 +25,7 @@ router.post("/thirdpartyagency/services/execute/redeemtoken",executeEcoCashOutEx
 
 //Bill validation and pyment routes
 router.post("/thirdpartyagency/services/validate/biller",validateBiller);
-router.post("/thirdpartyagency/services/execute/bill-payment",executeBillerPayment);
+router.post("/thirdpartyagency/services/execute/bill-payment",advancedTransactionLimiter() ,executeBillerPayment);
 //Bulk -sms
 router.post("/thirdpartyagency/services/execute/bulk-sms",ddinPindoBulkSmsPaymentForCorporate);
 router.post("/thirdpartyagency/services/execute/single-sms",ddinPindoSingleSmsPaymentForCorporate);
@@ -43,6 +45,25 @@ router.get("/thirdpartyagency/services/billers/details",getBillerList);
 router.get("/thirdpartyagency/services/transaction/details/:id",getTransactionsById);
 router.get("/thirdpartyagency/services/transactions/history",getAllAgentTransactions);
 
+router.get("/thirdpartyagency/services/transactions/history/:brokerId/broker", async (req, res) => {
+  try {
+    const brokerId = req.params.brokerId; 
+    console.log("Fetching transactions for brokerId:", brokerId);
+    const data = await selectBrokerTransactions(brokerId);
+  console.log("Transactions data:", data);
+    if (!data.length) {
+      return res.status(404).json({ success:false, message: "No transactions found." });
+    }
+
+    res.status(200).json({
+      success:true,
+      message:"Transactions fetched successfully",
+      data});
+  } catch (error) {
+    console.error("Error in transactions API:", error.message);
+    res.status(500).json({success:false, error: "Internal server error" });
+  }
+});
 router.get("/thirdpartyagency/services/tariffs", (req, res) => {
   res.json({
     success:true,

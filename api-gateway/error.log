@@ -50,3 +50,15 @@
 {"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-03T08:59:08.123Z"}
 {"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-03T09:12:29.144Z"}
 {"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-03T09:13:02.246Z"}
+{"level":"error","message":"Proxy error: read ECONNRESET","service":"api-gateway","timestamp":"2025-10-27T17:49:05.341Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-28T17:37:46.004Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-28T17:39:27.012Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-02T16:44:51.644Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:12.369Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:12.383Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:12.390Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:12.400Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:27.191Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:27.207Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:27.218Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-11-13T11:07:27.237Z"}

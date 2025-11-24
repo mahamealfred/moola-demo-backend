@@ -8,6 +8,7 @@ import { generateFDIAccessToken } from '../utils/helper.js';
 import { insertLogs, selectAllLogs, selectTransactionById } from '../utils/logsData.js';
 import { getBillerCharge } from '../utils/helper.js';
 import jwt from "jsonwebtoken";
+import { createResponse, createErrorResponse } from '@moola/shared';
 import { buildAirtimePayload, buildEcobankElecticityPayload, buildEcobankIremboPayPayload, buildEcobankRNITPayPayload, buildEcobankStartimePayload, buildEcobankWasacPayload, buildElecticityPayload, buildGenericBillerPayload, buildRRABillerPayload, buildRRAEcobankBillerPayload, buildStartimePayload } from '../utils/payloadBuilder.js';
 import { ecobankBillPayamentService, fdiBillPayamentService } from '../services/billPayamentService.js';
 import https from "https";
@@ -27,10 +28,7 @@ export const validateBiller = async (req, res) => {
     const { billerCode, productCode, customerId, amount } = req.body;
 
     if (!billerCode || !productCode || !customerId) {
-        return res.status(400).json({
-            success: false,
-            message: 'Missing required fields: billerCode, productCode, or customerId',
-        });
+        return res.status(400).json(createErrorResponse('validation.missing_biller_fields', req.language, 400));
     }
 
     // Billers that go through FDI
@@ -50,19 +48,13 @@ export const validateBiller = async (req, res) => {
         }
         else {
             logger.error('Validation routing failed: Bill cord not found', billerCode);
-            return res.status(404).json({
-                success: false,
-                message: 'Validation routing failed: Bill cord not found',
-
-            });
+            return res.status(404).json(createErrorResponse('billing.biller_not_found', req.language, 404));
         }
     } catch (error) {
         logger.error('Validation routing failed f', { error: error.message });
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error during biller validation',
+        return res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
             error: error.message,
-        });
+        }));
     }
 };
 
@@ -78,24 +70,26 @@ export const ValidateBillerFdi = async (req, res) => {
     //     });
     // }
 
+    //       if (billerCode.toLowerCase() === "electricity") {
+    //     return res.status(400).json({
+    //         success: false,
+    //         message: "Electricity service is under maintenance. Please try again later",
+    //     });
+    // }
+
     let accessToken;
     try {
         accessToken = await generateFDIAccessToken();
     } catch (err) {
         logger.error('Failed to generate access token', { error: err.message });
-        return res.status(500).json({
-            success: false,
-            message: 'Failed to generate access token',
+        return res.status(500).json(createErrorResponse('authentication.token_generation_failed', req.language, 500, {
             error: err.message,
-        });
+        }));
     }
 
     if (!accessToken) {
         logger.warn('Missing access token');
-        return res.status(401).json({
-            success: false,
-            message: 'A token is required for authentication',
-        });
+        return res.status(401).json(createErrorResponse('authentication.token_required', req.language, 401));
     }
 
     const payload = {
@@ -119,25 +113,17 @@ export const ValidateBillerFdi = async (req, res) => {
         const responseData = response.data;
         logger.info(' validation response', { responseData });
         if (response.status === 200 && responseData?.data) {
-            return res.status(200).json({
-                success: true,
-                message: 'Details validated successfully',
-                data: {
-                    productId: billerCode,
-                    productName: responseData.data.pdtName,
-                    customerId: customerId,
-                    customerName: responseData.data.customerAccountName,
-                    maxAmount: responseData.data.vendMax,
-                    requestId: responseData.data.trxId,
-
-                },
-            });
+            return res.status(200).json(createResponse(true, 'billing.details_validated_successfully', {
+                productId: billerCode,
+                productName: responseData.data.pdtName,
+                customerId: customerId,
+                customerName: responseData.data.customerAccountName,
+                maxAmount: responseData.data.vendMax,
+                requestId: responseData.data.trxId,
+            }, req.language));
         }
 
-        return res.status(500).json({
-            success: false,
-            message: "Unable to complete your transaction at this time. Please try again later.",
-        });
+        return res.status(500).json(createErrorResponse('billing.transaction_unavailable', req.language, 500));
     } catch (error) {
         console.log("error:", error)
         const status = error?.response?.status;
@@ -149,24 +135,18 @@ export const ValidateBillerFdi = async (req, res) => {
         });
 
         if (status === 404) {
-            return res.status(404).json({
-                success: false,
-                message: 'Customer not found',
-            });
+            return res.status(404).json(createErrorResponse('billing.customer_not_found', req.language, 404));
         }
 
         if (status === 400 || status === 422) {
-            return res.status(status).json({
-                success: false,
-                message: errorMessage,
-            });
+            return res.status(status).json(createErrorResponse('validation.invalid_request', req.language, status, {
+                apiMessage: errorMessage
+            }));
         }
 
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error. Please try again later.',
+        return res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
             error: errorMessage,
-        });
+        }));
     }
 }
 
@@ -178,10 +158,7 @@ export const validateBillEcobank = async (req, res) => {
 
     if (!billerCode || !productCode || !customerId) {
         logger.warn('Missing required fields', { billerCode, productCode, customerId });
-        return res.status(400).json({
-            success: false,
-            message: 'Missing required fields: billerCode, productCode, or customerId',
-        });
+        return res.status(400).json(createErrorResponse('validation.missing_biller_fields', req.language, 400));
     }
 
     const header = {
@@ -242,11 +219,7 @@ export const validateBillEcobank = async (req, res) => {
         logger.info('Bill payment validation response', { responseData });
 
         if (responseData?.header?.responsecode === '000') {
-            return res.status(200).json({
-                success: true,
-                message: 'Bill payment validated successfully',
-                data: responseData,
-            });
+            return res.status(200).json(createResponse(true, 'billing.payment_validated_successfully', responseData, req.language));
         } else {
             return res.status(400).json({
                 success: false,
@@ -260,11 +233,10 @@ export const validateBillEcobank = async (req, res) => {
             error: error?.response?.data || error.message,
         });
         if (error.response?.header?.responsecode) {
-            return res.status(400).json({
-                success: false,
-                message: error.response?.header?.responsemessage,
+            return res.status(400).json(createErrorResponse('billing.payment_validation_failed', req.language, 400, {
                 code: error.response?.header?.responsecode,
-            });
+                apiMessage: error.response?.header?.responsemessage
+            }));
         }
         return res.status(500).json({
             success: false,
@@ -576,6 +548,7 @@ export const executeBillerPaymentFDI = async (req, res) => {
         });
     }
 
+
     const payload =
         billerCode.toLowerCase() === "airtime"
             ? buildAirtimePayload({ amount, requestId, ccy, customerId, clientPhone })
@@ -604,6 +577,7 @@ export const executeBillerPaymentFDI = async (req, res) => {
         },
         data: JSON.stringify(payload),
     };
+
 
     try {
         const response = await axios.request(config);

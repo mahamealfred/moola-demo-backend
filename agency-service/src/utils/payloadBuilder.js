@@ -145,7 +145,7 @@ export const buildRRABillerPayload = ({
     {
       internalName: "tax_document_id",
       fieldId: "84",
-      value: clientPhone
+      value: customerId
     },
     {
       internalName: "taxpayer",

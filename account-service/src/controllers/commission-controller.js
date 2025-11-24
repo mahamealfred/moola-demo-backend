@@ -3,6 +3,7 @@ import axios from "axios";
 import xml2js from "xml2js";
 import trustAccountToAgentFloat from "../service/trustAccountToAgentFloat.js";
 import logger from "../utils/logger.js";
+import { createResponse, createErrorResponse } from "@moola/shared";
 
 // Self serve commission
 export const withdrawalCommission = async (req, res) => {
@@ -14,19 +15,13 @@ export const withdrawalCommission = async (req, res) => {
 
         if (!token) {
             logger.warn("No token provided!");
-            return res.status(401).json({
-                success: false,
-                message: "Authentication required!",
-            });
+            return res.status(401).json(createErrorResponse('authentication.required', req.language, 401));
         }
 
         const userTokenDetails = await jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
             if (err) {
                 logger.warn("Invalid token!");
-                return res.status(401).json({
-                    success: false,
-                    message: "Invalid token!",
-                });
+                return res.status(401).json(createErrorResponse('authentication.invalid_token', req.language, 401));
             }
             return user;
         });
@@ -37,18 +32,12 @@ export const withdrawalCommission = async (req, res) => {
         // Input validation
         if (!amount || isNaN(amount)) {
             logger.warn("Invalid amount provided");
-            return res.status(400).json({
-                success: false,
-                message: "Valid amount is required",
-            });
+            return res.status(400).json(createErrorResponse('validation.amount_required', req.language, 400));
         }
 
         if (amount < 5000) {
             logger.warn("Amount must be at least 5000 RWF.");
-            return res.status(400).json({
-                success: false,
-                message: "The minimum withdraw amount is 5,000 RWF. Please enter an amount equal to or greater than 5,000.",
-            });
+            return res.status(400).json(createErrorResponse('validation.minimum_amount_5000', req.language, 400));
         }
 
         const url = process.env.CYCLOS_URL + '/services/payment';
@@ -101,10 +90,7 @@ export const withdrawalCommission = async (req, res) => {
 
             if (!paymentResponse) {
                 logger.error("Invalid SOAP response structure", { response: result });
-                return res.status(500).json({
-                    message: "Invalid response from payment service",
-                    success: false,
-                });
+                return res.status(500).json(createErrorResponse('banking.invalid_payment_response', req.language, 500));
             }
 
             const { status, transactionNumber, errors } = paymentResponse;

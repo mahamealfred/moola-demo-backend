@@ -1,6 +1,7 @@
 import axios from "axios";
 import logger from "../utils/logger.js";
 import generateTokens from "../utils/generateToken.js";
+import { createResponse, createErrorResponse } from "@moola/shared";
 import dotenv from "dotenv";
 dotenv.config()
 
@@ -41,18 +42,15 @@ const loginService = async (req, res, username, password) => {
             phoneNumber 
         });
 
-        return res.status(200).json({
-            success: true,
-            data: {
-                id,
-                name: response.data.name,
-                email: response.data.email,
-                category: agentCategory,
-                phoneNumber,
-                accessToken,
-                refreshToken
-            }
-        });
+        return res.status(200).json(createResponse(true, 'authentication.login_success', {
+            id,
+            name: response.data.name,
+            email: response.data.email,
+            category: agentCategory,
+            phoneNumber,
+            accessToken,
+            refreshToken
+        }, req.language));
     } catch (error) {
         logger.error("Error during login:", {
             error: error.response?.data || error.message,
@@ -60,23 +58,14 @@ const loginService = async (req, res, username, password) => {
         });
         
         if (error.response?.status === 400) {
-            return res.status(400).json({
-                success: false,
-                message: error.response?.data?.errorDetails || "Invalid Credentials",
-            });
+            return res.status(400).json(createErrorResponse('authentication.invalid_credentials', req.language, 400));
         }
 
         if (error.response?.status === 401) {
-            return res.status(401).json({
-                success: false,
-                message: "Invalid username or password",
-            });
+            return res.status(401).json(createErrorResponse('authentication.invalid_credentials', req.language, 401));
         }
 
-        return res.status(500).json({
-            success: false,
-            message: "An unexpected error occurred while processing login",
-        });
+        return res.status(500).json(createErrorResponse('common.server_error', req.language, 500));
     }
 };
 

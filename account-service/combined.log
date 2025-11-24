@@ -1266,3 +1266,18 @@
 {"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-10-26T13:31:02.226Z"}
 {"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-10-26T15:04:45.985Z"}
 {"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-10-26T18:04:05.309Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-10-27T12:12:45.504Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-10-27T20:42:17.600Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-10-28T17:20:10.747Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-10-28T19:45:35.152Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-02T16:45:30.769Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-02T19:26:49.021Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-09T17:38:31.624Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-09T18:52:34.577Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-12T18:54:06.461Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-13T11:26:40.920Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-13T11:27:51.679Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-13T12:08:57.841Z"}
+{"level":"info","message":"Account service running on port 4002","service":"account-service","timestamp":"2025-11-13T12:13:20.793Z"}
+{"level":"info","message":"Get Account Balance endpoint hit...","service":"account-service","timestamp":"2025-11-21T20:17:35.604Z"}
+{"level":"warn","message":"Successfully get Account Balance","service":"account-service","timestamp":"2025-11-21T20:17:36.318Z"}

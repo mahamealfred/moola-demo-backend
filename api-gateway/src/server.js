@@ -1,49 +1,69 @@
 
 import express from "express";
 import cors from "cors";
-import Redis from "ioredis";
 import helmet from "helmet";
 import dotenv from "dotenv";
 import {rateLimit} from "express-rate-limit";
 import { RedisStore } from "rate-limit-redis";
-import logger from "./utils/logger.js";
 import proxy from "express-http-proxy";
 import errorHandler from "./middleware/errorHandler.js";
 import  { validateToken } from "./middleware/authMiddleware.js";
+import { i18nManager, sharedConfig, loggerConfig } from "@moola/shared";
 
 dotenv.config();
 
+// Initialize shared configuration
+const { database, redis, logger, config } = await sharedConfig.init({
+  serviceName: 'api-gateway',
+  enableDatabase: false, // API Gateway typically doesn't need direct DB access
+  enableRedis: true
+});
+
+// Initialize i18n
+await i18nManager.init();
+
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = config.server.port || process.env.PORT || 4000;
 
-const redisClient = new Redis(process.env.REDIS_URL);
-
+// Security and parsing middleware
 app.use(helmet());
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: config.server.corsOrigin,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Language', 'Accept-Language'],
+  exposedHeaders: ['X-Language']
+}));
+app.use(express.json({ limit: config.server.bodyLimit }));
 
-//rate limiting
+// Add shared middleware
+app.use(loggerConfig.getRequestLogger());
+app.use(i18nManager.middleware());
+
+// Add language forwarding middleware
+app.use((req, res, next) => {
+  // Ensure language headers are preserved for downstream services
+  req.headers['x-language'] = req.language;
+  next();
+});
+
+// Rate limiting using shared configuration
+const rateLimitConfig = config.rateLimit;
 const ratelimitOptions = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
+  windowMs: rateLimitConfig.windowMs,
+  max: rateLimitConfig.maxRequests,
   standardHeaders: true,
   legacyHeaders: false,
   handler: (req, res) => {
-    logger.warn(`Sensitive endpoint rate limit exceeded for IP: ${req.ip}`);
+    logger.warn(`Rate limit exceeded for IP: ${req.ip}`);
     res.status(429).json({ success: false, message: "Too many requests" });
   },
   store: new RedisStore({
-    sendCommand: (...args) => redisClient.call(...args),
+    sendCommand: (...args) => redis.call(...args),
   }),
 });
 
 app.use(ratelimitOptions);
-
-app.use((req, res, next) => {
-  logger.info(`Received ${req.method} request to ${req.url}`);
-  logger.info(`Request body, ${req.body}`);
-  next();
-});
 
 const proxyOptions = {
   proxyReqPathResolver: (req) => {
@@ -259,24 +279,51 @@ app.use(
 
 
 
+// Health check endpoint
+app.get('/health', async (req, res) => {
+  try {
+    const health = await sharedConfig.healthCheck();
+    res.json({
+      status: 'ok',
+      service: 'api-gateway',
+      timestamp: new Date().toISOString(),
+      ...health
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      service: 'api-gateway',
+      error: error.message
+    });
+  }
+});
+
 app.use(errorHandler);
 
+// Graceful shutdown
+const gracefulShutdown = async () => {
+  logger.info('🔄 Received shutdown signal, closing API Gateway gracefully...');
+  
+  try {
+    await sharedConfig.shutdown();
+    process.exit(0);
+  } catch (error) {
+    logger.error('❌ Error during graceful shutdown:', error);
+    process.exit(1);
+  }
+};
+
+process.on('SIGTERM', gracefulShutdown);
+process.on('SIGINT', gracefulShutdown);
+
 app.listen(PORT, () => {
-  logger.info(`API Gateway is running on port ${PORT}`);
-  logger.info(
-    `Identity service is running on port ${process.env.IDENTITY_SERVICE_URL}`
-  );
-  logger.info(
-    `Account service is running on port ${process.env.ACCOUNT_SERVICE_URL}`
-  );
-  logger.info(
-    `Agency service is running on port ${process.env.AGENCY_SERVICE_URL}`
-  );
-  logger.info(
-    `Client service is running on port ${process.env.CLIENT_SERVICE_URL}`
-  );
-    logger.info(
-    `Test service is running on port ${process.env.TEST_SERVICE_URL}`
-  );
-   logger.info(`Redis Url ${process.env.REDIS_URL}`);
+  logger.info(`🚀 API Gateway running on port ${PORT}`);
+  logger.info(`📊 Environment: ${config.server.env}`);
+  logger.info(`🌐 CORS Origin: ${config.server.corsOrigin}`);
+  logger.info(`🔗 Services: ${JSON.stringify(config.services)}`);
+});
+
+// Unhandled promise rejection
+process.on('unhandledRejection', (reason) => {
+    logger.error('Unhandled Rejection:', reason?.message || reason);
 });
