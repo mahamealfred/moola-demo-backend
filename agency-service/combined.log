@@ -7439,3 +7439,22 @@
 {"billerCode":"airtime","customerId":"+250788123456","level":"warn","message":"Invalid customer ID provided","service":"agency-service","timestamp":"2026-01-20T21:44:36.297Z"}
 {"level":"info","message":"Initializing scheduled transaction reports","service":"agency-service","timestamp":"2026-01-20T21:45:02.378Z"}
 {"dailyEvening":"Every day at 8:00 PM","dailyMorning":"Every day at 8:00 AM","hourly":"Every hour at :00","level":"info","message":"Scheduled jobs initialized successfully","service":"agency-service","timestamp":"2026-01-20T21:45:02.385Z"}
+{"level":"info","message":"Initializing scheduled transaction reports","service":"agency-service","timestamp":"2026-01-20T21:50:14.918Z"}
+{"dailyEvening":"Every day at 8:00 PM","dailyMorning":"Every day at 8:00 AM","hourly":"Every hour at :00","level":"info","message":"Scheduled jobs initialized successfully","service":"agency-service","timestamp":"2026-01-20T21:50:14.925Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"info","message":"FDI Validation Request (Mock Mode - No API Call)","productCode":"airtime","service":"agency-service","timestamp":"2026-01-20T21:50:35.916Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"warn","message":"Invalid customer ID provided","service":"agency-service","timestamp":"2026-01-20T21:50:35.918Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"info","message":"FDI Validation Request (Mock Mode - No API Call)","productCode":"airtime","service":"agency-service","timestamp":"2026-01-20T21:51:21.091Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"warn","message":"Invalid customer ID provided","service":"agency-service","timestamp":"2026-01-20T21:51:21.093Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"info","message":"FDI Validation Request (Mock Mode - No API Call)","productCode":"airtime","service":"agency-service","timestamp":"2026-01-20T21:52:14.077Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"warn","message":"Invalid customer ID provided","service":"agency-service","timestamp":"2026-01-20T21:52:14.078Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"info","message":"FDI Validation Request (Mock Mode - No API Call)","productCode":"airtime","service":"agency-service","timestamp":"2026-01-20T21:53:36.873Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"warn","message":"Invalid customer ID provided","service":"agency-service","timestamp":"2026-01-20T21:53:36.874Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"info","message":"FDI Validation Request (Mock Mode - No API Call)","productCode":"airtime","service":"agency-service","timestamp":"2026-01-20T21:53:41.100Z"}
+{"billerCode":"airtime","customerId":"+250788123456","level":"warn","message":"Invalid customer ID provided","service":"agency-service","timestamp":"2026-01-20T21:53:41.101Z"}
+{"billerCode":"airtime","customerId":"58","level":"info","message":"FDI Validation Request (Mock Mode - No API Call)","productCode":"airtime","service":"agency-service","timestamp":"2026-01-20T21:55:35.281Z"}
+{"billerCode":"airtime","customerId":"58","level":"warn","message":"Invalid customer ID provided","service":"agency-service","timestamp":"2026-01-20T21:55:35.282Z"}
+{"level":"info","message":"Hourly report cron job triggered","service":"agency-service","timestamp":"2026-01-20T22:00:00.772Z"}
+{"level":"info","message":"Starting hourly transaction report generation","service":"agency-service","timestamp":"2026-01-20T22:00:00.773Z"}
+{"level":"warn","message":"WhatsApp credentials not configured. Message not sent.","service":"agency-service","timestamp":"2026-01-20T22:00:01.007Z"}
+{"level":"info","message":"📊 *Hourly Transaction Report*\n⏰ 2026-01-20 23:00:00 - 2026-01-21 00:00:00\n\n📈 *Overall Statistics*\n• Total Transactions: 0\n• ✅ Successful: 0\n• ❌ Failed: 0\n• Success Rate: 0%\n\n💰 *Financial Summary*\n• Total Amount: 0 RWF\n• Success Amount: 0 RWF\n• Failed Amount: 0 RWF","phoneNumber":"250788123456","service":"agency-service","timestamp":"2026-01-20T22:00:01.008Z"}
+{"failed":0,"level":"info","message":"Hourly transaction report sent successfully","service":"agency-service","successful":0,"timestamp":"2026-01-20T22:00:01.010Z","total":0}
