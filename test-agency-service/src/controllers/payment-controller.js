@@ -337,8 +337,9 @@ export const executeBillerPayment = async (req, res) => {
   let userAuth = null;
   let agent_id=0
   let customer_charge = 0;
-if (billerCode.toLowerCase() === "tax") {
-  customer_charge = getBillerCharge(amount,billerCode);
+// Calculate customer charges for tax and airtime
+if (billerCode.toLowerCase() === "tax" || billerCode.toLowerCase() === "airtime") {
+  customer_charge = getBillerCharge(amount, billerCode);
 }
 
   try {
@@ -406,9 +407,9 @@ if (billerCode.toLowerCase() === "tax") {
     });
 
     if (response.status === 200) {
-      // Generate token if electricity
-      const electricityToken =
-        billerCode.toLowerCase() === "electricity"
+      // Generate token for electricity and airtime transactions
+      const serviceToken =
+        billerCode.toLowerCase() === "electricity" || billerCode.toLowerCase() === "airtime"
           ? generate20DigitToken()
           : null;
 
@@ -425,7 +426,7 @@ if (billerCode.toLowerCase() === "tax") {
         billerCode,                   // service_name
         requestId,                   // trxId
         customerId,                  // customerId
-        electricityToken             // token
+        serviceToken             // token
       );
 
       return res.status(200).json({
@@ -436,7 +437,7 @@ if (billerCode.toLowerCase() === "tax") {
           requestId,
           amount,
           subagentCode: agent_name,
-          token: electricityToken,
+          token: serviceToken,
         },
       });
     }

@@ -8,7 +8,10 @@ import {RedisStore} from "rate-limit-redis";
 import {RateLimiterRedis} from "rate-limiter-flexible";
 import errorHandler from "./middleware/errorHandler.js";
 import routes from "./routes/banking-routes.js";
+import reportRoutes from "./routes/report-routes.js";
+import dataColl from "./routes/datacollection-routes.js";
 import { i18nManager, sharedConfig, loggerConfig } from "@moola/shared";
+import { initializeScheduledJobs } from "./jobs/reportScheduler.js";
 
 dotenv.config();
 
@@ -95,9 +98,14 @@ app.get('/health', async (req, res) => {
 
 // Routes
 app.use("/api/agency", routes);
+app.use("/api/reports", reportRoutes);
+app.use("/api/agency", dataColl);
 
 // Error handler
 app.use(errorHandler);
+
+// Initialize scheduled transaction reports
+initializeScheduledJobs();
 
 // Graceful shutdown
 const gracefulShutdown = async () => {

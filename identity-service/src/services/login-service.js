@@ -33,7 +33,7 @@ const loginService = async (req, res, username, password) => {
             }
         });
 
-        const { accessToken, refreshToken } = await generateTokens(token, id, name,username);
+        const { accessToken, refreshToken } = await generateTokens(token, id, name,username,agentCategory);
 
         logger.warn("Successfully logged in", { 
             userId: id, 

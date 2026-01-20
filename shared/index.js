@@ -1,16 +1,10 @@
-const { i18nManager, createResponse, createErrorResponse } = require('./utils/i18n');
+import { i18nManager, createResponse, createErrorResponse } from './utils/i18n.mjs';
 
 // Import configuration modules
-const {
-  default: sharedConfig,
-  SharedConfig,
-  databaseConfig,
-  redisConfig,
-  loggerConfig,
-  appConfig
-} = require('./config/index.js');
+import sharedConfig from './config/index.js';
+import { SharedConfig, databaseConfig, redisConfig, loggerConfig, appConfig } from './config/index.js';
 
-module.exports = {
+export {
   // i18n exports
   i18nManager,
   createResponse,

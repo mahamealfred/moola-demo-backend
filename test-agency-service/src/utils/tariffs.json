@@ -114,6 +114,36 @@
       "range_from": 500001,
       "range_to": 1000000000,
       "customer_charges": 3000
+    },
+    {
+      "transaction_type": "airtime",
+      "range_from": 1000,
+      "range_to": 5000,
+      "customer_charges": 50
+    },
+    {
+      "transaction_type": "airtime",
+      "range_from": 5001,
+      "range_to": 10000,
+      "customer_charges": 100
+    },
+    {
+      "transaction_type": "airtime",
+      "range_from": 10001,
+      "range_to": 25000,
+      "customer_charges": 150
+    },
+    {
+      "transaction_type": "airtime",
+      "range_from": 25001,
+      "range_to": 50000,
+      "customer_charges": 250
+    },
+    {
+      "transaction_type": "airtime",
+      "range_from": 50001,
+      "range_to": 100000,
+      "customer_charges": 400
     }
   ],
   "rapidTransferSendTariffs": [

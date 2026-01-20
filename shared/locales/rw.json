@@ -83,8 +83,20 @@
     "missing_cash_token_amount": "Cash token n'amafaranga birakenewe",
     "failed": "Kwemeza byanze",
     "missing_biller_fields": "Imyanya y'uwishyura irakenewe",
-    "invalid_request": "Icyifuzo kitemewe",
+    "invalid_request": "Icyifuzo gifite amakuru atemewe. Nyamuneka reba icyo winjije ugerageze",
+    "invalid_payment_data": "Ntibishoboka gutunganya ubwishyu. Nyamuneka emeza amakuru y'ubwishyu ugerageze",
+    "invalid_customer_details": "Amakuru y'umukiriya atemewe. Nyamuneka emeza amakuru ugerageze",
+    "invalid_biller_information": "Amakuru y'uwishyura atemewe. Nyamuneka emeza code y'uwishyura na code y'ibicuruzwa",
     "amount_required": "Amafaranga arakenewe",
-    "minimum_amount_5000": "Amafaranga make ni 5,000 RWF"
+    "minimum_amount_5000": "Amafaranga make ni 5,000 RWF",
+    "missing_form_fields": "Imyanya y'inyandiko ibuze"
+  },
+  "data_collection": {
+    "forms_retrieved_successfully": "Inyandiko zabonetse neza",
+    "form_submitted_successfully": "Inyandiko yoherejwe neza",
+    "invalid_form_data": "Amakuru y'inyandiko atemewe",
+    "authentication_failed": "Kwemeza ubwizi byanze - API key itemewe",
+    "forms_not_found": "Inyandiko ntibabonetse",
+    "service_unavailable": "Serivisi yo gukusanya amakuru itari hano ubu"
   }
 }

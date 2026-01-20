@@ -9,6 +9,7 @@ import { callPollEndpoint } from "../utils/checkMomoTransactionStatus.js";
 import { clientMomoTopup } from "../service/momoPullToCyclos.js";
 import { airtimePaymentService } from "../service/airtimePayment.js";
 import { createResponse, createErrorResponse } from '@moola/shared';
+import { mockMomoTransaction, isMockMode } from '@moola/shared/mock-payment-service';
 
 dotenv.config()
 //user topup
@@ -17,6 +18,13 @@ const momoClientPull = async (req, res) => {
     try {
         const authHeader = req.headers["authorization"];
         const token = authHeader && authHeader.split(" ")[1];
+        
+        // Check if mock mode is enabled
+        if (isMockMode()) {
+            logger.info("[MOCK MODE] Processing MoMo transaction with mock data");
+            return await mockMomoTransaction(req, res);
+        }
+
         const userTokenDeatails = await jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
             if (err) {
                 logger.warn("Invalid token!");

@@ -3,7 +3,7 @@ let tariffs;
 
 export async function loadTariffs() {
   if (!tariffs) {
-    const module = await import('./tariffs.json', { assert: { type: 'json' } });
+    const module = await import('./tariffs.json', { with: { type: 'json' } });
     tariffs = module.default;
   }
   return tariffs;

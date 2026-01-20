@@ -83,8 +83,20 @@
     "missing_cash_token_amount": "Cash token and amount are required",
     "failed": "Validation failed",
     "missing_biller_fields": "Missing required fields: billerCode, productCode, or customerId",
-    "invalid_request": "Invalid request",
+    "invalid_request": "The request contains invalid data. Please check your input and try again",
+    "invalid_payment_data": "Unable to process payment. Please verify your payment details and try again",
+    "invalid_customer_details": "The customer details provided are invalid. Please check the information and try again",
+    "invalid_biller_information": "The biller information is invalid. Please verify the biller code and product code",
     "amount_required": "Valid amount is required",
-    "minimum_amount_5000": "The minimum withdraw amount is 5,000 RWF"
+    "minimum_amount_5000": "The minimum withdraw amount is 5,000 RWF",
+    "missing_form_fields": "Missing required form fields"
+  },
+  "data_collection": {
+    "forms_retrieved_successfully": "Forms retrieved successfully",
+    "form_submitted_successfully": "Form submitted successfully",
+    "invalid_form_data": "Invalid form data provided",
+    "authentication_failed": "Authentication failed - invalid API key",
+    "forms_not_found": "Forms not found",
+    "service_unavailable": "Data collection service is temporarily unavailable"
   }
 }

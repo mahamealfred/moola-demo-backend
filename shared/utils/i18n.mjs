@@ -15,6 +15,8 @@ class I18nManager {
     if (this.initialized) return;
 
     try {
+      const loadPath = path.join(__dirname, '../locales/{{lng}}.json');
+      
       await i18next
         .use(Backend)
         .init({
@@ -23,7 +25,7 @@ class I18nManager {
           supportedLngs: ['en', 'rw', 'fr', 'sw'],
           debug: false,
           backend: {
-            loadPath: path.join(__dirname, '../locales/{{lng}}.json'),
+            loadPath: loadPath,
           },
           interpolation: {
             escapeValue: false,
@@ -37,10 +39,10 @@ class I18nManager {
         });
 
       // Verify all languages are loaded
-      console.log('i18n initialized with languages:', i18next.languages);
+      console.log('✅ i18n initialized successfully with languages:', i18next.languages);
       this.initialized = true;
     } catch (error) {
-      console.error('Failed to initialize i18n:', error);
+      console.error('❌ Failed to initialize i18n:', error);
       throw error;
     }
   }
@@ -48,7 +50,7 @@ class I18nManager {
   /**
    * Get translation for a key
    * @param {string} key - Translation key (e.g., 'common.success')
-   * @param {string} language - Language code (rw, en, fr)
+   * @param {string} language - Language code (rw, en, fr, sw)
    * @param {object} options - Interpolation options
    * @returns {string} Translated text
    */
@@ -65,7 +67,10 @@ class I18nManager {
     try {
       const translation = i18next.t(key, { ...options, lng: targetLanguage });
       // If translation returns the key itself, it means translation was not found
-      return translation !== key ? translation : key;
+      if (translation === key) {
+        console.warn(`Translation missing for key '${key}' in language '${targetLanguage}'`);
+      }
+      return translation;
     } catch (error) {
       console.error(`Translation error for key '${key}' in language '${targetLanguage}':`, error);
       return key;
@@ -139,17 +144,33 @@ const i18nManager = new I18nManager();
 
 // Helper functions for common response patterns
 const createResponse = (success, messageKey, data = null, language = 'en') => {
+  let message = messageKey;
+  try {
+    if (i18nManager && i18nManager.initialized) {
+      message = i18nManager.t(messageKey, language);
+    }
+  } catch (error) {
+    console.error('Error translating message:', error);
+  }
   return {
     success,
-    message: i18nManager.t(messageKey, language),
+    message,
     data
   };
 };
 
 const createErrorResponse = (messageKey, language = 'en', statusCode = 400) => {
+  let message = messageKey;
+  try {
+    if (i18nManager && i18nManager.initialized) {
+      message = i18nManager.t(messageKey, language);
+    }
+  } catch (error) {
+    console.error('Error translating error message:', error);
+  }
   return {
     success: false,
-    message: i18nManager.t(messageKey, language),
+    message,
     statusCode,
     data: null
   };

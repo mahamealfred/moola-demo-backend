@@ -210,8 +210,11 @@ const refreshTokenUser = async (req, res) => {
             accessToken: newAccessToken,
             refreshToken: newRefreshToken,
         } = await generateTokens(
-         token,id
-        
+         token,
+         id,
+         storedToken.name,
+         storedToken.username,
+         storedToken.agentCategory
         );
 
         // Delete the old refresh token

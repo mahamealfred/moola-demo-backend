@@ -83,8 +83,20 @@
     "missing_cash_token_amount": "Jeton cash et montant requis",
     "failed": "Échec de la validation",
     "missing_biller_fields": "Champs requis manquants: billerCode, productCode, ou customerId",
-    "invalid_request": "Requête invalide",
+    "invalid_request": "La requête contient des données invalides. Veuillez vérifier votre saisie et réessayer",
+    "invalid_payment_data": "Impossible de traiter le paiement. Veuillez vérifier vos détails de paiement et réessayer",
+    "invalid_customer_details": "Les détails du client fournis sont invalides. Veuillez vérifier les informations et réessayer",
+    "invalid_biller_information": "Les informations du facturier sont invalides. Veuillez vérifier le code facturier et le code produit",
     "amount_required": "Montant valide requis",
-    "minimum_amount_5000": "Le montant minimum de retrait est de 5 000 RWF"
+    "minimum_amount_5000": "Le montant minimum de retrait est de 5 000 RWF",
+    "missing_form_fields": "Champs de formulaire requis manquants"
+  },
+  "data_collection": {
+    "forms_retrieved_successfully": "Formulaires récupérés avec succès",
+    "form_submitted_successfully": "Formulaire soumis avec succès",
+    "invalid_form_data": "Données de formulaire invalides fournies",
+    "authentication_failed": "Échec de l'authentification - clé API invalide",
+    "forms_not_found": "Formulaires non trouvés",
+    "service_unavailable": "Le service de collecte de données est temporairement indisponible"
   }
 }

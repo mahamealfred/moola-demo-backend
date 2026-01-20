@@ -15,6 +15,18 @@ const RefreshToken = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+     name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+     username: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+     agentCategory: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     userAuth: {
       type: DataTypes.STRING,
       allowNull: false

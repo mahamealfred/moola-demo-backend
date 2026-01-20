@@ -12,6 +12,11 @@ export const buildAirtimePayload = ({   amount,
   description: 'Airtime Purchase',
   customValues: [
     {
+      internalName: 'phoneNumber',
+      fieldId: '116',
+      value: customerId,
+    },
+    {
       internalName: 'trans_id',
       fieldId: '118',
       value: requestId,

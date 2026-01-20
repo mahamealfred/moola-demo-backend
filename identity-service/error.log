@@ -315,3 +315,25 @@
 {"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-21T19:52:19.058Z","username":"User1"}
 {"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-21T20:17:13.986Z","username":"Liveagent"}
 {"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-24T21:02:51.250Z","username":"Liveagentr"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:51:31.448Z","username":"liveagent"}
+{"error":"Operation timeout","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:51:41.243Z","username":"liveagent"}
+{"error":"read ECONNRESET","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:56:49.818Z","username":"Liveagent"}
+{"error":"read ECONNRESET","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:56:49.849Z","username":"Liveagent"}
+{"error":"read ECONNRESET","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:56:49.857Z","username":"Liveagent"}
+{"error":"read ECONNRESET","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:56:49.864Z","username":"liveagent"}
+{"error":"read ECONNRESET","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:56:49.870Z","username":"liveagent"}
+{"error":"read ECONNRESET","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:56:49.883Z","username":"liveagent"}
+{"error":"connect ECONNREFUSED 127.0.0.1:3306","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T10:58:08.425Z","username":"liveagent"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T11:17:58.718Z","username":"liveagent"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T12:46:14.248Z","username":"liveagent"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-25T14:34:38.553Z","username":"liveagent"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-26T14:47:45.353Z","username":"liveagent"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-26T16:30:56.593Z","username":"liveagent"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-26T19:11:03.680Z","username":"liveagent"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-11-26T20:07:18.699Z","username":"liveagent"}
+{"error":"connect ETIMEDOUT 13.244.151.8:443","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-12-10T10:59:18.294Z","username":"User1"}
+{"error":"connect ETIMEDOUT 13.244.151.8:443","level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-12-10T11:00:04.404Z","username":"User1"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-12-30T14:09:40.027Z","username":"Mahame"}
+{"error":{"errorCode":"BLOCKED_CREDENTIALS","errorDetails":"Credentials blocked"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2025-12-30T14:09:49.292Z","username":"Mahame"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2026-01-05T09:42:50.955Z","username":"Mahame"}
+{"error":{"errorCode":"INVALID_CREDENTIALS","errorDetails":"Invalid username / password"},"level":"error","message":"Error during login:","service":"identity-service","timestamp":"2026-01-06T10:37:20.474Z","username":"Mahame"}

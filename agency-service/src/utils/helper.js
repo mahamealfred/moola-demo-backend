@@ -2,6 +2,7 @@
 import CryptoJS from 'crypto-js';
 import axios from "axios";
 import dotenv from "dotenv";
+import jwt from "jsonwebtoken";
 
 import { loadTariffs } from "../utils/loadTariffs.js";
 
@@ -17,7 +18,31 @@ export const  getBillerCharge=async(amount,billerCode)=> {
     (t) => amount >= t.range_from && amount <= t.range_to
   );
 
-  return match ? Number(match.customer_charges) : 0;
+  // If tariff found, return it; otherwise use tax service pricing
+  if (match) {
+    return Number(match.customer_charges);
+  }
+
+  // Tax service customer charge tiers
+  if (billerCode.toLowerCase() === 'tax') {
+    if (amount >= 1 && amount <= 1000) {
+      return 160;
+    } else if (amount >= 1001 && amount <= 10000) {
+      return 300;
+    } else if (amount >= 10001 && amount <= 40000) {
+      return 500;
+    } else if (amount >= 40001 && amount <= 75000) {
+      return 1000;
+    } else if (amount >= 75001 && amount <= 150000) {
+      return 1500;
+    } else if (amount >= 150001 && amount <= 500000) {
+      return 2000;
+    } else if (amount >= 500001) {
+      return 3000;
+    }
+  }
+
+  return 0;
 }
 export const generateRequestId=() =>{
     let id = 'A';
@@ -243,4 +268,19 @@ export const billercategories = {
             "serialNo": 2
         }
     ]
+};
+
+/**
+ * Decode JWT token
+ * @param {string} token - JWT token to decode
+ * @returns {object|null} - Decoded token payload or null if invalid
+ */
+export const decodeToken = (token) => {
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    return decoded;
+  } catch (error) {
+    console.error("Token decode error:", error.message);
+    return null;
+  }
 };

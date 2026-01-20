@@ -1,19 +1,13 @@
 import { i18nManager, createResponse, createErrorResponse } from './utils/i18n.mjs';
 
 // Import configuration modules
-import {
-  default as sharedConfig,
-  SharedConfig,
-  databaseConfig,
-  redisConfig,
-  loggerConfig,
-  appConfig
-} from './config/index.js';
+import sharedConfig from './config/index.js';
+import { SharedConfig, databaseConfig, redisConfig, loggerConfig, appConfig } from './config/index.js';
 
-export { 
+export {
   // i18n exports
-  i18nManager, 
-  createResponse, 
+  i18nManager,
+  createResponse,
   createErrorResponse,
   // Configuration exports
   sharedConfig,

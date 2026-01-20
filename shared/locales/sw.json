@@ -75,7 +75,20 @@
     "amount_too_high": "Kiasi ni kikubwa sana",
     "missing_required_fields": "Mashamba yanayohitajika hayajajazwa",
     "invalid_credentials": "Uthibitisho wa utambulisho batili",
-    "weak_password": "Nywila ni dhaifu"
+    "weak_password": "Nywila ni dhaifu",
+    "invalid_request": "Ombi lina data batili. Tafadhali kagua ingizo lako na jaribu tena",
+    "invalid_payment_data": "Haiwezekani kuchakata malipo. Tafadhali thibitisha maelezo ya malipo yako na jaribu tena",
+    "invalid_customer_details": "Maelezo ya mteja yaliyotolewa ni batili. Tafadhali kagua taarifa na jaribu tena",
+    "invalid_biller_information": "Taarifa za mlipaji ni batili. Tafadhali thibitisha msimbo wa mlipaji na msimbo wa bidhaa",
+    "missing_form_fields": "Mashamba ya fomu yanayohitajika hayajajazwa"
+  },
+  "data_collection": {
+    "forms_retrieved_successfully": "Fomu zimepatikana kwa mafanikio",
+    "form_submitted_successfully": "Fomu imetumwa kwa mafanikio",
+    "invalid_form_data": "Data ya fomu yaliyotolewa ni batili",
+    "authentication_failed": "Uthibitisho wa utambulisho umeshindwa - kitufe cha API batili",
+    "forms_not_found": "Fomu hazijapatikana",
+    "service_unavailable": "Huduma ya ukusanyaji wa data haipatikani kwa sasa"
   },
   "billing": {
     "biller_not_found": "Mlipaji haja patikana",

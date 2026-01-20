@@ -3,15 +3,16 @@ import crypto from 'crypto';
 import logger from '../utils/logger.js';
 import dotenv from 'dotenv';
 import CryptoJS from 'crypto-js';
-import { billercategories, findNetAmount, generateRequestId } from '../utils/helper.js';
+import { billercategories, decodeToken, findNetAmount, generateRequestId } from '../utils/helper.js';
 import { generateFDIAccessToken } from '../utils/helper.js';
-import { insertLogs, selectAllLogs, selectTransactionById } from '../utils/logsData.js';
+import { insertLogs, selectAllLogs, selectTransactionById, updateLogs } from '../utils/logsData.js';
 import { getBillerCharge } from '../utils/helper.js';
 import jwt from "jsonwebtoken";
 import { createResponse, createErrorResponse } from '@moola/shared';
 import { buildAirtimePayload, buildEcobankElecticityPayload, buildEcobankIremboPayPayload, buildEcobankRNITPayPayload, buildEcobankStartimePayload, buildEcobankWasacPayload, buildElecticityPayload, buildGenericBillerPayload, buildRRABillerPayload, buildRRAEcobankBillerPayload, buildStartimePayload } from '../utils/payloadBuilder.js';
 import { ecobankBillPayamentService, fdiBillPayamentService } from '../services/billPayamentService.js';
 import https from "https";
+import { mockValidateBiller, mockExecutePayment, mockValidateEcobankBiller, isMockMode } from '@moola/shared/mock-payment-service';
 dotenv.config();
 
 
@@ -23,6 +24,19 @@ const SOURCE_CODE = 'DDIN';
 const agent = new https.Agent({
     rejectUnauthorized: false,  // WARNING: disables SSL verification
 });
+
+// Map internal biller codes to FDI verticalId values
+const FDI_VERTICAL_ID_MAP = {
+    'electricity': 'ELEC',
+    'airtime': 'airtime',
+    'tax': 'tax',
+    'paytv': 'paytv',
+    'water': 'water',
+};
+
+const getFDIVerticalId = (billerCode) => {
+    return FDI_VERTICAL_ID_MAP[billerCode?.toLowerCase()] || billerCode;
+};
 // Router function: decides which validator to use
 export const validateBiller = async (req, res) => {
     const { billerCode, productCode, customerId, amount } = req.body;
@@ -31,10 +45,16 @@ export const validateBiller = async (req, res) => {
         return res.status(400).json(createErrorResponse('validation.missing_biller_fields', req.language, 400));
     }
 
+    // Check if mock mode is enabled
+    if (isMockMode()) {
+        logger.info(`[MOCK MODE] validateBiller called for ${billerCode}`);
+        return await mockValidateBiller(req, res, billerCode, customerId);
+    }
+
     // Billers that go through FDI
-    const fdiBillers = ['tax', 'airtime', 'paytv', 'electricity'];
-    // Billers that go through FDI
-    const ecoBillers = ['RRA', 'RWANDA_WASAC', 'IREMBOPAY', 'EUCL_ERW', 'ELEC', 'STTV', 'RNIT', 'GTP-LOAD'];
+    const fdiBillers = ['tax', 'airtime', 'paytv', 'electricity', 'rra', 'water', 'rnit', 'irembopay'];
+    // Billers that go through EcoBank
+    const ecoBillers = ['RWANDA_WASAC', 'EUCL_ERW', 'ELEC', 'STTV', 'GTP-LOAD'];
     try {
         if (fdiBillers.includes(billerCode)) {
 
@@ -62,92 +82,311 @@ export const validateBiller = async (req, res) => {
 export const ValidateBillerFdi = async (req, res) => {
     const { billerCode, productCode, customerId, amount } = req.body;
 
-    // if (!billerCode || !productCode || !customerId) {
-    //     logger.warn('Missing required fields', { billerCode, productCode, customerId });
-    //     return res.status(400).json({
-    //         success: false,
-    //         message: 'Missing required fields: billerCode, productCode, or customerId',
-    //     });
-    // }
+    logger.info('FDI Validation Request (Mock Mode - No API Call)', { 
+        billerCode,
+        productCode,
+        customerId,
+        amount
+    });
 
-    //       if (billerCode.toLowerCase() === "electricity") {
-    //     return res.status(400).json({
-    //         success: false,
-    //         message: "Electricity service is under maintenance. Please try again later",
-    //     });
-    // }
-
-    let accessToken;
-    try {
-        accessToken = await generateFDIAccessToken();
-    } catch (err) {
-        logger.error('Failed to generate access token', { error: err.message });
-        return res.status(500).json(createErrorResponse('authentication.token_generation_failed', req.language, 500, {
-            error: err.message,
-        }));
-    }
-
-    if (!accessToken) {
-        logger.warn('Missing access token');
-        return res.status(401).json(createErrorResponse('authentication.token_required', req.language, 401));
-    }
-
-    const payload = {
-        verticalId: billerCode,
-        customerAccountNumber: customerId,
+    // Mock validation data with 3 samples per service
+    const mockValidationSamples = {
+        'electricity': [
+            {
+                customerId: '0123456789',
+                pdtName: 'EWSA Electricity',
+                customerAccountName: 'Jean Nshimiyimana - Kigali',
+                vendMax: 200000,
+                vendMin: 5000,
+                meterNumber: 'MTR-123456',
+                trxId: 'TRX-ELEC-001',
+            },
+            {
+                customerId: '0987654321',
+                pdtName: 'EWSA Electricity',
+                customerAccountName: 'Uwishake Marie - Huye',
+                vendMax: 200000,
+                vendMin: 5000,
+                meterNumber: 'MTR-654321',
+                trxId: 'TRX-ELEC-002',
+            },
+            {
+                customerId: '1122334455',
+                pdtName: 'EWSA Electricity',
+                customerAccountName: 'Pierre Kabushesha - Musanze',
+                vendMax: 200000,
+                vendMin: 5000,
+                meterNumber: 'MTR-112233',
+                trxId: 'TRX-ELEC-003',
+            },
+        ],
+        'airtime': [
+            {
+                customerId: '250788123456',
+                pdtName: 'MTN Airtime',
+                customerAccountName: 'Jean Nshimiyimana',
+                vendMax: 100000,
+                vendMin: 1000,
+                provider: 'MTN',
+                trxId: 'TRX-AIR-001',
+            },
+            {
+                customerId: '250701234567',
+                pdtName: 'Airtel Airtime',
+                customerAccountName: 'Uwishake Marie',
+                vendMax: 100000,
+                vendMin: 1000,
+                provider: 'AIRTEL',
+                trxId: 'TRX-AIR-002',
+            },
+            {
+                customerId: '250712345678',
+                pdtName: 'RURA Airtime',
+                customerAccountName: 'Pierre Kabushesha',
+                vendMax: 100000,
+                vendMin: 1000,
+                provider: 'RURA',
+                trxId: 'TRX-AIR-003',
+            },
+        ],
+        'tax': [
+            {
+                customerId: '0123456789',
+                pdtName: 'RRA VAT Payment',
+                customerAccountName: 'Business A Ltd - Kigali',
+                vendMax: 5000,
+                vendMin: 100,
+                tinNumber: 'TIN-123456789',
+                taxType: 'VAT',
+                trxId: 'TRX-TAX-001',
+            },
+            {
+                customerId: '9876543210',
+                pdtName: 'RRA Income Tax Payment',
+                customerAccountName: 'Enterprise Corp - Huye',
+                vendMax: 5000,
+                vendMin: 100,
+                tinNumber: 'TIN-987654321',
+                taxType: 'INCOME_TAX',
+                trxId: 'TRX-TAX-002',
+            },
+            {
+                customerId: '1122334455',
+                pdtName: 'RRA Business Tax Payment',
+                customerAccountName: 'Trading Company - Musanze',
+                vendMax: 5000,
+                vendMin: 100,
+                tinNumber: 'TIN-112233445',
+                taxType: 'BUSINESS_TAX',
+                trxId: 'TRX-TAX-003',
+            },
+        ],
+        'rra': [
+            {
+                customerId: '0123456789',
+                pdtName: 'RRA VAT Payment',
+                customerAccountName: 'Business A Ltd - Kigali',
+                vendMax: 5000,
+                vendMin: 100,
+                tinNumber: 'TIN-123456789',
+                taxType: 'VAT',
+                trxId: 'TRX-RRA-001',
+            },
+            {
+                customerId: '9876543210',
+                pdtName: 'RRA Income Tax Payment',
+                customerAccountName: 'Enterprise Corp - Huye',
+                vendMax: 5000,
+                vendMin: 100,
+                tinNumber: 'TIN-987654321',
+                taxType: 'INCOME_TAX',
+                trxId: 'TRX-RRA-002',
+            },
+            {
+                customerId: '1122334455',
+                pdtName: 'RRA Business Tax Payment',
+                customerAccountName: 'Trading Company - Musanze',
+                vendMax: 5000,
+                vendMin: 100,
+                tinNumber: 'TIN-112233445',
+                taxType: 'BUSINESS_TAX',
+                trxId: 'TRX-RRA-003',
+            },
+        ],
+        'paytv': [
+            {
+                customerId: '1234567890',
+                pdtName: 'MyTV Basic Package',
+                customerAccountName: 'MyTV Subscriber - Basic Plan',
+                vendMax: 50000,
+                vendMin: 5000,
+                subscriberNumber: 'SUB-001234',
+                packageType: 'BASIC',
+                trxId: 'TRX-TV-001',
+            },
+            {
+                customerId: '9876543210',
+                pdtName: 'MyTV Standard Package',
+                customerAccountName: 'MyTV Subscriber - Standard Plan',
+                vendMax: 50000,
+                vendMin: 5000,
+                subscriberNumber: 'SUB-987654',
+                packageType: 'STANDARD',
+                trxId: 'TRX-TV-002',
+            },
+            {
+                customerId: '5555555555',
+                pdtName: 'MyTV Premium Package',
+                customerAccountName: 'MyTV Subscriber - Premium Plan',
+                vendMax: 50000,
+                vendMin: 5000,
+                subscriberNumber: 'SUB-PREM01',
+                packageType: 'PREMIUM',
+                trxId: 'TRX-TV-003',
+            },
+        ],
+        'rnit': [
+            {
+                customerId: '1000000000000001',
+                pdtName: 'Rwanda National ID Service',
+                customerAccountName: 'Jean Nshimiyimana - Kigali',
+                vendMax: 50000,
+                vendMin: 1000,
+                nationalId: '1000000000000001',
+                idStatus: 'ACTIVE',
+                trxId: 'TRX-RNIT-001',
+            },
+            {
+                customerId: '1000000000000002',
+                pdtName: 'Rwanda National ID Service',
+                customerAccountName: 'Marie Uwishake - Huye',
+                vendMax: 50000,
+                vendMin: 1000,
+                nationalId: '1000000000000002',
+                idStatus: 'ACTIVE',
+                trxId: 'TRX-RNIT-002',
+            },
+            {
+                customerId: '1000000000000003',
+                pdtName: 'Rwanda National ID Service',
+                customerAccountName: 'Pierre Kabushesha - Musanze',
+                vendMax: 50000,
+                vendMin: 1000,
+                nationalId: '1000000000000003',
+                idStatus: 'ACTIVE',
+                trxId: 'TRX-RNIT-003',
+            },
+        ],
+        'irembopay': [
+            {
+                customerId: 'IREMBO001001',
+                pdtName: 'Irembo - Business License',
+                customerAccountName: 'Business A Ltd - Kigali',
+                vendMax: 500000,
+                vendMin: 10000,
+                serviceType: 'BUSINESS_LICENSE',
+                referenceNumber: 'REF-IREMBO-001',
+                trxId: 'TRX-IREMBO-001',
+            },
+            {
+                customerId: 'IREMBO002002',
+                pdtName: 'Irembo - Land Lease',
+                customerAccountName: 'Enterprise Corp - Huye',
+                vendMax: 500000,
+                vendMin: 10000,
+                serviceType: 'LAND_LEASE',
+                referenceNumber: 'REF-IREMBO-002',
+                trxId: 'TRX-IREMBO-002',
+            },
+            {
+                customerId: 'IREMBO003003',
+                pdtName: 'Irembo - Building Permit',
+                customerAccountName: 'Construction Ltd - Musanze',
+                vendMax: 500000,
+                vendMin: 10000,
+                serviceType: 'BUILDING_PERMIT',
+                referenceNumber: 'REF-IREMBO-003',
+                trxId: 'TRX-IREMBO-003',
+            },
+        ],
     };
 
-    const config = {
-        method: 'post',
-        maxBodyLength: Infinity,
-        url: `${process.env.EFASHE_URL}/rw/v2/vend/validate`,
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${accessToken.replace(/['"]+/g, '')}`,
-        },
-        data: JSON.stringify(payload),
-    };
+    const billerKey = billerCode.toLowerCase();
+    const samples = mockValidationSamples[billerKey];
 
-    try {
-        const response = await axios.request(config);
-        const responseData = response.data;
-        logger.info(' validation response', { responseData });
-        if (response.status === 200 && responseData?.data) {
-            return res.status(200).json(createResponse(true, 'billing.details_validated_successfully', {
-                productId: billerCode,
-                productName: responseData.data.pdtName,
-                customerId: customerId,
-                customerName: responseData.data.customerAccountName,
-                maxAmount: responseData.data.vendMax,
-                requestId: responseData.data.trxId,
-            }, req.language));
-        }
+    if (!samples) {
+        logger.warn('No mock samples found for biller', { billerCode });
+        return res.status(404).json(createErrorResponse('billing.biller_not_found', req.language, 404));
+    }
 
-        return res.status(500).json(createErrorResponse('billing.transaction_unavailable', req.language, 500));
-    } catch (error) {
-        console.log("error:", error)
-        const status = error?.response?.status;
-        const errorMessage = error?.response?.data?.msg || error.message;
+    // Find matching sample by customerId
+    const matchingSample = samples.find(s => s.customerId === customerId);
 
-        logger.error('Phone number validation failed', {
-            status,
-            error: error?.response?.data || errorMessage,
+    if (!matchingSample) {
+        logger.warn('Invalid customer ID provided', { billerCode, customerId });
+        
+        // Service-specific error messages
+        const serviceMessages = {
+            'electricity': 'Electricity meter account not found',
+            'airtime': 'Airtime account not found',
+            'tax': 'Tax account not found',
+            'paytv': 'PayTV subscriber account not found',
+            'rnit': 'National ID record not found',
+            'irembopay': 'Irembo service account not found',
+        };
+        
+        const errorMessage = serviceMessages[billerKey] || 'Customer account not found';
+        const validIds = samples.map(s => s.customerId).join(', ');
+        
+        return res.status(400).json({
+            success: false,
+            message: errorMessage,
+            details: `Valid customer IDs: ${validIds}`,
+            code: 'CUSTOMER_NOT_FOUND'
         });
-
-        if (status === 404) {
-            return res.status(404).json(createErrorResponse('billing.customer_not_found', req.language, 404));
-        }
-
-        if (status === 400 || status === 422) {
-            return res.status(status).json(createErrorResponse('validation.invalid_request', req.language, status, {
-                apiMessage: errorMessage
-            }));
-        }
-
-        return res.status(500).json(createErrorResponse('common.server_error', req.language, 500, {
-            error: errorMessage,
-        }));
     }
+
+    logger.info('Mock validation response returned', { 
+        billerCode, 
+        customerId, 
+        matchingSample,
+        totalSamples: samples.length,
+        amount
+    });
+
+    // Build response object
+    const responseData = {
+        productId: billerCode,
+        productName: matchingSample.pdtName,
+        customerId: matchingSample.customerId,
+        customerName: matchingSample.customerAccountName,
+        maxAmount: matchingSample.vendMax,
+        minAmount: matchingSample.vendMin,
+        requestId: matchingSample.trxId,
+        samples: samples.map(s => ({
+            customerId: s.customerId,
+            customerName: s.customerAccountName,
+            ...Object.fromEntries(
+                Object.entries(s).filter(([key]) => !['customerId', 'customerAccountName'].includes(key))
+            )
+        }))
+    };
+
+    // Add tax-specific fields if this is a tax or RRA service and amount is provided
+    if ((billerKey === 'tax' || billerKey === 'rra') && amount) {
+        try {
+            const customerCharge = await getBillerCharge(amount, billerKey);
+            const totalToPay = amount + customerCharge;
+            responseData.amountRequested = amount;
+            responseData.customerCharge = customerCharge;
+            responseData.amountToPay = totalToPay;
+            logger.info('Tax charges calculated', { amountRequested: amount, customerCharge, totalToPay });
+        } catch (error) {
+            logger.warn('Failed to calculate tax charges', { error: error.message });
+        }
+    }
+
+    return res.status(200).json(createResponse(true, 'billing.details_validated_successfully', responseData, req.language));
 }
 
 
@@ -159,6 +398,12 @@ export const validateBillEcobank = async (req, res) => {
     if (!billerCode || !productCode || !customerId) {
         logger.warn('Missing required fields', { billerCode, productCode, customerId });
         return res.status(400).json(createErrorResponse('validation.missing_biller_fields', req.language, 400));
+    }
+
+    // Check if mock mode is enabled
+    if (isMockMode()) {
+        logger.info(`[MOCK MODE] validateBillEcobank called for ${billerCode}`);
+        return await mockValidateEcobankBiller(req, res);
     }
 
     const header = {
@@ -266,10 +511,17 @@ export const executeBillerPayment = async (req, res) => {
             message: 'Missing required fields: email, customerNumber, billerCode, productCode, amount ',
         });
     }
+
+    // Check if mock mode is enabled
+    if (isMockMode()) {
+        logger.info(`[MOCK MODE] executeBillerPayment called for ${billerCode}`);
+        return await mockExecutePayment(req, res, billerCode, amount);
+    }
+
     // Billers that go through FDI
-    const fdiBillers = ['tax', 'airtime', 'paytv', 'electricity'];
-    // Billers that go through FDI
-    const ecoBillers = ['RRA', 'RWANDA_WASAC', 'EUCL_ERW', 'IREMBOPAY', 'ELEC', 'STTV', 'RNIT', 'GTP-LOAD'];
+    const fdiBillers = ['tax', 'airtime', 'paytv', 'electricity', 'rra', 'water', 'rnit', 'irembopay'];
+    // Billers that go through EcoBank
+    const ecoBillers = ['RWANDA_WASAC', 'EUCL_ERW', 'ELEC', 'STTV', 'GTP-LOAD'];
     try {
         if (fdiBillers.includes(billerCode)) {
 
@@ -325,6 +577,12 @@ export const executeBillPaymentEcoBank = async (req, res) => {
         });
     }
 
+    // Check if mock mode is enabled
+    if (isMockMode()) {
+        logger.info(`[MOCK MODE] executeBillPaymentEcoBank called for ${billerCode}`);
+        return await mockExecutePayment(req, res, billerCode, amount);
+    }
+
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
 
@@ -334,7 +592,7 @@ export const executeBillPaymentEcoBank = async (req, res) => {
     let customer_charge = 0;
     let netAmount = findNetAmount(amount)
     if (billerCode.toLowerCase() === "RRA") {
-        customer_charge = getBillerCharge(amount, billerCode);
+        customer_charge = await getBillerCharge(amount, billerCode);
     }
 
     try {
@@ -424,19 +682,41 @@ export const executeBillPaymentEcoBank = async (req, res) => {
                 electricityToken             // token
             );
 
-            // Call ecobank service and return its result
-            return await ecobankBillPayamentService(
-                req,
-                res,
-                cyclosResp,
-                amount,
-                billerCode,
+            // Return mock response without calling EcoBank third-party service
+            const token = billerCode.toLowerCase() === "elec" || billerCode.toLowerCase() === "eucl_erw" ? "MOCK20240106001234" : null;
+            const units = billerCode.toLowerCase() === "elec" || billerCode.toLowerCase() === "eucl_erw" ? 150 : null;
+            
+            // Build comprehensive description with all transaction details
+            const description = `${billerCode.toUpperCase()} payment - Customer ID: ${customerId} - Amount: ${amount} - Agent: ${agent_name} (${agent_id}) - Request ID: ${requestId}${units ? ` - Units: ${units}` : ''}${token ? ` - Token: ${token}` : ''}`.trim();
+            
+            // Update logs with successful status (non-blocking)
+            updateLogs(
+              cyclosResp.data.id,      // transactionId
+              "successful",            // status
+              "successful",            // thirdpart_status
+              token,                   // token
+              description              // description
+            ).catch(err => {
+              logger.error("Failed to update logs after successful payment", { error: err.message });
+            });
+            
+            return res.status(200).json({
+              success: true,
+              message: "Your payment was successful.",
+              data: {
+                transactionId: cyclosResp.data.id,
                 requestId,
-                customerId,
-                agent_name,
-                agent_id,
-                email
-            );
+                amount,
+                subagentCode: agent_id,
+                agentName: agent_name,
+                token: token,
+                units: units,
+                deliveryMethod: billerCode.toLowerCase() === "elec" || billerCode.toLowerCase() === "eucl_erw" ? "SMS" : "NOTIFICATION",
+                billerCode: billerCode,
+                customerId: customerId,
+                timestamp: new Date().toISOString()
+              },
+            });
         } else {
             // Handle non-200 responses from cyclos
             return res.status(502).json({
@@ -457,15 +737,15 @@ export const executeBillPaymentEcoBank = async (req, res) => {
         });
 
         if (status === 400) {
-            let message = "Unable to process payment due to invalid request.";
-
             if (errorDetails === "INVALID_TRANSACTION_PASSWORD") {
-                message = "Your transaction password is incorrect. Please try again.";
+                return res.status(400).json(createErrorResponse('banking.invalid_transaction_password', req.language, 400));
             } else if (errorDetails === "BLOCKED_TRANSACTION_PASSWORD") {
-                message = "Your transaction password has been blocked. Please contact support.";
+                return res.status(400).json(createErrorResponse('banking.blocked_transaction_password', req.language, 400));
             }
 
-            return res.status(400).json({ success: false, message });
+            return res.status(400).json(createErrorResponse('validation.invalid_payment_data', req.language, 400, {
+                details: errorDetails
+            }));
         }
 
         if (status === 401) {
@@ -511,14 +791,17 @@ export const executeBillerPaymentFDI = async (req, res) => {
 
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
-
+    const decodedToken = decodeToken(token);
+    const agentCategory = decodedToken.agentCategory;
+    
     let agent_name = "UnknownAgent";
     let userAuth = null;
     let agent_id = 0
     let customer_charge = 0;
-    let netAmount = findNetAmount(amount)
-    if (billerCode.toLowerCase() === "tax") {
-        customer_charge = getBillerCharge(amount, billerCode);
+    let netAmount = amount;
+    if (billerCode.toLowerCase() === "tax" || billerCode.toLowerCase() === "rra") {
+        customer_charge = await getBillerCharge(amount, billerCode);
+        netAmount = amount;
     }
 
     try {
@@ -551,13 +834,13 @@ export const executeBillerPaymentFDI = async (req, res) => {
 
     const payload =
         billerCode.toLowerCase() === "airtime"
-            ? buildAirtimePayload({ amount, requestId, ccy, customerId, clientPhone })
+            ? buildAirtimePayload({ amount, requestId, ccy, customerId, clientPhone,agentCategory })
             : billerCode.toLowerCase() === "electricity"
-                ? buildElecticityPayload({ amount, requestId, ccy, customerId, clientPhone })
+                ? buildElecticityPayload({ amount, requestId, ccy, customerId, clientPhone,agentCategory })
                 : billerCode.toLowerCase() === "paytv"
-                    ? buildStartimePayload({ amount, requestId, ccy, customerId, clientPhone })
-                    : billerCode.toLowerCase() === "tax"
-                        ? buildRRABillerPayload({ amount, requestId, ccy, customerId, clientPhone, netAmount })
+                    ? buildStartimePayload({ amount, requestId, ccy, customerId, clientPhone,agentCategory })
+                    : (billerCode.toLowerCase() === "tax" || billerCode.toLowerCase() === "rra")
+                        ? buildRRABillerPayload({ amount, requestId, ccy, customerId, clientPhone, netAmount, agentCategory })
                         : buildGenericBillerPayload({
                             amount,
                             requestId,
@@ -577,10 +860,10 @@ export const executeBillerPaymentFDI = async (req, res) => {
         },
         data: JSON.stringify(payload),
     };
-
-
+console.log("config:",config)
+ 
     try {
-        const response = await axios.request(config);
+          const response = await axios.request(config);
 
         logger.info("Biller payment response from core system", {
             status: response.status,
@@ -595,13 +878,19 @@ export const executeBillerPaymentFDI = async (req, res) => {
             //   : null;
 
             // Save log to DB
+            logger.info('Saving transaction log', { 
+                amount, 
+                customer_charge, 
+                billerCode,
+                customerId
+            });
             await insertLogs(
                 response.data.id,            // transactionId
                 null,                   // thirdpart_status
                 "Payment processed",         // description
                 amount,
-                customer_charge,
-                agent_id,                  // amount
+                customer_charge,        // Save the calculated charge separately
+                agent_id,                  // agent_id
                 agent_name,                  // agent_name
                 "pending",                  // status
                 billerCode,                   // service_name
@@ -609,17 +898,41 @@ export const executeBillerPaymentFDI = async (req, res) => {
                 customerId,                  // customerId
                 electricityToken             // token
             );
-            //call third-party endpoint
-            return await fdiBillPayamentService(req,
-                res,
-                response,
-                amount,
-                billerCode,
+            // Return dummy/mock response without calling FDI service
+            const token = billerCode.toLowerCase() === "electricity" ? "MOCK20240106001234" : null;
+            const units = billerCode.toLowerCase() === "electricity" ? 150 : null;
+            
+            // Build comprehensive description with all transaction details
+            const description = `${billerCode.toUpperCase()} payment - Customer ID: ${customerId} - Amount: ${amount} - Agent: ${agent_name} (${agent_id}) - Request ID: ${requestId}${units ? ` - Units: ${units}` : ''}${token ? ` - Token: ${token}` : ''}`.trim();
+            
+            // Update logs with successful status (non-blocking)
+            updateLogs(
+              response.data.id,      // transactionId
+              "successful",          // status
+              "successful",          // thirdpart_status
+              token,                 // token
+              description            // description
+            ).catch(err => {
+              logger.error("Failed to update logs after successful payment", { error: err.message });
+            });
+            
+            return res.status(200).json({
+              success: true,
+              message: "Your payment was successful.",
+              data: {
+                transactionId: response.data.id,
                 requestId,
-                customerId,
-                agent_name,
-                agent_id
-            )
+                amount,
+                subagentCode: agent_id,
+                agentName: agent_name,
+                token: token,
+                units: units,
+                deliveryMethod: billerCode.toLowerCase() === "electricity" ? "SMS" : "NOTIFICATION",
+                billerCode: billerCode,
+                customerId: customerId,
+                timestamp: new Date().toISOString()
+              },
+            });
 
 
         }
@@ -631,6 +944,7 @@ export const executeBillerPaymentFDI = async (req, res) => {
                 "Unexpected response from the payment server. Please try again later.",
         });
     } catch (error) {
+       
         const status = error?.response?.status;
         const errorDetails = error?.response?.data?.errorDetails;
         const coreError = error?.response?.data;
@@ -644,16 +958,15 @@ export const executeBillerPaymentFDI = async (req, res) => {
 
 
         if (status === 400) {
-            let message = "Unable to process payment due to invalid request.";
-
             if (errorDetails === "INVALID_TRANSACTION_PASSWORD") {
-                message = "Your transaction password is incorrect. Please try again.";
+                return res.status(400).json(createErrorResponse('banking.invalid_transaction_password', req.language, 400));
             } else if (errorDetails === "BLOCKED_TRANSACTION_PASSWORD") {
-                message =
-                    "Your transaction password has been blocked. Please contact support.";
+                return res.status(400).json(createErrorResponse('banking.blocked_transaction_password', req.language, 400));
             }
 
-            return res.status(400).json({ success: false, message });
+            return res.status(400).json(createErrorResponse('validation.invalid_payment_data', req.language, 400, {
+                details: errorDetails
+            }));
         }
 
         if (status === 401) {

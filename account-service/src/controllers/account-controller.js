@@ -115,10 +115,17 @@ export const getAccountsBalance = async (req, res) => {
                 };
             });
 
-            return res.status(200).json(createResponse(true, 'common.success', {
+              return res.status(200).json({success:true, message:'Success', 
                 accounts: formattedAccounts,
-                creditBalance: 0
-            }, req.language));
+                data:{
+                 accounts: formattedAccounts   
+                },
+                creditBalance: 0,
+             });
+            // return res.status(200).json(createResponse(true, 'common.success', {
+            //     accounts: formattedAccounts,
+            //     creditBalance: 0
+            // }, req.language));
         }
 
     } catch (error) {
